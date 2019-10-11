@@ -151,7 +151,7 @@ namespace FERIADO_JARVIS_
                             }
                             else if (GrammarRules.SubirMenu.Any(x => x == speech))
                             {
-                                MenuSubier();
+                                MenuSubir();
                             }
 
 
@@ -181,6 +181,7 @@ namespace FERIADO_JARVIS_
         {
             this.label1.ForeColor = Color.Red;
         }
+        //Tela do feriado
         private void minimizarJanela()
         {
             if (this.WindowState == FormWindowState.Normal || this.WindowState == FormWindowState.Maximized)
@@ -210,7 +211,7 @@ namespace FERIADO_JARVIS_
 
 
         }
-        //metodos para as telas minimizar e janela normal
+        //metodos para as telas minimizar e janela normal 
 
         private void MinimizarMenu()
         {

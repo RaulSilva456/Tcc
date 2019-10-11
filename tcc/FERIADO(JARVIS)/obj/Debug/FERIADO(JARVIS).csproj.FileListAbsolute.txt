@@ -40,3 +40,6 @@ C:\Users\teste\Downloads\principal\FERIADO(JARVIS)\obj\Debug\FERIADO(JARVIS).pdb
 C:\Users\teste\Downloads\tcc\FERIADO(JARVIS)\bin\Debug\FERIADO(JARVIS).exe.config
 C:\Users\teste\Downloads\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO(JARVIS).exe
 C:\Users\teste\Downloads\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO(JARVIS).pdb
+C:\Users\teste\Source\Repos\hello-world\tcc\FERIADO(JARVIS)\bin\Debug\FERIADO(JARVIS).exe.config
+C:\Users\teste\Source\Repos\hello-world\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO(JARVIS).exe
+C:\Users\teste\Source\Repos\hello-world\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO(JARVIS).pdb
