@@ -52,11 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Consultas em Geral.cs" />
     <Compile Include="Business\Estoque Business.cs" />
     <Compile Include="Business\Financeiro Business.cs" />
     <Compile Include="Business\RH Business.cs" />
     <Compile Include="Business\Suprimentos Business.cs" />
-    <Compile Include="Database\Estoque Database.cs" />
+    <Compile Include="Database\Consultas Em Geral.cs" />
+    <Compile Include="Database\EstoqueDatabase.cs" />
     <Compile Include="Database\Financeiro Database.cs" />
     <Compile Include="Database\RH Database.cs" />
     <Compile Include="Database\Suprimentos Database.cs" />
