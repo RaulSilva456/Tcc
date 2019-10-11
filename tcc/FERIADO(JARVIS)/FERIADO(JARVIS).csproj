@@ -73,6 +73,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="speaker.cs" />
+    <Compile Include="Telas\frmAlterarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmAlterarFuncionario.Designer.cs">
+      <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmAlterarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,12 @@
     </Compile>
     <Compile Include="Telas\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Projeto Jarvis\Jarvis.resx">
       <DependentUpon>Jarvis.cs</DependentUpon>

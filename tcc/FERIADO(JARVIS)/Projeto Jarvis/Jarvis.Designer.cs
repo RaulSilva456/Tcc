@@ -37,7 +37,7 @@
             // progressBar1
             // 
             this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.progressBar1.Location = new System.Drawing.Point(0, 489);
+            this.progressBar1.Location = new System.Drawing.Point(8, 489);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(328, 23);
             this.progressBar1.TabIndex = 0;
@@ -72,13 +72,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(507, 524);
+            this.ClientSize = new System.Drawing.Size(507, 525);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(523, 563);
             this.MinimumSize = new System.Drawing.Size(523, 563);
             this.Name = "Jarvis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FERIADO(JARVIS)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
