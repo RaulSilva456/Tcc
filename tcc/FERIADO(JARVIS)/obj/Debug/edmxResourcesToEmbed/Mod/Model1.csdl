@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tccModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_clientes">
+    <Key>
+      <PropertyRef Name="id_clientes" />
+    </Key>
+    <Property Name="nm_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_endereco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doc_rg" Type="Int32" />
+    <Property Name="doc_cep" Type="Int32" />
+    <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tel_telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="id_clientes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tb_compras">
+    <Key>
+      <PropertyRef Name="id_compra" />
+    </Key>
+    <Property Name="id_compra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dt_compra" Type="DateTime" />
+    <Property Name="vl_compra" Type="Decimal" />
+    <Property Name="nm_produto_estoque" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="id_cliente_produto" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_despesas">
+    <Key>
+      <PropertyRef Name="id_despesas" />
+    </Key>
+    <Property Name="id_despesas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vl_valor" Type="Decimal" />
+    <Property Name="dt_data" Type="DateTime" />
+    <Property Name="tp_conta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_estoque">
+    <Key>
+      <PropertyRef Name="id_produto" />
+    </Key>
+    <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vl_validade_produto" Type="DateTime" />
+    <Property Name="pr_preço" Type="Decimal" />
+    <Property Name="nm_fornecedor_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_folhapagamento">
+    <Key>
+      <PropertyRef Name="id_folha_funcinario" />
+    </Key>
+    <Property Name="ds_desconto" Type="Decimal" />
+    <Property Name="ds_inss" Type="Decimal" />
+    <Property Name="hora_extra" Type="Decimal" />
+    <Property Name="ad_gratificação" Type="Decimal" />
+    <Property Name="imposto_renda" Type="Decimal" />
+    <Property Name="vl_alimentação" Type="Decimal" />
+    <Property Name="vl_transporte" Type="Decimal" />
+    <Property Name="ds_faltas" Type="Int32" />
+    <Property Name="sl_salario_liquido" Type="Decimal" />
+    <Property Name="nm_folha_funcionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_folha_funcinario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dt_pagamento" Type="DateTime" />
+    <Property Name="sl_salario_bruto" Type="Decimal" />
+  </EntityType>
+  <EntityType Name="tb_fornecedores">
+    <Key>
+      <PropertyRef Name="id_fornecedores" />
+    </Key>
+    <Property Name="id_fornecedores" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nm_fornecedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tl_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vl_valor" Type="Decimal" />
+    <Property Name="vl_valor_produto" Type="Decimal" />
+  </EntityType>
+  <EntityType Name="tb_funcionarios">
+    <Key>
+      <PropertyRef Name="id_funcionario" />
+    </Key>
+    <Property Name="id_funcionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_funcionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt_nasc" Type="DateTime" />
+    <Property Name="fun_rg" Type="Int32" />
+    <Property Name="fun_cpf" Type="Int32" />
+    <Property Name="fun_endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ad_fgts" Type="Decimal" />
+    <Property Name="sl_salario" Type="Decimal" />
+    <Property Name="dt_data_de_contratacao" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tb_login">
+    <Key>
+      <PropertyRef Name="id_login" />
+    </Key>
+    <Property Name="id_login" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pes_senha" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_pedido">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_cliente" Type="Int32" />
+    <Property Name="id_produto" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_produto">
+    <Key>
+      <PropertyRef Name="id_produto" />
+    </Key>
+    <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_produto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cat_categoria" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="sb_sabor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id_fornecedor_produto" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_venda">
+    <Key>
+      <PropertyRef Name="id_venda" />
+    </Key>
+    <Property Name="id_venda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vl_venda" Type="Decimal" />
+    <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_cliente_venda" Type="Int32" />
+    <Property Name="dt_venda_produto" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="tccEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" />
+    <EntitySet Name="tb_compras" EntityType="Self.tb_compras" />
+    <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" />
+    <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" />
+    <EntitySet Name="tb_folhapagamento" EntityType="Self.tb_folhapagamento" />
+    <EntitySet Name="tb_fornecedores" EntityType="Self.tb_fornecedores" />
+    <EntitySet Name="tb_funcionarios" EntityType="Self.tb_funcionarios" />
+    <EntitySet Name="tb_login" EntityType="Self.tb_login" />
+    <EntitySet Name="tb_pedido" EntityType="Self.tb_pedido" />
+    <EntitySet Name="tb_produto" EntityType="Self.tb_produto" />
+    <EntitySet Name="tb_venda" EntityType="Self.tb_venda" />
+  </EntityContainer>
+</Schema>

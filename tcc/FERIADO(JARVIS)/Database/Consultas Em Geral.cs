@@ -8,5 +8,12 @@ namespace FERIADO_JARVIS_.Database
 {
     class Consultas_Em_Geral
     {
+        public List<Mod.tb_funcionarios>consultarFuncionarios()
+        {
+            Mod.tccEntities mod = new Mod.tccEntities();
+
+            List<Mod.tb_funcionarios> tabela = mod.tb_funcionarios.ToList();
+            return tabela;
+        }
     }
 }
