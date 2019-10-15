@@ -10,14 +10,25 @@ using System.Windows.Forms;
 
 namespace FERIADO_JARVIS_.Telas
 {
-    public partial class frmFolhaPagamento : Form
+    public partial class frmFornecedores : Form
     {
-        public frmFolhaPagamento()
+        public frmFornecedores()
         {
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Close();
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
         }

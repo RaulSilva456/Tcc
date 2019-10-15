@@ -101,7 +101,7 @@
     <Compile Include="Mod\tb_clientes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mod\tb_compras.cs">
+    <Compile Include="Mod\tb_compras_cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Mod\tb_despesas.cs">
@@ -122,13 +122,13 @@
     <Compile Include="Mod\tb_login.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mod\tb_pedido.cs">
+    <Compile Include="Mod\tb_pedido_cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Mod\tb_produto.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mod\tb_venda.cs">
+    <Compile Include="Mod\tb_venda_cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Projeto Jarvis\Jarvis.cs">
@@ -142,18 +142,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="speaker.cs" />
-    <Compile Include="Telas\frmAlterarFuncionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\frmAlterarFuncionario.Designer.cs">
-      <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\frmAlterarProdutos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\frmAlterarProdutos.Designer.cs">
-      <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Telas\frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,18 +153,6 @@
     </Compile>
     <Compile Include="Telas\frmCadastroProdutos.Designer.cs">
       <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\frmConsultarFuncionarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\frmConsultarFuncionarios.Designer.cs">
-      <DependentUpon>frmConsultarFuncionarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\frmConsultarProdutos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\frmConsultarProdutos.Designer.cs">
-      <DependentUpon>frmConsultarProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmContasAReceber.cs">
       <SubType>Form</SubType>
@@ -195,6 +171,12 @@
     </Compile>
     <Compile Include="Telas\frmFolhaPagamento.Designer.cs">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmFornecedores.Designer.cs">
+      <DependentUpon>frmFornecedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmInserirFuncionario.cs">
       <SubType>Form</SubType>
@@ -233,6 +215,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\frmCadastro.resx">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmCadastroProdutos.resx">
+      <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmContasAReceber.resx">
+      <DependentUpon>frmContasAReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmEstoque.resx">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmFolhaPagamento.resx">
+      <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmFornecedores.resx">
+      <DependentUpon>frmFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmInserirFuncionario.resx">
       <DependentUpon>frmInserirFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,7 +263,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Mod\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

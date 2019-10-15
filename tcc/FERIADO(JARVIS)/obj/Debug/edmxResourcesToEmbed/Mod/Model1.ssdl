@@ -4,15 +4,15 @@
     <Key>
       <PropertyRef Name="id_clientes" />
     </Key>
+    <Property Name="id_clientes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_nome" Type="varchar" MaxLength="50" />
     <Property Name="end_endereco" Type="varchar" MaxLength="50" />
     <Property Name="doc_rg" Type="int" />
     <Property Name="doc_cep" Type="int" />
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
     <Property Name="tel_telefone" Type="varchar" MaxLength="11" />
-    <Property Name="id_clientes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
-  <EntityType Name="tb_compras">
+  <EntityType Name="tb_compras_cliente">
     <Key>
       <PropertyRef Name="id_compra" />
     </Key>
@@ -39,13 +39,12 @@
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
     <Property Name="vl_validade_produto" Type="datetime" Precision="0" />
     <Property Name="pr_preço" Type="decimal" Precision="2" Scale="2" />
-    <Property Name="nm_fornecedor_produto" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
     <Key>
-      <PropertyRef Name="id_folha_funcinario" />
+      <PropertyRef Name="id_folha_pagamento" />
     </Key>
-    <Property Name="ds_desconto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="id_folha_pagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ds_inss" Type="decimal" Precision="10" Scale="2" />
     <Property Name="hora_extra" Type="decimal" Precision="10" Scale="2" />
     <Property Name="ad_gratificação" Type="decimal" Precision="10" Scale="2" />
@@ -54,10 +53,9 @@
     <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="2" />
     <Property Name="ds_faltas" Type="int" />
     <Property Name="sl_salario_liquido" Type="decimal" Precision="10" Scale="4" />
-    <Property Name="nm_folha_funcionario" Type="varchar" MaxLength="50" />
-    <Property Name="id_folha_funcinario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="dt_pagamento" Type="date" />
+    <Property Name="id_funcionario" Type="varchar" MaxLength="50" />
     <Property Name="sl_salario_bruto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="dt_pagamento" Type="date" />
   </EntityType>
   <EntityType Name="tb_fornecedores">
     <Key>
@@ -96,7 +94,7 @@
     <Property Name="pes_senha" Type="varchar" MaxLength="20" />
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="tb_pedido">
+  <EntityType Name="tb_pedido_cliente">
     <Key>
       <PropertyRef Name="id_pedido" />
     </Key>
@@ -109,12 +107,12 @@
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_fornecedor_produto" Type="int" />
     <Property Name="nm_produto" Type="varchar" MaxLength="40" />
     <Property Name="cat_categoria" Type="varchar" MaxLength="10" />
     <Property Name="sb_sabor" Type="varchar" MaxLength="20" />
-    <Property Name="id_fornecedor_produto" Type="int" />
   </EntityType>
-  <EntityType Name="tb_venda">
+  <EntityType Name="tb_venda_cliente">
     <Key>
       <PropertyRef Name="id_venda" />
     </Key>
@@ -126,15 +124,15 @@
   </EntityType>
   <EntityContainer Name="tccModelStoreContainer">
     <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" Schema="tcc" store:Type="Tables" />
-    <EntitySet Name="tb_compras" EntityType="Self.tb_compras" Schema="tcc" store:Type="Tables" />
+    <EntitySet Name="tb_compras_cliente" EntityType="Self.tb_compras_cliente" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_folhapagamento" EntityType="Self.tb_folhapagamento" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_fornecedores" EntityType="Self.tb_fornecedores" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_funcionarios" EntityType="Self.tb_funcionarios" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_login" EntityType="Self.tb_login" Schema="tcc" store:Type="Tables" />
-    <EntitySet Name="tb_pedido" EntityType="Self.tb_pedido" Schema="tcc" store:Type="Tables" />
+    <EntitySet Name="tb_pedido_cliente" EntityType="Self.tb_pedido_cliente" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_produto" EntityType="Self.tb_produto" Schema="tcc" store:Type="Tables" />
-    <EntitySet Name="tb_venda" EntityType="Self.tb_venda" Schema="tcc" store:Type="Tables" />
+    <EntitySet Name="tb_venda_cliente" EntityType="Self.tb_venda_cliente" Schema="tcc" store:Type="Tables" />
   </EntityContainer>
 </Schema>

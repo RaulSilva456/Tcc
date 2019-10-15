@@ -19,5 +19,10 @@ namespace FERIADO_JARVIS_.Business
             bs.deleta(id);
 
         }
+        public void alterar(Mod.tb_funcionarios tabela)
+        {
+            Database.Database_Funcionarios db = new Database.Database_Funcionarios();
+            db.alterar(tabela);
+        }
     }
 }

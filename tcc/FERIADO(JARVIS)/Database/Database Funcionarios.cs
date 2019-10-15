@@ -10,16 +10,31 @@ namespace FERIADO_JARVIS_.Database
     {
         public void inserirFuncionario(Mod.tb_funcionarios tabela)
         {
-            Mod.tccEntities mod = new Mod.tccEntities();
+            Mod.tccEntities1 mod = new Mod.tccEntities1();
             mod.tb_funcionarios.Add(tabela);
             mod.SaveChanges();
         }
-        public void deleta (int id)
+        public void deleta(int id)
         {
-            Mod.tccEntities mod = new Mod.tccEntities();
+            Mod.tccEntities1 mod = new Mod.tccEntities1();
             Mod.tb_funcionarios tabela = mod.tb_funcionarios.First(x => x.id_funcionario == id);
             mod.tb_funcionarios.Remove(tabela);
             mod.SaveChanges();
+
+        }
+        public void alterar(Mod.tb_funcionarios tabela)
+        {
+            Mod.tccEntities1 MOD = new Mod.tccEntities1();
+            Mod.tb_funcionarios alterar = MOD.tb_funcionarios.First(t => t.id_funcionario == tabela.id_funcionario);
+            alterar.nm_funcionario = tabela.nm_funcionario;
+            alterar.sl_salario = tabela.sl_salario;
+            alterar.fun_rg = tabela.fun_rg;
+            alterar.fun_endereço = tabela.fun_endereço;
+            alterar.fun_cpf = tabela.fun_cpf;
+            alterar.dt_data_de_contratacao = tabela.dt_data_de_contratacao;
+            alterar.ad_fgts = tabela.ad_fgts;
+            MOD.SaveChanges();
+
 
         }
     }

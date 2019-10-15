@@ -14,12 +14,12 @@ namespace FERIADO_JARVIS_.Mod
     
     public partial class tb_clientes
     {
+        public int id_clientes { get; set; }
         public string nm_nome { get; set; }
         public string end_endereco { get; set; }
         public Nullable<int> doc_rg { get; set; }
         public Nullable<int> doc_cep { get; set; }
         public string pes_email { get; set; }
         public string tel_telefone { get; set; }
-        public int id_clientes { get; set; }
     }
 }

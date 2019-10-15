@@ -10,7 +10,7 @@ namespace FERIADO_JARVIS_.Database
     {
         public List<Mod.tb_funcionarios>consultarFuncionarios()
         {
-            Mod.tccEntities mod = new Mod.tccEntities();
+            Mod.tccEntities1 mod = new Mod.tccEntities1();
 
             List<Mod.tb_funcionarios> tabela = mod.tb_funcionarios.ToList();
             return tabela;

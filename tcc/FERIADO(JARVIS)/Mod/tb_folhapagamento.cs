@@ -14,7 +14,7 @@ namespace FERIADO_JARVIS_.Mod
     
     public partial class tb_folhapagamento
     {
-        public Nullable<decimal> ds_desconto { get; set; }
+        public int id_folha_pagamento { get; set; }
         public Nullable<decimal> ds_inss { get; set; }
         public Nullable<decimal> hora_extra { get; set; }
         public Nullable<decimal> ad_gratificação { get; set; }
@@ -23,9 +23,8 @@ namespace FERIADO_JARVIS_.Mod
         public Nullable<decimal> vl_transporte { get; set; }
         public Nullable<int> ds_faltas { get; set; }
         public Nullable<decimal> sl_salario_liquido { get; set; }
-        public string nm_folha_funcionario { get; set; }
-        public int id_folha_funcinario { get; set; }
-        public Nullable<System.DateTime> dt_pagamento { get; set; }
+        public string id_funcionario { get; set; }
         public Nullable<decimal> sl_salario_bruto { get; set; }
+        public Nullable<System.DateTime> dt_pagamento { get; set; }
     }
 }

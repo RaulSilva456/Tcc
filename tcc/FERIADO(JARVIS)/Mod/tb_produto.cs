@@ -15,9 +15,9 @@ namespace FERIADO_JARVIS_.Mod
     public partial class tb_produto
     {
         public int id_produto { get; set; }
+        public Nullable<int> id_fornecedor_produto { get; set; }
         public string nm_produto { get; set; }
         public string cat_categoria { get; set; }
         public string sb_sabor { get; set; }
-        public Nullable<int> id_fornecedor_produto { get; set; }
     }
 }

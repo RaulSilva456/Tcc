@@ -59,5 +59,38 @@ namespace FERIADO_JARVIS_.Telas
             bs.deleta(id);
             MessageBox.Show("Removido Com Sucesso");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
+            tb.ad_fgts = Convert.ToDecimal(fgts.Text);
+            tb.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
+            tb.fun_endereço = endereço.Text;
+            tb.sl_salario = Convert.ToDecimal(salario.Text);
+            tb.nm_funcionario = txtNomeFuncionario.Text;
+            tb.fun_cpf = Convert.ToInt32(cpf.Text);
+            tb.fun_rg = Convert.ToInt32(rg.Text);
+            tb.dt_nasc = Convert.ToDateTime(nacimento.Value);
+
+            int id = Convert.ToInt32(numericUpDown2.Value);
+          Business.funcionarios_bsiness business = new Business.funcionarios_bsiness();
+            business.alterar(tb);
+            MessageBox.Show("alterado Com Sucesso");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmInserirFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgtFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

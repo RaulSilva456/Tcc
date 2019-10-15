@@ -18,6 +18,5 @@ namespace FERIADO_JARVIS_.Mod
         public string nm_produto { get; set; }
         public Nullable<System.DateTime> vl_validade_produto { get; set; }
         public Nullable<decimal> pr_preço { get; set; }
-        public string nm_fornecedor_produto { get; set; }
     }
 }

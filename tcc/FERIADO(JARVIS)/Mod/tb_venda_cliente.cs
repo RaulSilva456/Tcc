@@ -12,7 +12,7 @@ namespace FERIADO_JARVIS_.Mod
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_venda
+    public partial class tb_venda_cliente
     {
         public int id_venda { get; set; }
         public Nullable<decimal> vl_venda { get; set; }

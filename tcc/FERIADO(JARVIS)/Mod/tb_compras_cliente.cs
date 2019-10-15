@@ -12,7 +12,7 @@ namespace FERIADO_JARVIS_.Mod
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_compras
+    public partial class tb_compras_cliente
     {
         public int id_compra { get; set; }
         public Nullable<System.DateTime> dt_compra { get; set; }
