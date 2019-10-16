@@ -30,13 +30,10 @@ namespace FERIADO_JARVIS_
         Telas.frmFolhaPagamento folhapagamnento = new Telas.frmFolhaPagamento();
         Telas.frmEstoque estoque = new Telas.frmEstoque();
         Telas.frmContasAReceber contasareceber = new Telas.frmContasAReceber();
-        Telas.frmConsultarProdutos consultarprodutos = new Telas.frmConsultarProdutos();
-        Telas.frmConsultarFuncionarios consultarfuncionario = new Telas.frmConsultarFuncionarios();
+     
         Telas.frmCadastroProdutos cadastroproduto = new Telas.frmCadastroProdutos();
         Telas.frmCadastro cadastro = new Telas.frmCadastro();
-        Telas.frmAlterarProdutos alterarproduto = new Telas.frmAlterarProdutos();
-        Telas.frmAlterarFuncionario alterarfuncionario = new Telas.frmAlterarFuncionario();
-
+        
         public Jarvis()
         {
             InitializeComponent();

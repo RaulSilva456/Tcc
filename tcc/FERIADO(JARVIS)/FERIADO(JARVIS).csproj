@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BusinessLogin.cs" />
     <Compile Include="Business\consultas.cs" />
     <Compile Include="Business\Estoque Business.cs" />
     <Compile Include="Business\Financeiro Business.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Business\Suprimentos Business.cs" />
     <Compile Include="Database\Consultas Em Geral.cs" />
     <Compile Include="Database\Database Funcionarios.cs" />
+    <Compile Include="Database\databaseLogin.cs" />
     <Compile Include="Database\EstoqueDatabase.cs" />
     <Compile Include="Database\Financeiro Database.cs" />
     <Compile Include="Database\RH Database.cs" />

@@ -33,11 +33,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -64,7 +62,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(95, 170);
+            this.button1.Location = new System.Drawing.Point(85, 144);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 2;
@@ -87,13 +85,6 @@
             this.txtSenha.TabIndex = 4;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(95, 115);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 6;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -107,11 +98,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtSenha);
-            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -130,15 +119,6 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "X";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "e-mail:";
             // 
             // label5
             // 
@@ -186,10 +166,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;

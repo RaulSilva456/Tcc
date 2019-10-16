@@ -24,7 +24,20 @@ namespace FERIADO_JARVIS_.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var funcao = new Database.databaseLogin();
 
+            string login, senha;
+            login = txtNome.Text;
+            senha = txtSenha.Text;
+
+            if(!funcao.login(login,senha))
+            {
+                MessageBox.Show("Login Ou Senha Incorretos", "ATENÇÃO");
+            }
+            else
+            {
+                MessageBox.Show("Logado");
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)

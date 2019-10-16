@@ -14,10 +14,10 @@ namespace FERIADO_JARVIS_.Database
             mod.tb_funcionarios.Add(tabela);
             mod.SaveChanges();
         }
-        public void deleta(int id)
+        public void deleta(Mod.tb_funcionarios tabelas)
         {
             Mod.tccEntities1 mod = new Mod.tccEntities1();
-            Mod.tb_funcionarios tabela = mod.tb_funcionarios.First(x => x.id_funcionario == id);
+            Mod.tb_funcionarios tabela = mod.tb_funcionarios.First(x => x.id_funcionario == tabelas.id_funcionario);
             mod.tb_funcionarios.Remove(tabela);
             mod.SaveChanges();
 

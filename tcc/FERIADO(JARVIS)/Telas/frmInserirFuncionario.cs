@@ -36,6 +36,11 @@ namespace FERIADO_JARVIS_.Telas
             mod.dt_nasc = Convert.ToDateTime(nacimento.Value);
             bs.inserirFuncionario(mod);
             MessageBox.Show("inserido");
+            
+            
+            Business.consultas b = new Business.consultas();//Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = b.consultarFuncionarios();
+            dgtFuncionario.DataSource = tabela;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,20 +54,30 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label6_Click(object sender, EventArgs e)
         {
+           
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(numericUpDown1.Value);
+             Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
+                
+
             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
-            bs.deleta(id);
+            bs.deleta(tb);
             MessageBox.Show("Removido Com Sucesso");
+
+
+            
+            Business.consultas b = new Business.consultas();//Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = b.consultarFuncionarios();
+            dgtFuncionario.DataSource = tabela;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
+           
             tb.ad_fgts = Convert.ToDecimal(fgts.Text);
             tb.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
             tb.fun_endereço = endereço.Text;
@@ -72,10 +87,14 @@ namespace FERIADO_JARVIS_.Telas
             tb.fun_rg = Convert.ToInt32(rg.Text);
             tb.dt_nasc = Convert.ToDateTime(nacimento.Value);
 
-            int id = Convert.ToInt32(numericUpDown2.Value);
-          Business.funcionarios_bsiness business = new Business.funcionarios_bsiness();
+           
+            Business.funcionarios_bsiness business = new Business.funcionarios_bsiness();
             business.alterar(tb);
             MessageBox.Show("alterado Com Sucesso");
+
+            Business.consultas b = new Business.consultas();//Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = b.consultarFuncionarios();
+            dgtFuncionario.DataSource = tabela;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -86,6 +105,10 @@ namespace FERIADO_JARVIS_.Telas
         private void frmInserirFuncionario_Load(object sender, EventArgs e)
         {
 
+            Business.consultas bs = new Business.consultas();
+
+            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            dgtFuncionario.DataSource = tabela;
         }
 
         private void dgtFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)

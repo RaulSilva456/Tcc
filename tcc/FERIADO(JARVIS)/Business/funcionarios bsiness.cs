@@ -8,15 +8,16 @@ namespace FERIADO_JARVIS_.Business
 {
     class funcionarios_bsiness
     {
+        Database.Database_Funcionarios data = new Database.Database_Funcionarios();
         public void inserirFuncionario(Mod.tb_funcionarios Tabela)
         {
-            Database.Database_Funcionarios data = new Database.Database_Funcionarios();
+            
             data.inserirFuncionario(Tabela);
         }
-        public void deleta(int id)
+        public void deleta(   Mod.tb_funcionarios tabela)
         {
-            Database.Database_Funcionarios bs = new Database.Database_Funcionarios();
-            bs.deleta(id);
+            data.deleta(tabela);
+            
 
         }
         public void alterar(Mod.tb_funcionarios tabela)

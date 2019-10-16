@@ -16,5 +16,16 @@ namespace FERIADO_JARVIS_.Telas
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Mod.tb_login tabela = new Mod.tb_login();
+            tabela.nm_nome = txtUsuario.Text;
+            tabela.pes_email = txtEmail.Text;
+            tabela.pes_senha = txtSenha.Text;
+            Business.BusinessLogin bs = new Business.BusinessLogin();
+            bs.Cadastrar(tabela);
+            MessageBox.Show("cadastrado");
+        }
     }
 }
