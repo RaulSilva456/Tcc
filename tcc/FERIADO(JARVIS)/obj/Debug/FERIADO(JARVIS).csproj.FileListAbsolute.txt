@@ -113,3 +113,8 @@ C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\bin\Debug\MySql.Data.E
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\bin\Debug\EntityFramework.xml
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO(JARVIS).csproj.CopyComplete
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmCadastro.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmCadastroProdutos.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmEstoque.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmFolhaPagamento.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmFornecedores.resources

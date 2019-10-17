@@ -25,7 +25,52 @@ namespace FERIADO_JARVIS_.Telas
             tabela.pes_senha = txtSenha.Text;
             Business.BusinessLogin bs = new Business.BusinessLogin();
             bs.Cadastrar(tabela);
-            MessageBox.Show("cadastrado");
+            MessageBox.Show("cadastrado realizado com sucesso");
+
+            frmLogin r = new frmLogin();
+            r.Show();
+            Hide();
+
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtconfi_TextChanged(object sender, EventArgs e)
+        {
+            if(txtconfi.Text != txtSenha.Text)
+            {
+                label5.Visible = true;
+            }
+            else 
+            {
+                label5.Visible = false;
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+       
+        
     }
 }

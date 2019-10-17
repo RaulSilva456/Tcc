@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FERIADO_JARVIS_.Telas
 {
-    public partial class frmContasAReceber : Form
+    public partial class frmClientes : Form
     {
-        public frmContasAReceber()
+        public frmClientes()
         {
             InitializeComponent();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

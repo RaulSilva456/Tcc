@@ -156,11 +156,11 @@
     <Compile Include="Telas\frmCadastroProdutos.Designer.cs">
       <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmContasAReceber.cs">
+    <Compile Include="Telas\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmContasAReceber.Designer.cs">
-      <DependentUpon>frmContasAReceber.cs</DependentUpon>
+    <Compile Include="Telas\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmEstoque.cs">
       <SubType>Form</SubType>
@@ -223,8 +223,8 @@
     <EmbeddedResource Include="Telas\frmCadastroProdutos.resx">
       <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmContasAReceber.resx">
-      <DependentUpon>frmContasAReceber.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
@@ -276,6 +276,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\show_hide_password-10-512.png" />
+    <None Include="Resources\ui-icon-pack-14-512.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

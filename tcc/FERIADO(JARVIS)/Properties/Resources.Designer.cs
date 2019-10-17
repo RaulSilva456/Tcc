@@ -59,5 +59,25 @@ namespace FERIADO_JARVIS_.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap show_hide_password_10_512 {
+            get {
+                object obj = ResourceManager.GetObject("show_hide_password-10-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ui_icon_pack_14_512 {
+            get {
+                object obj = ResourceManager.GetObject("ui-icon-pack-14-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
