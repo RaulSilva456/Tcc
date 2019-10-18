@@ -24,7 +24,9 @@ namespace FERIADO_JARVIS_.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var funcao = new Database.databaseLogin();
+           
+
+            Objetos funcao = new Objetos();
 
             string login, senha,email;
             login = txtNome.Text;

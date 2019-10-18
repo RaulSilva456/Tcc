@@ -15,7 +15,8 @@ namespace FERIADO_JARVIS_.Telas
         public frmCadastro()
         {
             InitializeComponent();
-        }
+        } 
+         Business.BusinessLogin bs = new Business.BusinessLogin();
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -23,13 +24,40 @@ namespace FERIADO_JARVIS_.Telas
             tabela.nm_nome = txtUsuario.Text;
             tabela.pes_email = txtEmail.Text;
             tabela.pes_senha = txtSenha.Text;
-            Business.BusinessLogin bs = new Business.BusinessLogin();
-            bs.Cadastrar(tabela);
-            MessageBox.Show("cadastrado realizado com sucesso");
+          
 
-            frmLogin r = new frmLogin();
-            r.Show();
-            Hide();
+            if (txtconfi.Text == txtSenha.Text)
+            {
+                bs.Cadastrar(tabela);
+                MessageBox.Show("cadastrado realizado com sucesso");
+
+                frmLogin r = new frmLogin();
+                r.Show();
+                Hide();
+
+            }
+
+            //validação na verificação de senha
+            if(txtconfi.Text != txtSenha.Text)
+            {
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Senha Nao se Coecidem");
+                }
+            }
+
+          
+            
+
+
+
+
+            
 
         }
 

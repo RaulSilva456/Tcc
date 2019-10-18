@@ -133,6 +133,7 @@
     <Compile Include="Mod\tb_venda_cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Objetos.cs" />
     <Compile Include="Projeto Jarvis\Jarvis.cs">
       <SubType>Form</SubType>
     </Compile>
