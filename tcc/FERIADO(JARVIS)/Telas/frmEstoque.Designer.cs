@@ -36,11 +36,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnEstoque);
             this.groupBox1.Controls.Add(this.dtpValidadeProduto);
             this.groupBox1.Controls.Add(this.txtPreço);
@@ -113,6 +115,17 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "nome do produto:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(312, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 24);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "X";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,5 +153,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

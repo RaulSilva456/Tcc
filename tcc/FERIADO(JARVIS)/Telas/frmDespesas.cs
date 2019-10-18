@@ -10,29 +10,18 @@ using System.Windows.Forms;
 
 namespace FERIADO_JARVIS_.Telas
 {
-    public partial class frmFornecedores : Form
+    public partial class frmDespesas : Form
     {
-        public frmFornecedores()
+        public frmDespesas()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
             Telas.frmMenu r = new Telas.frmMenu();
             r.Show();
             Hide();
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

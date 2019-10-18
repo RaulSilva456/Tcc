@@ -52,11 +52,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtINSS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtGratificação);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtVA);
@@ -272,6 +274,17 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "inss:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(463, -3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(25, 24);
+            this.label12.TabIndex = 69;
+            this.label12.Text = "X";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // frmFolhaPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,5 +328,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtINSS;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -21,5 +21,12 @@ namespace FERIADO_JARVIS_.Telas
         {
 
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            Telas.frmMenu r = new Telas.frmMenu();
+            r.Show();
+            Hide();
+        }
     }
 }

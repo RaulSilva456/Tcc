@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace FERIADO_JARVIS_.Telas
 {
-    public partial class frmFornecedores : Form
+    public partial class frmConfirmarCompra : Form
     {
-        public frmFornecedores()
+        public frmConfirmarCompra()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
             Telas.frmMenu r = new Telas.frmMenu();
             r.Show();
@@ -25,12 +25,7 @@ namespace FERIADO_JARVIS_.Telas
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

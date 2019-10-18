@@ -163,6 +163,18 @@
     <Compile Include="Telas\frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmConfirmarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmConfirmarCompra.Designer.cs">
+      <DependentUpon>frmConfirmarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmDespesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmDespesas.Designer.cs">
+      <DependentUpon>frmDespesas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,12 @@
     <Compile Include="Telas\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmPedidoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmPedidoCliente.Designer.cs">
+      <DependentUpon>frmPedidoCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +245,12 @@
     <EmbeddedResource Include="Telas\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmConfirmarCompra.resx">
+      <DependentUpon>frmConfirmarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmDespesas.resx">
+      <DependentUpon>frmDespesas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmPedidoCliente.resx">
+      <DependentUpon>frmPedidoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Mod\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -277,6 +304,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\estoque.png" />
+    <None Include="Resources\money1.jpg" />
+    <None Include="Resources\money.jpg" />
+    <None Include="Resources\pessoa icone.png" />
+    <None Include="Resources\saida logo.png" />
     <None Include="Resources\show_hide_password-10-512.png" />
     <None Include="Resources\ui-icon-pack-14-512.png" />
   </ItemGroup>

@@ -102,6 +102,12 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label8_Click_1(object sender, EventArgs e)
         {
+         
+            
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
             if (txtSenha.UseSystemPasswordChar == true)
             {
                 txtSenha.UseSystemPasswordChar = false;
@@ -110,7 +116,6 @@ namespace FERIADO_JARVIS_.Telas
             {
                 txtSenha.UseSystemPasswordChar = true;
             }
-            
         }
     }
 }
