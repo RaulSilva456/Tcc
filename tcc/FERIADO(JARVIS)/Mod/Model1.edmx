@@ -42,7 +42,7 @@
           </Key>
           <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_produto" Type="varchar" MaxLength="50" />
-          <Property Name="vl_validade_produto" Type="datetime" Precision="0" />
+          <Property Name="vl_validade_produto" Type="date" />
           <Property Name="pr_preço" Type="decimal" Precision="2" Scale="2" />
         </EntityType>
         <EntityType Name="tb_folhapagamento">
@@ -70,10 +70,9 @@
           <Property Name="nm_produto" Type="varchar" MaxLength="50" />
           <Property Name="nm_fornecedor" Type="varchar" MaxLength="50" />
           <Property Name="end_endereço" Type="varchar" MaxLength="50" />
-          <Property Name="tl_telefone" Type="varchar" MaxLength="50" />
-          <Property Name="fr_cep" Type="varchar" MaxLength="50" />
-          <Property Name="fr_cnpj" Type="varchar" MaxLength="50" />
-          <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="tl_telefone" Type="int" />
+          <Property Name="fr_cep" Type="int" />
+          <Property Name="fr_cnpj" Type="int" />
           <Property Name="vl_valor_produto" Type="decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="tb_funcionarios">
@@ -210,10 +209,9 @@
           <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="nm_fornecedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="end_endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="tl_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="vl_valor" Type="Decimal" />
+          <Property Name="tl_telefone" Type="Int32" />
+          <Property Name="fr_cep" Type="Int32" />
+          <Property Name="fr_cnpj" Type="Int32" />
           <Property Name="vl_valor_produto" Type="Decimal" />
         </EntityType>
         <EntityType Name="tb_funcionarios">
@@ -267,7 +265,7 @@
           <Property Name="id_cliente_venda" Type="Int32" />
           <Property Name="dt_venda_produto" Type="DateTime" />
         </EntityType>
-        <EntityContainer Name="tccEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="tccEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" />
           <EntitySet Name="tb_compras_cliente" EntityType="Self.tb_compras_cliente" />
           <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" />
@@ -285,7 +283,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="tccModelStoreContainer" CdmEntityContainer="tccEntities1">
+        <EntityContainerMapping StorageEntityContainer="tccModelStoreContainer" CdmEntityContainer="tccEntities3">
           <EntitySetMapping Name="tb_clientes">
             <EntityTypeMapping TypeName="tccModel.tb_clientes">
               <MappingFragment StoreEntitySet="tb_clientes">
@@ -358,7 +356,6 @@
                 <ScalarProperty Name="tl_telefone" ColumnName="tl_telefone" />
                 <ScalarProperty Name="fr_cep" ColumnName="fr_cep" />
                 <ScalarProperty Name="fr_cnpj" ColumnName="fr_cnpj" />
-                <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
                 <ScalarProperty Name="vl_valor_produto" ColumnName="vl_valor_produto" />
               </MappingFragment>
             </EntityTypeMapping>

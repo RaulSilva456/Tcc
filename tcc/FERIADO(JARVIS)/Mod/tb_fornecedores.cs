@@ -18,10 +18,9 @@ namespace FERIADO_JARVIS_.Mod
         public string nm_produto { get; set; }
         public string nm_fornecedor { get; set; }
         public string end_endereço { get; set; }
-        public string tl_telefone { get; set; }
-        public string fr_cep { get; set; }
-        public string fr_cnpj { get; set; }
-        public Nullable<decimal> vl_valor { get; set; }
+        public Nullable<int> tl_telefone { get; set; }
+        public Nullable<int> fr_cep { get; set; }
+        public Nullable<int> fr_cnpj { get; set; }
         public Nullable<decimal> vl_valor_produto { get; set; }
     }
 }

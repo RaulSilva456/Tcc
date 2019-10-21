@@ -29,5 +29,11 @@ namespace FERIADO_JARVIS_.Telas
         {
 
         }
+
+        private void frmConfirmarCompra_Load(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }

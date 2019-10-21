@@ -92,7 +92,6 @@ C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARV
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Properties.Resources.resources
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmCadastro.resources
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmCadastroProdutos.resources
-C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmContasAReceber.resources
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmEstoque.resources
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmFolhaPagamento.resources
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmFornecedores.resources
@@ -171,3 +170,7 @@ C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO(JARVIS).
 C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmConfirmarCompra.resources
 C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmDespesas.resources
 C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmPedidoCliente.resources
+C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmClientes.resources
+C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmConfirmarCompra.resources
+C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmDespesas.resources
+C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmPedidoCliente.resources

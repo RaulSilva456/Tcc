@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvPedido = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgvPedido = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtIDProduto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.nudQuantidadeAlteração = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtProdutoAlteração = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIDProduto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -58,14 +58,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Confirmação de compra";
             // 
-            // dgvPedido
-            // 
-            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedido.Location = new System.Drawing.Point(19, 19);
-            this.dgvPedido.Name = "dgvPedido";
-            this.dgvPedido.Size = new System.Drawing.Size(308, 154);
-            this.dgvPedido.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(108, 197);
@@ -74,6 +66,14 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Confirmar compra";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dgvPedido
+            // 
+            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedido.Location = new System.Drawing.Point(19, 19);
+            this.dgvPedido.Name = "dgvPedido";
+            this.dgvPedido.Size = new System.Drawing.Size(308, 154);
+            this.dgvPedido.TabIndex = 0;
             // 
             // button2
             // 
@@ -114,6 +114,22 @@
             this.groupBox2.Text = "Alterar Pedido";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // txtIDProduto
+            // 
+            this.txtIDProduto.Location = new System.Drawing.Point(99, 59);
+            this.txtIDProduto.Name = "txtIDProduto";
+            this.txtIDProduto.Size = new System.Drawing.Size(100, 20);
+            this.txtIDProduto.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "ID Produto:";
+            // 
             // nudQuantidadeAlteração
             // 
             this.nudQuantidadeAlteração.Location = new System.Drawing.Point(99, 136);
@@ -151,22 +167,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Novo Produto:";
             // 
-            // txtIDProduto
-            // 
-            this.txtIDProduto.Location = new System.Drawing.Point(99, 59);
-            this.txtIDProduto.Name = "txtIDProduto";
-            this.txtIDProduto.Size = new System.Drawing.Size(100, 20);
-            this.txtIDProduto.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "ID Produto:";
-            // 
             // frmConfirmarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +179,7 @@
             this.Name = "frmConfirmarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConfirmarCompra";
+            this.Load += new System.EventHandler(this.frmConfirmarCompra_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
             this.groupBox2.ResumeLayout(false);

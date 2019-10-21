@@ -65,10 +65,9 @@
     <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="nm_fornecedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="end_endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="tl_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="vl_valor" Type="Decimal" />
+    <Property Name="tl_telefone" Type="Int32" />
+    <Property Name="fr_cep" Type="Int32" />
+    <Property Name="fr_cnpj" Type="Int32" />
     <Property Name="vl_valor_produto" Type="Decimal" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
@@ -122,7 +121,7 @@
     <Property Name="id_cliente_venda" Type="Int32" />
     <Property Name="dt_venda_produto" Type="DateTime" />
   </EntityType>
-  <EntityContainer Name="tccEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="tccEntities3" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" />
     <EntitySet Name="tb_compras_cliente" EntityType="Self.tb_compras_cliente" />
     <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" />

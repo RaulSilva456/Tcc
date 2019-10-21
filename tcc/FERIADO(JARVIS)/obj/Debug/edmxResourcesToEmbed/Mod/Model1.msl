@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="tccModelStoreContainer" CdmEntityContainer="tccEntities1">
+  <EntityContainerMapping StorageEntityContainer="tccModelStoreContainer" CdmEntityContainer="tccEntities3">
     <EntitySetMapping Name="tb_clientes">
       <EntityTypeMapping TypeName="tccModel.tb_clientes">
         <MappingFragment StoreEntitySet="tb_clientes">
@@ -73,7 +73,6 @@
           <ScalarProperty Name="tl_telefone" ColumnName="tl_telefone" />
           <ScalarProperty Name="fr_cep" ColumnName="fr_cep" />
           <ScalarProperty Name="fr_cnpj" ColumnName="fr_cnpj" />
-          <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
           <ScalarProperty Name="vl_valor_produto" ColumnName="vl_valor_produto" />
         </MappingFragment>
       </EntityTypeMapping>

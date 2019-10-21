@@ -41,15 +41,15 @@ namespace FERIADO_JARVIS_.Telas
             MessageBox.Show("inserido");
             
             
-            Business.consultas b = new Business.consultas();//Atualizar a DataGrid
-            List<Mod.tb_funcionarios> tabela = b.consultarFuncionarios();
+          //Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            Business.consultas bs = new Business.consultas();
+            Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
 
             List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
@@ -72,8 +72,8 @@ namespace FERIADO_JARVIS_.Telas
 
 
             
-            Business.consultas b = new Business.consultas();//Atualizar a DataGrid
-            List<Mod.tb_funcionarios> tabela = b.consultarFuncionarios();
+   //Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
         }
 
@@ -95,8 +95,8 @@ namespace FERIADO_JARVIS_.Telas
             business.alterar(tb);
             MessageBox.Show("alterado Com Sucesso");
 
-            Business.consultas b = new Business.consultas();//Atualizar a DataGrid
-            List<Mod.tb_funcionarios> tabela = b.consultarFuncionarios();
+           
+            List<Mod.tb_funcionarios> tabela = business.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
         }
 
@@ -108,7 +108,7 @@ namespace FERIADO_JARVIS_.Telas
         private void frmInserirFuncionario_Load(object sender, EventArgs e)
         {
 
-            Business.consultas bs = new Business.consultas();
+            Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
 
             List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;

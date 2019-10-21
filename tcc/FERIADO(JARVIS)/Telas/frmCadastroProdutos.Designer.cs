@@ -30,8 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.txtSabor = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,6 +71,14 @@
             this.button3.TabIndex = 41;
             this.button3.Text = "Deletar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtSabor
+            // 
+            this.txtSabor.Location = new System.Drawing.Point(114, 97);
+            this.txtSabor.Name = "txtSabor";
+            this.txtSabor.Size = new System.Drawing.Size(100, 20);
+            this.txtSabor.TabIndex = 38;
             // 
             // button4
             // 
@@ -80,13 +88,7 @@
             this.button4.TabIndex = 42;
             this.button4.Text = "Alterar";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // txtSabor
-            // 
-            this.txtSabor.Location = new System.Drawing.Point(114, 97);
-            this.txtSabor.Name = "txtSabor";
-            this.txtSabor.Size = new System.Drawing.Size(100, 20);
-            this.txtSabor.TabIndex = 38;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label3
             // 
@@ -121,6 +123,7 @@
             this.btnInserirProduto.TabIndex = 34;
             this.btnInserirProduto.Text = "Inserir";
             this.btnInserirProduto.UseVisualStyleBackColor = true;
+            this.btnInserirProduto.Click += new System.EventHandler(this.btnInserirProduto_Click);
             // 
             // txtNomeProduto
             // 
