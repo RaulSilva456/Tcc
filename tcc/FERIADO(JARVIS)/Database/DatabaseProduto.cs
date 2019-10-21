@@ -8,11 +8,16 @@ namespace FERIADO_JARVIS_.Database
 {
     class DatabaseProduto
     {
-        Mod.tccEntities3 md = new Mod.tccEntities3();
+        Mod.tccEntities5 md = new Mod.tccEntities5();
 
-        public void inerir(Mod.tb_produto tabela)
+        public void inerir(Mod.tb_produto tabela )
         {
+            
+
+
+           
             md.tb_produto.Add(tabela);
+         
             md.SaveChanges();
         }
         public void deletar(Mod.tb_produto tabela)
@@ -32,6 +37,17 @@ namespace FERIADO_JARVIS_.Database
         public List<Mod.tb_produto> listar()
         {
             return md.tb_produto.ToList();
+        }
+        public  Mod.tb_produto fornecedores(string nome)
+        {
+           Mod.tb_produto fornecedor = md.tb_produto.FirstOrDefault(t => t.nm_fornecedor_produto == nome  );
+                                                                       
+
+            return fornecedor;
+        }
+        public List<Mod.tb_fornecedores> lista()
+        {
+            return md.tb_fornecedores.ToList();
         }
     }
 }

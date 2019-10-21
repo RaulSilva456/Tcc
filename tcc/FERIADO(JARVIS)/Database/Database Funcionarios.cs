@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace FERIADO_JARVIS_.Database
 {
     class Database_Funcionarios
-    {Mod.tccEntities3 mod = new Mod.tccEntities3();
+    {Mod.tccEntities5 mod = new Mod.tccEntities5();
         public void inserirFuncionario(Mod.tb_funcionarios tabela)
         {
         

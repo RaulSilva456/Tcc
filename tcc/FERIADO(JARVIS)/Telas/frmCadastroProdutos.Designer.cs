@@ -40,6 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgtFuncionario = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtFuncionario)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +49,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.cboFornecedor);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.txtSabor);
             this.groupBox1.Controls.Add(this.button4);
@@ -58,7 +62,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 257);
+            this.groupBox1.Size = new System.Drawing.Size(295, 257);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produto";
@@ -145,7 +149,7 @@
             // 
             this.dgtFuncionario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgtFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtFuncionario.Location = new System.Drawing.Point(313, 27);
+            this.dgtFuncionario.Location = new System.Drawing.Point(313, 12);
             this.dgtFuncionario.Name = "dgtFuncionario";
             this.dgtFuncionario.Size = new System.Drawing.Size(240, 242);
             this.dgtFuncionario.TabIndex = 39;
@@ -161,17 +165,35 @@
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Nome  Fornecedor:";
+            // 
+            // cboFornecedor
+            // 
+            this.cboFornecedor.FormattingEnabled = true;
+            this.cboFornecedor.Location = new System.Drawing.Point(116, 130);
+            this.cboFornecedor.Name = "cboFornecedor";
+            this.cboFornecedor.Size = new System.Drawing.Size(98, 21);
+            this.cboFornecedor.TabIndex = 44;
+            // 
             // frmCadastroProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(565, 286);
+            this.ClientSize = new System.Drawing.Size(565, 303);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgtFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastroProdutos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroProdutos";
             this.Load += new System.EventHandler(this.frmCadastroProdutos_Load);
             this.groupBox1.ResumeLayout(false);
@@ -196,5 +218,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgtFuncionario;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboFornecedor;
     }
 }

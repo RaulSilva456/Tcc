@@ -13,10 +13,10 @@ namespace FERIADO_JARVIS_.Mod
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class tccEntities3 : DbContext
+    public partial class tccEntities5 : DbContext
     {
-        public tccEntities3()
-            : base("name=tccEntities3")
+        public tccEntities5()
+            : base("name=tccEntities5")
         {
         }
     

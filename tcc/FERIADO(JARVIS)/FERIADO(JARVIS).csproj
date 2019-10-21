@@ -185,6 +185,18 @@
     <Compile Include="Telas\frmEstoque.Designer.cs">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmEstoqueDirecionador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmEstoqueDirecionador.Designer.cs">
+      <DependentUpon>frmEstoqueDirecionador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmFinanceiro.Designer.cs">
+      <DependentUpon>frmFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmFolhaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,11 +233,23 @@
     <Compile Include="Telas\frmPedidoCliente.Designer.cs">
       <DependentUpon>frmPedidoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmRH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmRH.Designer.cs">
+      <DependentUpon>frmRH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmSuprimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmSuprimentos.Designer.cs">
+      <DependentUpon>frmSuprimentos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Projeto Jarvis\Jarvis.resx">
       <DependentUpon>Jarvis.cs</DependentUpon>
@@ -258,6 +282,12 @@
     <EmbeddedResource Include="Telas\frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmEstoqueDirecionador.resx">
+      <DependentUpon>frmEstoqueDirecionador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmFinanceiro.resx">
+      <DependentUpon>frmFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmFolhaPagamento.resx">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +305,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmPedidoCliente.resx">
       <DependentUpon>frmPedidoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmRH.resx">
+      <DependentUpon>frmRH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmSuprimentos.resx">
+      <DependentUpon>frmSuprimentos.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Mod\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -320,6 +359,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\suprimentos icone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

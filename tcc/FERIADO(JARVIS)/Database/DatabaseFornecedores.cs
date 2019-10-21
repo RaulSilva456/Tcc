@@ -8,7 +8,7 @@ namespace FERIADO_JARVIS_.Database
 {
     class DatabaseFornecedores
     {
-        Mod.tccEntities3 md = new Mod.tccEntities3();
+        Mod.tccEntities5 md = new Mod.tccEntities5();
         public void inserir(Mod.tb_fornecedores tabela)
         {
             md.tb_fornecedores.Add(tabela);

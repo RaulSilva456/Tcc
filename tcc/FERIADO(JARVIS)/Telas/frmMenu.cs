@@ -21,5 +21,33 @@ namespace FERIADO_JARVIS_.Telas
         {
             Close();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            frmSuprimentos r = new frmSuprimentos();
+            r.Show();
+            Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmRH r = new frmRH();
+            r.Show();
+            Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmFinanceiro r = new frmFinanceiro();
+            r.Show();
+            Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            frmEstoqueDirecionador r = new frmEstoqueDirecionador();
+            r.Show();
+            Hide();
+        }
     }
 }

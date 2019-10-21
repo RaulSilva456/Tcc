@@ -174,3 +174,12 @@ C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARV
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmConfirmarCompra.resources
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmDespesas.resources
 C:\Users\Raulcortez\Source\Repos\Tcc6\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmPedidoCliente.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmClientes.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmConfirmarCompra.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmDespesas.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmPedidoCliente.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmSplash.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmEstoqueDirecionador.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmFinanceiro.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmRH.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmSuprimentos.resources

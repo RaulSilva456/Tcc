@@ -48,11 +48,11 @@ namespace FERIADO_JARVIS_.Telas
         {
             Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
             tabela.end_endereço = txtEndereço.Text;
-            tabela.fr_cep = Convert.ToInt32(txtCEP.Text);
-            tabela.fr_cnpj = Convert.ToInt32(txtCNPJ.Text);
+            tabela.fr_cep =txtCEP.Text;
+            tabela.fr_cnpj = txtCNPJ.Text;
             tabela.nm_fornecedor = txtNMFornecedor.Text;
             tabela.nm_produto = txtNMProduto.Text;
-            tabela.tl_telefone = Convert.ToInt32( txtTelefone.Text);
+            tabela.tl_telefone =  txtTelefone.Text;
             tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.inserir(tabela);
@@ -78,11 +78,11 @@ namespace FERIADO_JARVIS_.Telas
         {
             Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
             tabela.end_endereço = txtEndereço.Text;
-            tabela.fr_cep = Convert.ToInt32(txtCEP.Text);
-            tabela.fr_cnpj = Convert.ToInt32(txtCNPJ.Text);
+            tabela.fr_cep = txtCEP.Text;
+            tabela.fr_cnpj = txtCNPJ.Text;
             tabela.nm_fornecedor = txtNMFornecedor.Text;
             tabela.nm_produto = txtNMProduto.Text;
-            tabela.tl_telefone = Convert.ToInt32(txtTelefone.Text);
+            tabela.tl_telefone = txtTelefone.Text;
             tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.alterar(tabela);

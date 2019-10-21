@@ -26,5 +26,13 @@ namespace FERIADO_JARVIS_.Business
         {
             return db.listar();
         }
+        public Mod.tb_produto fornecedor(string nome)
+        {
+          return  db.fornecedores(nome);
+        }
+        public List<Mod.tb_fornecedores> listarF()
+        {
+            return db.lista();
+        }
     }
 }

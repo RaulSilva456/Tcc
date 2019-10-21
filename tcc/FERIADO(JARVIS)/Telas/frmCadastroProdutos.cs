@@ -24,8 +24,16 @@ namespace FERIADO_JARVIS_.Telas
 
         private void frmCadastroProdutos_Load(object sender, EventArgs e)
         {
+
             Business.Business_Produtos bs = new Business.Business_Produtos();
             dgtFuncionario.DataSource = bs.listar();
+
+
+            List<Mod.tb_fornecedores> fornecedor = bs.listarF();
+
+            cboFornecedor.DisplayMember = nameof(Mod.tb_fornecedores.nm_fornecedor);
+            cboFornecedor.DataSource = fornecedor;
+
 
         }
 
@@ -37,12 +45,25 @@ namespace FERIADO_JARVIS_.Telas
         }
 
         private void btnInserirProduto_Click(object sender, EventArgs e)
-        {
-            Mod.tb_produto tabela = new Mod.tb_produto();
+        { Mod.tb_produto tabela = new Mod.tb_produto();
+
+          Business.Business_Produtos bs = new Business.Business_Produtos();
+
+
+
+
+
+
+            tabela.nm_fornecedor_produto = cboFornecedor.Text;
+
+           
             tabela.cat_categoria = txtCategoria.Text;
             tabela.nm_produto = txtNomeProduto.Text;
             tabela.sb_sabor = txtSabor.Text;
-            Business.Business_Produtos bs = new Business.Business_Produtos();
+           
+          
+                                        
+            
             bs.inerir(tabela);
             MessageBox.Show("Cadastrado!");
 

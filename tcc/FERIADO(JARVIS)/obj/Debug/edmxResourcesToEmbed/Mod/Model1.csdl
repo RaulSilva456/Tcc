@@ -65,9 +65,10 @@
     <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="nm_fornecedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="end_endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="tl_telefone" Type="Int32" />
-    <Property Name="fr_cep" Type="Int32" />
-    <Property Name="fr_cnpj" Type="Int32" />
+    <Property Name="tl_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vl_valor" Type="Decimal" />
     <Property Name="vl_valor_produto" Type="Decimal" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
@@ -106,7 +107,7 @@
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_fornecedor_produto" Type="Int32" />
+    <Property Name="nm_fornecedor_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="nm_produto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="cat_categoria" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="sb_sabor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -121,7 +122,7 @@
     <Property Name="id_cliente_venda" Type="Int32" />
     <Property Name="dt_venda_produto" Type="DateTime" />
   </EntityType>
-  <EntityContainer Name="tccEntities3" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="tccEntities5" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" />
     <EntitySet Name="tb_compras_cliente" EntityType="Self.tb_compras_cliente" />
     <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" />
