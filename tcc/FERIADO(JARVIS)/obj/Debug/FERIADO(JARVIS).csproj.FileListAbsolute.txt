@@ -183,3 +183,8 @@ C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Te
 C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmFinanceiro.resources
 C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmRH.resources
 C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmSuprimentos.resources
+C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmEstoqueDirecionador.resources
+C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmFinanceiro.resources
+C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmRH.resources
+C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmSplash.resources
+C:\Users\infod18\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmSuprimentos.resources

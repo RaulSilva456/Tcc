@@ -117,5 +117,9 @@ namespace FERIADO_JARVIS_.Telas
                 txtSenha.UseSystemPasswordChar = true;
             }
         }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

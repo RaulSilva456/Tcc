@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.nacimento = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.fgts = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.endereço = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.salario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,10 +48,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtNomeFuncionario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dgtFuncionario = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtFuncionario)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcionario";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(269, 187);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(91, 35);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Deletar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label10
             // 
@@ -130,6 +140,16 @@
             this.endereço.Name = "endereço";
             this.endereço.Size = new System.Drawing.Size(100, 20);
             this.endereço.TabIndex = 14;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(159, 187);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(91, 35);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Alterar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label7
             // 
@@ -223,16 +243,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(159, 187);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 35);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Alterar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -253,16 +263,6 @@
             this.dgtFuncionario.Size = new System.Drawing.Size(307, 227);
             this.dgtFuncionario.TabIndex = 1;
             this.dgtFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtFuncionario_CellContentClick);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(269, 187);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 35);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Deletar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmInserirFuncionario
             // 
