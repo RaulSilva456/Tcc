@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Business Folha de Pagamento.cs" />
     <Compile Include="Business\Business Produtos.cs" />
     <Compile Include="Business\BusinessCliente.cs" />
     <Compile Include="Business\BusinessFornecedores.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Business\funcionarios bsiness.cs" />
     <Compile Include="Business\RH Business.cs" />
     <Compile Include="Business\Suprimentos Business.cs" />
+    <Compile Include="Database\Database FolhaDePagamento[.cs" />
     <Compile Include="Database\Database Funcionarios.cs" />
     <Compile Include="Database\DatabaseCliente.cs" />
     <Compile Include="Database\DatabaseFornecedores.cs" />
@@ -349,6 +351,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\choco icone.jpg" />
+    <None Include="Resources\suprimentos icone.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Mod\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -359,8 +365,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\choco icone.jpg" />
-    <None Include="Resources\suprimentos icone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

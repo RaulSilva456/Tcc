@@ -40,7 +40,8 @@ namespace FERIADO_JARVIS_.Database
         }
         public  Mod.tb_produto fornecedores(string nome)
         {
-           Mod.tb_produto fornecedor = md.tb_produto.FirstOrDefault(t => t.nm_fornecedor_produto == nome  );
+            Mod.tb_fornecedores f = new Mod.tb_fornecedores();
+           Mod.tb_produto fornecedor = md.tb_produto.FirstOrDefault(x => f.nm_fornecedor == nome  );
                                                                        
 
             return fornecedor;

@@ -34,8 +34,8 @@ namespace FERIADO_JARVIS_.Telas
         private void button1_Click(object sender, EventArgs e)
         {
             Mod.tb_clientes tabela = new Mod.tb_clientes();
-            tabela.doc_cep = Convert.ToInt32( txtCep.Text);
-            tabela.doc_rg = Convert.ToInt32(txtRg.Text);
+            tabela.doc_cep = txtCep.Text;
+            tabela.doc_rg = txtRg.Text;
             tabela.end_endereco = txtEndereço.Text;
             tabela.nm_nome = txtNomeCliente.Text;
             tabela.pes_email = txtEmail.Text;
@@ -65,8 +65,8 @@ namespace FERIADO_JARVIS_.Telas
         private void button3_Click(object sender, EventArgs e)
         {
             Mod.tb_clientes tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_clientes;
-            tabela.doc_cep = Convert.ToInt32(txtCep.Text);
-            tabela.doc_rg = Convert.ToInt32(txtRg.Text);
+            tabela.doc_cep = txtCep.Text;
+            tabela.doc_rg = txtRg.Text;
             tabela.end_endereco = txtEndereço.Text;
             tabela.nm_nome = txtNomeCliente.Text;
             tabela.pes_email = txtEmail.Text;

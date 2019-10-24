@@ -7,8 +7,8 @@
     <Property Name="id_clientes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_nome" Type="varchar" MaxLength="50" />
     <Property Name="end_endereco" Type="varchar" MaxLength="50" />
-    <Property Name="doc_rg" Type="int" />
-    <Property Name="doc_cep" Type="int" />
+    <Property Name="doc_rg" Type="varchar" MaxLength="50" />
+    <Property Name="doc_cep" Type="varchar" MaxLength="50" />
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
     <Property Name="tel_telefone" Type="varchar" MaxLength="11" />
   </EntityType>
@@ -37,7 +37,7 @@
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
-    <Property Name="vl_validade_produto" Type="datetime" Precision="0" />
+    <Property Name="vl_validade_produto" Type="date" />
     <Property Name="pr_preço" Type="decimal" Precision="2" Scale="2" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
@@ -53,7 +53,7 @@
     <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="2" />
     <Property Name="ds_faltas" Type="int" />
     <Property Name="sl_salario_liquido" Type="decimal" Precision="10" Scale="4" />
-    <Property Name="id_funcionario" Type="varchar" MaxLength="50" />
+    <Property Name="id_funcionario" Type="int" />
     <Property Name="sl_salario_bruto" Type="decimal" Precision="10" Scale="2" />
     <Property Name="dt_pagamento" Type="date" />
   </EntityType>
@@ -68,7 +68,6 @@
     <Property Name="tl_telefone" Type="varchar" MaxLength="50" />
     <Property Name="fr_cep" Type="varchar" MaxLength="50" />
     <Property Name="fr_cnpj" Type="varchar" MaxLength="50" />
-    <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" />
     <Property Name="vl_valor_produto" Type="decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
@@ -84,6 +83,7 @@
     <Property Name="ad_fgts" Type="decimal" Precision="10" Scale="2" />
     <Property Name="sl_salario" Type="decimal" Precision="10" Scale="4" />
     <Property Name="dt_data_de_contratacao" Type="date" />
+    <Property Name="fun_cargo" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="tb_login">
     <Key>

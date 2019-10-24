@@ -7,8 +7,8 @@
     <Property Name="id_clientes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nm_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="end_endereco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="doc_rg" Type="Int32" />
-    <Property Name="doc_cep" Type="Int32" />
+    <Property Name="doc_rg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doc_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="tel_telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
   </EntityType>
@@ -53,7 +53,7 @@
     <Property Name="vl_transporte" Type="Decimal" />
     <Property Name="ds_faltas" Type="Int32" />
     <Property Name="sl_salario_liquido" Type="Decimal" />
-    <Property Name="id_funcionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_funcionario" Type="Int32" />
     <Property Name="sl_salario_bruto" Type="Decimal" />
     <Property Name="dt_pagamento" Type="DateTime" />
   </EntityType>
@@ -68,7 +68,6 @@
     <Property Name="tl_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="vl_valor" Type="Decimal" />
     <Property Name="vl_valor_produto" Type="Decimal" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
@@ -84,6 +83,7 @@
     <Property Name="ad_fgts" Type="Decimal" />
     <Property Name="sl_salario" Type="Decimal" />
     <Property Name="dt_data_de_contratacao" Type="DateTime" />
+    <Property Name="fun_cargo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tb_login">
     <Key>

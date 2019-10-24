@@ -73,7 +73,6 @@
           <ScalarProperty Name="tl_telefone" ColumnName="tl_telefone" />
           <ScalarProperty Name="fr_cep" ColumnName="fr_cep" />
           <ScalarProperty Name="fr_cnpj" ColumnName="fr_cnpj" />
-          <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
           <ScalarProperty Name="vl_valor_produto" ColumnName="vl_valor_produto" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -90,6 +89,7 @@
           <ScalarProperty Name="ad_fgts" ColumnName="ad_fgts" />
           <ScalarProperty Name="sl_salario" ColumnName="sl_salario" />
           <ScalarProperty Name="dt_data_de_contratacao" ColumnName="dt_data_de_contratacao" />
+          <ScalarProperty Name="fun_cargo" ColumnName="fun_cargo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

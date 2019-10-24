@@ -12,8 +12,8 @@
           <Property Name="id_clientes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_nome" Type="varchar" MaxLength="50" />
           <Property Name="end_endereco" Type="varchar" MaxLength="50" />
-          <Property Name="doc_rg" Type="int" />
-          <Property Name="doc_cep" Type="int" />
+          <Property Name="doc_rg" Type="varchar" MaxLength="50" />
+          <Property Name="doc_cep" Type="varchar" MaxLength="50" />
           <Property Name="pes_email" Type="varchar" MaxLength="50" />
           <Property Name="tel_telefone" Type="varchar" MaxLength="11" />
         </EntityType>
@@ -42,7 +42,7 @@
           </Key>
           <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_produto" Type="varchar" MaxLength="50" />
-          <Property Name="vl_validade_produto" Type="datetime" Precision="0" />
+          <Property Name="vl_validade_produto" Type="date" />
           <Property Name="pr_preço" Type="decimal" Precision="2" Scale="2" />
         </EntityType>
         <EntityType Name="tb_folhapagamento">
@@ -58,7 +58,7 @@
           <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="2" />
           <Property Name="ds_faltas" Type="int" />
           <Property Name="sl_salario_liquido" Type="decimal" Precision="10" Scale="4" />
-          <Property Name="id_funcionario" Type="varchar" MaxLength="50" />
+          <Property Name="id_funcionario" Type="int" />
           <Property Name="sl_salario_bruto" Type="decimal" Precision="10" Scale="2" />
           <Property Name="dt_pagamento" Type="date" />
         </EntityType>
@@ -73,7 +73,6 @@
           <Property Name="tl_telefone" Type="varchar" MaxLength="50" />
           <Property Name="fr_cep" Type="varchar" MaxLength="50" />
           <Property Name="fr_cnpj" Type="varchar" MaxLength="50" />
-          <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_valor_produto" Type="decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="tb_funcionarios">
@@ -89,6 +88,7 @@
           <Property Name="ad_fgts" Type="decimal" Precision="10" Scale="2" />
           <Property Name="sl_salario" Type="decimal" Precision="10" Scale="4" />
           <Property Name="dt_data_de_contratacao" Type="date" />
+          <Property Name="fun_cargo" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="tb_login">
           <Key>
@@ -152,8 +152,8 @@
           <Property Name="id_clientes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nm_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="end_endereco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="doc_rg" Type="Int32" />
-          <Property Name="doc_cep" Type="Int32" />
+          <Property Name="doc_rg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="doc_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="tel_telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -198,7 +198,7 @@
           <Property Name="vl_transporte" Type="Decimal" />
           <Property Name="ds_faltas" Type="Int32" />
           <Property Name="sl_salario_liquido" Type="Decimal" />
-          <Property Name="id_funcionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id_funcionario" Type="Int32" />
           <Property Name="sl_salario_bruto" Type="Decimal" />
           <Property Name="dt_pagamento" Type="DateTime" />
         </EntityType>
@@ -213,7 +213,6 @@
           <Property Name="tl_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="vl_valor" Type="Decimal" />
           <Property Name="vl_valor_produto" Type="Decimal" />
         </EntityType>
         <EntityType Name="tb_funcionarios">
@@ -229,6 +228,7 @@
           <Property Name="ad_fgts" Type="Decimal" />
           <Property Name="sl_salario" Type="Decimal" />
           <Property Name="dt_data_de_contratacao" Type="DateTime" />
+          <Property Name="fun_cargo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_login">
           <Key>
@@ -358,7 +358,6 @@
                 <ScalarProperty Name="tl_telefone" ColumnName="tl_telefone" />
                 <ScalarProperty Name="fr_cep" ColumnName="fr_cep" />
                 <ScalarProperty Name="fr_cnpj" ColumnName="fr_cnpj" />
-                <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
                 <ScalarProperty Name="vl_valor_produto" ColumnName="vl_valor_produto" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -375,6 +374,7 @@
                 <ScalarProperty Name="ad_fgts" ColumnName="ad_fgts" />
                 <ScalarProperty Name="sl_salario" ColumnName="sl_salario" />
                 <ScalarProperty Name="dt_data_de_contratacao" ColumnName="dt_data_de_contratacao" />
+                <ScalarProperty Name="fun_cargo" ColumnName="fun_cargo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
