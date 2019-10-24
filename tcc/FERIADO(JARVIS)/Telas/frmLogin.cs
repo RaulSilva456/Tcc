@@ -41,7 +41,7 @@ namespace FERIADO_JARVIS_.Telas
             else
             {
                 MessageBox.Show("Logado");
-                frmMenu r = new frmMenu();
+                frmSplash r = new frmSplash();
                 r.Show();
                 Hide();
             }
