@@ -68,14 +68,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void txtconfi_TextChanged(object sender, EventArgs e)
         {
-            if(txtconfi.Text != txtSenha.Text)
-            {
-                label5.Visible = true;
-            }
-            else 
-            {
-                label5.Visible = false;
-            }
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -98,7 +91,21 @@ namespace FERIADO_JARVIS_.Telas
             Close();
         }
 
-       
-        
+        private void Label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txtconfi_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txtconfi.Text != txtSenha.Text)
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+        }
     }
 }

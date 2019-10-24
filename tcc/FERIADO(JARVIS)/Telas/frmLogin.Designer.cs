@@ -43,6 +43,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblEsqueceuSenha = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +90,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lblEsqueceuSenha);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -207,6 +209,17 @@
             this.txtNome.TabIndex = 3;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
+            // lblEsqueceuSenha
+            // 
+            this.lblEsqueceuSenha.AutoSize = true;
+            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Arial Narrow", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.Blue;
+            this.lblEsqueceuSenha.Location = new System.Drawing.Point(347, 167);
+            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(83, 16);
+            this.lblEsqueceuSenha.TabIndex = 16;
+            this.lblEsqueceuSenha.Text = "Esqueceu senha?";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,5 +260,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblEsqueceuSenha;
     }
 }
