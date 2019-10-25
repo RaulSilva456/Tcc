@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.dtpValidadeProduto = new System.Windows.Forms.DateTimePicker();
             this.txtPreço = new System.Windows.Forms.TextBox();
@@ -36,12 +37,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Deletar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Deletar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnEstoque);
             this.groupBox1.Controls.Add(this.dtpValidadeProduto);
@@ -57,14 +63,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estoque";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(312, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 24);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "X";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // btnEstoque
             // 
-            this.btnEstoque.Location = new System.Drawing.Point(114, 184);
+            this.btnEstoque.Location = new System.Drawing.Point(29, 167);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(119, 41);
             this.btnEstoque.TabIndex = 21;
             this.btnEstoque.Text = "Inserir produto para o estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // dtpValidadeProduto
             // 
@@ -115,30 +133,50 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "nome do produto:";
             // 
-            // label4
+            // dataGridView1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(312, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 24);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "X";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(366, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(327, 261);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Deletar
+            // 
+            this.Deletar.Location = new System.Drawing.Point(178, 252);
+            this.Deletar.Name = "Deletar";
+            this.Deletar.Size = new System.Drawing.Size(74, 33);
+            this.Deletar.TabIndex = 23;
+            this.Deletar.Text = "Deletar";
+            this.Deletar.UseVisualStyleBackColor = true;
+            this.Deletar.Click += new System.EventHandler(this.Deletar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(257, 252);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 33);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Alterar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(361, 315);
+            this.ClientSize = new System.Drawing.Size(702, 315);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEstoque";
+            this.Load += new System.EventHandler(this.frmEstoque_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +192,8 @@
         private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Deletar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -130,8 +130,7 @@ namespace FERIADO_JARVIS_.Telas
             {
                 panelErro.BackColor = Color.Blue;
             }
-            if (textBox1_TextChanged = null)
-                panelErro.BackColor = Color.Transparent;
+           
           
         }
     }

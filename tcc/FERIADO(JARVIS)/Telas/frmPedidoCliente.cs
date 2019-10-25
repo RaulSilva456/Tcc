@@ -19,6 +19,32 @@ namespace FERIADO_JARVIS_.Telas
 
         private void frmPedidoCliente_Load(object sender, EventArgs e)
         {
+             string[] nome = { "raul", "maria" };
+
+             dataGridView1.DataSource = nome;
+
+             Business.Business_Produtos bs = new Business.Business_Produtos();
+             List<Mod.tb_produto> produto = bs.listar();
+
+
+             cboProduto.DisplayMember = nameof(Mod.tb_produto.nm_produto);
+            cboProduto.DataSource = produto ;
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
 
         }
 
@@ -49,6 +75,32 @@ namespace FERIADO_JARVIS_.Telas
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+        
+
+        }
+
+        private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
