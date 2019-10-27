@@ -76,6 +76,7 @@
     <Compile Include="Business\BusinessCliente.cs" />
     <Compile Include="Business\BusinessFornecedores.cs" />
     <Compile Include="Business\BusinessLogin.cs" />
+    <Compile Include="Business\BusinessPedidoCliente.cs" />
     <Compile Include="Business\Estoque Business.cs" />
     <Compile Include="Business\Financeiro Business.cs" />
     <Compile Include="Business\funcionarios bsiness.cs" />
@@ -84,8 +85,10 @@
     <Compile Include="Database\Database FolhaDePagamento[.cs" />
     <Compile Include="Database\Database Funcionarios.cs" />
     <Compile Include="Database\DatabaseCliente.cs" />
+    <Compile Include="Database\DataBaseDespesas.cs" />
     <Compile Include="Database\DatabaseFornecedores.cs" />
     <Compile Include="Database\databaseLogin.cs" />
+    <Compile Include="Database\DatabasePedidoCliente.cs" />
     <Compile Include="Database\DatabaseProduto.cs" />
     <Compile Include="Database\EstoqueDatabase.cs" />
     <Compile Include="Database\Financeiro Database.cs" />

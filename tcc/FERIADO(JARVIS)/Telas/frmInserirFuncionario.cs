@@ -72,7 +72,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             
-   //Atualizar a DataGrid
+           //Atualizar a DataGrid
             List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
         }
@@ -132,6 +132,64 @@ namespace FERIADO_JARVIS_.Telas
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
+            Mod.tb_funcionarios mod = new Mod.tb_funcionarios();
+            mod.ad_fgts = Convert.ToDecimal(fgts.Text);
+            mod.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
+            mod.fun_endereço = endereço.Text;
+            mod.sl_salario = Convert.ToDecimal(salario.Text);
+            mod.nm_funcionario = txtNomeFuncionario.Text;
+            mod.fun_cpf = Convert.ToInt32(cpf.Text);
+            mod.fun_rg = Convert.ToInt32(rg.Text);
+            mod.dt_nasc = Convert.ToDateTime(nacimento.Value);
+            bs.inserirFuncionario(mod);
+            MessageBox.Show("inserido");
+
+
+            //Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            dgtFuncionario.DataSource = tabela;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
+            Mod.tb_funcionarios mod = new Mod.tb_funcionarios();
+            mod.ad_fgts = Convert.ToDecimal(fgts.Text);
+            mod.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
+            mod.fun_endereço = endereço.Text;
+            mod.sl_salario = Convert.ToDecimal(salario.Text);
+            mod.nm_funcionario = txtNomeFuncionario.Text;
+            mod.fun_cpf = Convert.ToInt32(cpf.Text);
+            mod.fun_rg = Convert.ToInt32(rg.Text);
+            mod.dt_nasc = Convert.ToDateTime(nacimento.Value);
+            bs.inserirFuncionario(mod);
+            MessageBox.Show("inserido");
+
+
+            //Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            dgtFuncionario.DataSource = tabela;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
+
+
+            Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
+            bs.deleta(tb);
+            MessageBox.Show("Removido Com Sucesso");
+
+
+
+            //Atualizar a DataGrid
+            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            dgtFuncionario.DataSource = tabela;
         }
     }
 }

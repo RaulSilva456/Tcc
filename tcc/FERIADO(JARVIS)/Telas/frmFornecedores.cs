@@ -19,7 +19,9 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label1_Click(object sender, EventArgs e)
         {
-         
+            Telas.frmMenu r = new Telas.frmMenu();
+            r.Show();
+            Hide();
 
         }
 
@@ -51,7 +53,7 @@ namespace FERIADO_JARVIS_.Telas
             tabela.nm_fornecedor = txtNMFornecedor.Text;
             tabela.nm_produto = txtNMProduto.Text;
             tabela.tl_telefone =  txtTelefone.Text;
-            tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
+            tabela.vl_valor_produto = Convert.ToDecimal(txtValorPago.Text);
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.inserir(tabela);
             MessageBox.Show("Cadastrado");
@@ -88,13 +90,6 @@ namespace FERIADO_JARVIS_.Telas
             //atualizar Datagrid
             dataGridView1.DataSource = bs.listar();
 
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
         }
     }
 }

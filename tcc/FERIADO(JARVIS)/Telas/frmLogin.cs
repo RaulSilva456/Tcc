@@ -133,5 +133,10 @@ namespace FERIADO_JARVIS_.Telas
            
           
         }
+
+        private void lblEsqueceuSenha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

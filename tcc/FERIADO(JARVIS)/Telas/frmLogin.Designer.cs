@@ -34,6 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelErro = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblEsqueceuSenha = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,11 +46,9 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.panelErro = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelErro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,6 +113,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // panelErro
+            // 
+            this.panelErro.BackColor = System.Drawing.Color.Transparent;
+            this.panelErro.Controls.Add(this.textBox1);
+            this.panelErro.Location = new System.Drawing.Point(499, 200);
+            this.panelErro.Name = "panelErro";
+            this.panelErro.Size = new System.Drawing.Size(153, 31);
+            this.panelErro.TabIndex = 17;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(6, 9);
+            this.textBox1.MaxLength = 35;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(144, 15);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // lblEsqueceuSenha
             // 
             this.lblEsqueceuSenha.AutoSize = true;
@@ -123,6 +143,7 @@
             this.lblEsqueceuSenha.Size = new System.Drawing.Size(83, 16);
             this.lblEsqueceuSenha.TabIndex = 16;
             this.lblEsqueceuSenha.Text = "Esqueceu senha?";
+            this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
             // 
             // panel2
             // 
@@ -167,22 +188,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(279, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
+            this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Senha:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(268, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 20);
+            this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Usuario:";
             // 
@@ -224,26 +245,6 @@
             this.txtNome.TabIndex = 3;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
-            // panelErro
-            // 
-            this.panelErro.BackColor = System.Drawing.Color.Transparent;
-            this.panelErro.Controls.Add(this.textBox1);
-            this.panelErro.Location = new System.Drawing.Point(499, 200);
-            this.panelErro.Name = "panelErro";
-            this.panelErro.Size = new System.Drawing.Size(153, 31);
-            this.panelErro.TabIndex = 17;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(6, 9);
-            this.textBox1.MaxLength = 35;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 15);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,9 +263,9 @@
             this.Text = "frmLogin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelErro.ResumeLayout(false);
             this.panelErro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

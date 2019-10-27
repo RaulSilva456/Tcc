@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.dgtFuncionario = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.nacimento = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -46,12 +50,8 @@
             this.txtNomeFuncionario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dgtFuncionario = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtFuncionario)).BeginInit();
             this.panel1.SuspendLayout();
@@ -87,21 +87,70 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(351, 340);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 35);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Deletar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(351, 285);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 35);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Alterar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnLogin.Location = new System.Drawing.Point(351, 235);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(95, 35);
+            this.btnLogin.TabIndex = 35;
+            this.btnLogin.Text = "Adicionar";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // dgtFuncionario
+            // 
+            this.dgtFuncionario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgtFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgtFuncionario.Location = new System.Drawing.Point(20, 235);
+            this.dgtFuncionario.Name = "dgtFuncionario";
+            this.dgtFuncionario.Size = new System.Drawing.Size(315, 140);
+            this.dgtFuncionario.TabIndex = 1;
+            this.dgtFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtFuncionario_CellContentClick);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(200, 154);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 24);
+            this.label10.Size = new System.Drawing.Size(173, 24);
             this.label10.TabIndex = 19;
             this.label10.Text = "data de Nacimento:";
             // 
             // nacimento
             // 
             this.nacimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.nacimento.Location = new System.Drawing.Point(359, 157);
+            this.nacimento.Location = new System.Drawing.Point(376, 157);
             this.nacimento.Name = "nacimento";
             this.nacimento.Size = new System.Drawing.Size(87, 20);
             this.nacimento.TabIndex = 18;
@@ -109,7 +158,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(359, 180);
+            this.dateTimePicker1.Location = new System.Drawing.Point(383, 187);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(87, 20);
             this.dateTimePicker1.TabIndex = 17;
@@ -124,11 +173,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(319, 128);
+            this.label8.Location = new System.Drawing.Point(309, 127);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 24);
+            this.label8.Size = new System.Drawing.Size(43, 24);
             this.label8.TabIndex = 15;
             this.label8.Text = "fgts:";
             // 
@@ -142,11 +191,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(280, 99);
+            this.label7.Location = new System.Drawing.Point(256, 98);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 24);
+            this.label7.Size = new System.Drawing.Size(97, 24);
             this.label7.TabIndex = 13;
             this.label7.Text = "endereço:";
             // 
@@ -160,7 +209,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(16, 183);
             this.label5.Name = "label5";
@@ -178,11 +227,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(48, 157);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 24);
+            this.label4.Size = new System.Drawing.Size(43, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Cpf:";
             // 
@@ -196,22 +245,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(48, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 24);
+            this.label3.Size = new System.Drawing.Size(39, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Rg:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(199, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 24);
+            this.label2.Size = new System.Drawing.Size(179, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "data de contrataçao:";
             // 
@@ -225,11 +274,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(24, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 24);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
@@ -246,16 +295,6 @@
             this.label9.Text = "X";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // dgtFuncionario
-            // 
-            this.dgtFuncionario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgtFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtFuncionario.Location = new System.Drawing.Point(20, 235);
-            this.dgtFuncionario.Name = "dgtFuncionario";
-            this.dgtFuncionario.Size = new System.Drawing.Size(315, 140);
-            this.dgtFuncionario.TabIndex = 1;
-            this.dgtFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtFuncionario_CellContentClick);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -270,50 +309,14 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label6.Location = new System.Drawing.Point(101, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(263, 34);
+            this.label6.Size = new System.Drawing.Size(273, 31);
             this.label6.TabIndex = 27;
             this.label6.Text = "Inserir Funcionarios";
             this.label6.Click += new System.EventHandler(this.label6_Click_1);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnLogin.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnLogin.Location = new System.Drawing.Point(351, 235);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(95, 35);
-            this.btnLogin.TabIndex = 35;
-            this.btnLogin.Text = "Adicionar";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(351, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 35);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Alterar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(351, 340);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 35);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Deletar";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // frmInserirFuncionario
             // 

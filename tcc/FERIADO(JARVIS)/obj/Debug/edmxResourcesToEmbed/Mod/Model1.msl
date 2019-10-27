@@ -107,8 +107,8 @@
       <EntityTypeMapping TypeName="tccModel.tb_pedido_cliente">
         <MappingFragment StoreEntitySet="tb_pedido_cliente">
           <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
-          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
-          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+          <ScalarProperty Name="qtd_quantidade" ColumnName="qtd_quantidade" />
+          <ScalarProperty Name="nm_produto_cliente" ColumnName="nm_produto_cliente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

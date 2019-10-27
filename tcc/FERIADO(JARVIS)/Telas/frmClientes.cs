@@ -17,7 +17,12 @@ namespace FERIADO_JARVIS_.Telas
             InitializeComponent();
         }
 
-        
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Telas.frmMenu r = new Telas.frmMenu();
+            r.Show();
+            Hide();
+        }
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
@@ -74,13 +79,6 @@ namespace FERIADO_JARVIS_.Telas
 
             //atualizar Datagrid 
             dataGridView1.DataSource = bs.consu();
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-            frmMenu r = new frmMenu();
-            r.Show();
-            Hide();
         }
     }
 }

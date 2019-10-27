@@ -28,6 +28,7 @@ namespace FERIADO_JARVIS_.Telas
             if(this.Opacity == 0)
             {
                 ativo = false;
+                timer1.Enabled = false;
                 frmMenu r = new frmMenu();
                 r.Show();
                 Hide();

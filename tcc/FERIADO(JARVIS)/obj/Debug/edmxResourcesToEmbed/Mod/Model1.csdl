@@ -99,8 +99,8 @@
       <PropertyRef Name="id_pedido" />
     </Key>
     <Property Name="id_pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_cliente" Type="Int32" />
-    <Property Name="id_produto" Type="Int32" />
+    <Property Name="qtd_quantidade" Type="Int32" />
+    <Property Name="nm_produto_cliente" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tb_produto">
     <Key>

@@ -112,5 +112,41 @@ namespace FERIADO_JARVIS_.Telas
         {
 
         }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            Mod.tb_login tabela = new Mod.tb_login();
+            tabela.nm_nome = txtUsuario.Text;
+            tabela.pes_email = txtEmail.Text;
+            tabela.pes_senha = txtSenha.Text;
+
+
+            if (txtconfi.Text == txtSenha.Text)
+            {
+                bs.Cadastrar(tabela);
+                MessageBox.Show("cadastrado realizado com sucesso");
+
+                frmLogin r = new frmLogin();
+                r.Show();
+                Hide();
+
+            }
+
+            //validação na verificação de senha
+            if (txtconfi.Text != txtSenha.Text)
+            {
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Senha Nao se Coecidem");
+                }
+            }
+
+
+        }
     }
 }

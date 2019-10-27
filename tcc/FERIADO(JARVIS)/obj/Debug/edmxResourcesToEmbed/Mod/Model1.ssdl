@@ -18,7 +18,7 @@
     </Key>
     <Property Name="id_compra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="dt_compra" Type="date" />
-    <Property Name="vl_compra" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="vl_compra" Type="decimal" Precision="15" Scale="5" />
     <Property Name="nm_produto_estoque" Type="char" MaxLength="60" />
     <Property Name="id_cliente_produto" Type="int" />
   </EntityType>
@@ -27,7 +27,7 @@
       <PropertyRef Name="id_despesas" />
     </Key>
     <Property Name="id_despesas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="vl_valor" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="vl_valor" Type="decimal" Precision="15" Scale="5" />
     <Property Name="dt_data" Type="date" />
     <Property Name="tp_conta" Type="varchar" MaxLength="50" />
   </EntityType>
@@ -38,23 +38,23 @@
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
     <Property Name="vl_validade_produto" Type="date" />
-    <Property Name="pr_preço" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="pr_preço" Type="decimal" Precision="15" Scale="5" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
     <Key>
       <PropertyRef Name="id_folha_pagamento" />
     </Key>
     <Property Name="id_folha_pagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ds_inss" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="hora_extra" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="ad_gratificação" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="imposto_renda" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="vl_alimentação" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ds_inss" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="hora_extra" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="ad_gratificação" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="imposto_renda" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="vl_alimentação" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="5" />
     <Property Name="ds_faltas" Type="int" />
-    <Property Name="sl_salario_liquido" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="sl_salario_liquido" Type="decimal" Precision="10" Scale="5" />
     <Property Name="id_funcionario" Type="int" />
-    <Property Name="sl_salario_bruto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="sl_salario_bruto" Type="decimal" Precision="10" Scale="5" />
     <Property Name="dt_pagamento" Type="date" />
   </EntityType>
   <EntityType Name="tb_fornecedores">
@@ -68,7 +68,7 @@
     <Property Name="tl_telefone" Type="varchar" MaxLength="50" />
     <Property Name="fr_cep" Type="varchar" MaxLength="50" />
     <Property Name="fr_cnpj" Type="varchar" MaxLength="50" />
-    <Property Name="vl_valor_produto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="vl_valor_produto" Type="decimal" Precision="10" Scale="5" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
     <Key>
@@ -80,8 +80,8 @@
     <Property Name="fun_rg" Type="int" />
     <Property Name="fun_cpf" Type="int" />
     <Property Name="fun_endereço" Type="varchar" MaxLength="50" />
-    <Property Name="ad_fgts" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="sl_salario" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="ad_fgts" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="sl_salario" Type="decimal" Precision="10" Scale="5" />
     <Property Name="dt_data_de_contratacao" Type="date" />
     <Property Name="fun_cargo" Type="varchar" MaxLength="20" />
   </EntityType>
@@ -99,8 +99,8 @@
       <PropertyRef Name="id_pedido" />
     </Key>
     <Property Name="id_pedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_cliente" Type="int" />
-    <Property Name="id_produto" Type="int" />
+    <Property Name="qtd_quantidade" Type="int" />
+    <Property Name="nm_produto_cliente" Type="varchar" MaxLength="60" />
   </EntityType>
   <EntityType Name="tb_produto">
     <Key>
@@ -117,7 +117,7 @@
       <PropertyRef Name="id_venda" />
     </Key>
     <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="vl_venda" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="vl_venda" Type="decimal" Precision="10" Scale="5" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
     <Property Name="id_cliente_venda" Type="int" />
     <Property Name="dt_venda_produto" Type="date" />
