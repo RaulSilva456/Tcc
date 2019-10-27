@@ -16,5 +16,17 @@ namespace FERIADO_JARVIS_.Telas
         {
             InitializeComponent();
         }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor = "";
+
+            if(valor == "Funcionarios")
+            {
+                frmInserirFuncionario r = new frmInserirFuncionario();
+                r.Show();
+                Hide();
+            }
+        }
     }
 }

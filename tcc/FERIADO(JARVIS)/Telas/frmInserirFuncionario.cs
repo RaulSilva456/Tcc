@@ -118,5 +118,13 @@ namespace FERIADO_JARVIS_.Telas
         {
 
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+            Telas.frmMenu r = new Telas.frmMenu();
+            r.Show();
+            Hide();
+        }
     }
 }

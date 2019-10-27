@@ -37,13 +37,7 @@ namespace FERIADO_JARVIS_.Telas
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
-        }
-
+    
         private void btnInserirProduto_Click(object sender, EventArgs e)
         { Mod.tb_produto tabela = new Mod.tb_produto();
 
@@ -104,5 +98,11 @@ namespace FERIADO_JARVIS_.Telas
 
         }
 
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Telas.frmMenu r = new Telas.frmMenu();
+            r.Show();
+            Hide();
+        }
     }
 }
