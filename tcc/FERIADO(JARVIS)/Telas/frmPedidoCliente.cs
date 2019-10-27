@@ -41,12 +41,39 @@ namespace FERIADO_JARVIS_.Telas
             Hide();
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudQuantidadePedido_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtProdutoPedido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

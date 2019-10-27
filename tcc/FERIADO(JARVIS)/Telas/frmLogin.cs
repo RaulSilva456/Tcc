@@ -121,5 +121,17 @@ namespace FERIADO_JARVIS_.Telas
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            bool ativo = false;
+
+            if(ativo == true)
+            {
+                panelErro.BackColor = Color.Blue;
+            }
+           
+          
+        }
     }
 }

@@ -17,7 +17,11 @@ namespace FERIADO_JARVIS_.Telas
             InitializeComponent();
         }
 
-       
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             frmSuprimentos r = new frmSuprimentos();
@@ -46,15 +50,29 @@ namespace FERIADO_JARVIS_.Telas
             Hide();
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        private void label8_Click(object sender, EventArgs e)
         {
-            
 
         }
 
-        private void PictureBox7_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Close();
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

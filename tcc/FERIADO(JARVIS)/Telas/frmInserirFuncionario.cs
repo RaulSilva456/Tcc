@@ -119,12 +119,19 @@ namespace FERIADO_JARVIS_.Telas
 
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

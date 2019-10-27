@@ -38,7 +38,7 @@
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
     <Property Name="vl_validade_produto" Type="date" />
-    <Property Name="pr_preço" Type="decimal" Precision="2" Scale="2" />
+    <Property Name="pr_preço" Type="decimal" Precision="15" Scale="2" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
     <Key>
