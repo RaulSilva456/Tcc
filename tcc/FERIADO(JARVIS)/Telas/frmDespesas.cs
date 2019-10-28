@@ -23,5 +23,19 @@ namespace FERIADO_JARVIS_.Telas
             r.Show();
             Hide();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Mod.tb_clientes tabela = new Mod.tb_clientes();
+            tabela.tp_conta = txtCompra.Text;
+            tabela.dt_data_pagamento = Convert.ToDateTime(dtpDiaCompra);
+            tabela.vl_valor = txtValor.Text;
+            
+          
+
+            Business.BusinessCliente bs = new Business.BusinessCliente();
+            bs.inserir(tabela);
+            MessageBox.Show("Nova Despesa Adicionada");
+        }
     }
 }

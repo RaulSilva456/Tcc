@@ -80,5 +80,10 @@ namespace FERIADO_JARVIS_.Telas
             //atualizar Datagrid 
             dataGridView1.DataSource = bs.consu();
         }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
