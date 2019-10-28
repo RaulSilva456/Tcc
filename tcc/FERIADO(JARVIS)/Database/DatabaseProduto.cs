@@ -8,7 +8,7 @@ namespace FERIADO_JARVIS_.Database
 {
     class DatabaseProduto
     {
-        Mod.tccEntities5 md = new Mod.tccEntities5();
+        Mod.tccEntities10 md = new Mod.tccEntities10();
 
         public void inerir(Mod.tb_produto tabela )
         {

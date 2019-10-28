@@ -12,23 +12,13 @@
     <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="tel_telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="tb_compras_cliente">
-    <Key>
-      <PropertyRef Name="id_compra" />
-    </Key>
-    <Property Name="id_compra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="dt_compra" Type="DateTime" />
-    <Property Name="vl_compra" Type="Decimal" />
-    <Property Name="nm_produto_estoque" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="id_cliente_produto" Type="Int32" />
-  </EntityType>
   <EntityType Name="tb_despesas">
     <Key>
       <PropertyRef Name="id_despesas" />
     </Key>
     <Property Name="id_despesas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="vl_valor" Type="Decimal" />
-    <Property Name="dt_data" Type="DateTime" />
+    <Property Name="dt_data_pagamento" Type="DateTime" />
     <Property Name="tp_conta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tb_estoque">
@@ -37,8 +27,10 @@
     </Key>
     <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="vl_validade_produto" Type="DateTime" />
-    <Property Name="pr_preço" Type="Decimal" />
+    <Property Name="qtd_quantidade_do_produto" Type="Int32" />
+    <Property Name="pro_vencido" Type="Boolean" />
+    <Property Name="pr_preco" Type="Decimal" />
+    <Property Name="dt_saida_do_produto" Type="DateTime" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
     <Key>
@@ -69,6 +61,7 @@
     <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="vl_valor_produto" Type="Decimal" />
+    <Property Name="dt_entrada_do_produto" Type="DateTime" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
     <Key>
@@ -84,6 +77,7 @@
     <Property Name="sl_salario" Type="Decimal" />
     <Property Name="dt_data_de_contratacao" Type="DateTime" />
     <Property Name="fun_cargo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="dt_pagamento_do_funcionario" Type="Decimal" />
   </EntityType>
   <EntityType Name="tb_login">
     <Key>
@@ -100,14 +94,14 @@
     </Key>
     <Property Name="id_pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="qtd_quantidade" Type="Int32" />
-    <Property Name="nm_produto_cliente" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="nm_produto_cliente" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tb_produto">
     <Key>
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nm_fornecedor_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_fornecedor_produto" Type="Int32" />
     <Property Name="nm_produto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="cat_categoria" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="sb_sabor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -122,9 +116,8 @@
     <Property Name="id_cliente_venda" Type="Int32" />
     <Property Name="dt_venda_produto" Type="DateTime" />
   </EntityType>
-  <EntityContainer Name="tccEntities5" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="tccEntities10" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" />
-    <EntitySet Name="tb_compras_cliente" EntityType="Self.tb_compras_cliente" />
     <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" />
     <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" />
     <EntitySet Name="tb_folhapagamento" EntityType="Self.tb_folhapagamento" />

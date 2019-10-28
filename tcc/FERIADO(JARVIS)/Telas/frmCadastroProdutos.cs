@@ -54,7 +54,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
 
-            tabela.nm_fornecedor_produto = cboFornecedor.Text;
+           // tabela.nm_fornecedor_produto = cboFornecedor.Text;
 
            
             tabela.cat_categoria = txtCategoria.Text;
@@ -104,5 +104,45 @@ namespace FERIADO_JARVIS_.Telas
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
+        }
+
+        private void btnInserirProduto_Click_1(object sender, EventArgs e)
+        {
+            Mod.tb_produto tabela = new Mod.tb_produto();
+
+            Business.Business_Produtos bs = new Business.Business_Produtos();
+
+
+
+
+
+
+            // tabela.nm_fornecedor_produto = cboFornecedor.Text;
+
+
+            tabela.cat_categoria = txtCategoria.Text;
+            tabela.nm_produto = txtNomeProduto.Text;
+            tabela.sb_sabor = txtSabor.Text;
+
+
+
+
+            bs.inerir(tabela);
+            MessageBox.Show("Cadastrado!");
+
+            //Atualizar Datagrid
+            dgtFuncionario.DataSource = bs.listar();
+
+        }
     }
 }

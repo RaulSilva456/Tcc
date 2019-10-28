@@ -114,9 +114,6 @@
     <Compile Include="Mod\tb_clientes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mod\tb_compras_cliente.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Mod\tb_despesas.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -363,6 +360,10 @@
     <None Include="Resources\giphy.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\voltar icone1.png" />
+    <None Include="Resources\voltar icone.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Mod\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -373,6 +374,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\voltar icone2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

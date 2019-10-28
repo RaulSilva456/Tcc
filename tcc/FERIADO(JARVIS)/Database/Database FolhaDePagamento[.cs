@@ -8,7 +8,7 @@ namespace FERIADO_JARVIS_.Database
 {
     class Database_FolhaDePagamento_
     {
-        Mod.tccEntities5 md = new Mod.tccEntities5();
+        Mod.tccEntities10 md = new Mod.tccEntities10();
         public void inserir(Mod.tb_folhapagamento tabela)
         {
             md.tb_folhapagamento.Add(tabela);

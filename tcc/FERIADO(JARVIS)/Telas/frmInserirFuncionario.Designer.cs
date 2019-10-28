@@ -34,7 +34,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.dgtFuncionario = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.nacimento = new System.Windows.Forms.DateTimePicker();
+            this.nascimento = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.fgts = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,30 +42,33 @@
             this.label7 = new System.Windows.Forms.Label();
             this.salario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cpf = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomeFuncionario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cpf = new System.Windows.Forms.MaskedTextBox();
+            this.rg = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtFuncionario)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.rg);
+            this.groupBox1.Controls.Add(this.cpf);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.dgtFuncionario);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.nacimento);
+            this.groupBox1.Controls.Add(this.nascimento);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.fgts);
             this.groupBox1.Controls.Add(this.label8);
@@ -73,9 +76,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.salario);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cpf);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.rg);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNomeFuncionario);
@@ -95,7 +96,7 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button2.Location = new System.Drawing.Point(351, 340);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 35);
+            this.button2.Size = new System.Drawing.Size(112, 35);
             this.button2.TabIndex = 37;
             this.button2.Text = "Deletar";
             this.button2.UseVisualStyleBackColor = false;
@@ -109,7 +110,7 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(351, 285);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 35);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 36;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = false;
@@ -123,7 +124,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnLogin.Location = new System.Drawing.Point(351, 235);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(95, 35);
+            this.btnLogin.Size = new System.Drawing.Size(112, 35);
             this.btnLogin.TabIndex = 35;
             this.btnLogin.Text = "Adicionar";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -146,17 +147,17 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(189, 156);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 24);
+            this.label10.Size = new System.Drawing.Size(169, 24);
             this.label10.TabIndex = 19;
-            this.label10.Text = "data de Nacimento:";
+            this.label10.Text = "Data de Nacimento:";
             // 
-            // nacimento
+            // nascimento
             // 
-            this.nacimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.nacimento.Location = new System.Drawing.Point(356, 160);
-            this.nacimento.Name = "nacimento";
-            this.nacimento.Size = new System.Drawing.Size(87, 20);
-            this.nacimento.TabIndex = 18;
+            this.nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.nascimento.Location = new System.Drawing.Point(356, 160);
+            this.nascimento.Name = "nascimento";
+            this.nascimento.Size = new System.Drawing.Size(87, 20);
+            this.nascimento.TabIndex = 18;
             // 
             // dateTimePicker1
             // 
@@ -178,11 +179,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(298, 129);
+            this.label8.Location = new System.Drawing.Point(296, 128);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 24);
+            this.label8.Size = new System.Drawing.Size(51, 24);
             this.label8.TabIndex = 15;
-            this.label8.Text = "fgts:";
+            this.label8.Text = "Fgts:";
             // 
             // endereço
             // 
@@ -198,16 +199,17 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(259, 100);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 24);
+            this.label7.Size = new System.Drawing.Size(88, 24);
             this.label7.TabIndex = 13;
-            this.label7.Text = "endereço:";
+            this.label7.Text = "Endereço:";
             // 
             // salario
             // 
-            this.salario.Location = new System.Drawing.Point(84, 183);
+            this.salario.Location = new System.Drawing.Point(84, 188);
             this.salario.Name = "salario";
             this.salario.Size = new System.Drawing.Size(91, 20);
             this.salario.TabIndex = 10;
+            this.salario.TextChanged += new System.EventHandler(this.salario_TextChanged);
             // 
             // label5
             // 
@@ -220,37 +222,23 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Salario:";
             // 
-            // cpf
-            // 
-            this.cpf.Location = new System.Drawing.Point(84, 157);
-            this.cpf.Name = "cpf";
-            this.cpf.Size = new System.Drawing.Size(91, 20);
-            this.cpf.TabIndex = 8;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(48, 157);
+            this.label4.Location = new System.Drawing.Point(38, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Cpf:";
-            // 
-            // rg
-            // 
-            this.rg.Location = new System.Drawing.Point(84, 131);
-            this.rg.Name = "rg";
-            this.rg.Size = new System.Drawing.Size(91, 20);
-            this.rg.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(48, 125);
+            this.label3.Location = new System.Drawing.Point(38, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 24);
             this.label3.TabIndex = 5;
@@ -263,9 +251,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(188, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 24);
+            this.label2.Size = new System.Drawing.Size(170, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "data de contrataçao:";
+            this.label2.Text = "Data de contrataçao:";
             // 
             // txtNomeFuncionario
             // 
@@ -285,27 +273,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(444, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 24);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "X";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 64);
+            this.panel1.Size = new System.Drawing.Size(469, 67);
             this.panel1.TabIndex = 18;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -314,12 +289,41 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Harlow Solid Italic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(101, 16);
+            this.label6.Location = new System.Drawing.Point(153, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(283, 36);
+            this.label6.Size = new System.Drawing.Size(182, 36);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Inserir Funcionarios";
+            this.label6.Text = "Funcionarios";
             this.label6.Click += new System.EventHandler(this.label6_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FERIADO_JARVIS_.Properties.Resources.saida_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(435, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // cpf
+            // 
+            this.cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpf.Location = new System.Drawing.Point(84, 162);
+            this.cpf.Mask = "000.000.000-00";
+            this.cpf.Name = "cpf";
+            this.cpf.Size = new System.Drawing.Size(91, 20);
+            this.cpf.TabIndex = 38;
+            // 
+            // rg
+            // 
+            this.rg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rg.Location = new System.Drawing.Point(84, 133);
+            this.rg.Mask = "00.000.000-0";
+            this.rg.Name = "rg";
+            this.rg.Size = new System.Drawing.Size(91, 20);
+            this.rg.TabIndex = 39;
             // 
             // frmInserirFuncionario
             // 
@@ -341,6 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgtFuncionario)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,26 +355,26 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNomeFuncionario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox fgts;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox endereço;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox salario;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox cpf;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox rg;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dgtFuncionario;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker nacimento;
+        private System.Windows.Forms.DateTimePicker nascimento;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox cpf;
+        private System.Windows.Forms.MaskedTextBox rg;
     }
 }

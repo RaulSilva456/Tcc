@@ -26,14 +26,14 @@ namespace FERIADO_JARVIS_.Telas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Mod.tb_clientes tabela = new Mod.tb_clientes();
+            Mod.tb_despesas tabela = new Mod.tb_despesas();
             tabela.tp_conta = txtCompra.Text;
-            tabela.dt_data_pagamento = Convert.ToDateTime(dtpDiaCompra);
-            tabela.vl_valor = txtValor.Text;
+            tabela.dt_data_pagamento = dtpDiaCompra.Value;
+            tabela.vl_valor = Convert.ToInt32( txtValor.Text);
             
           
 
-            Business.BusinessCliente bs = new Business.BusinessCliente();
+            Business.Business_Despesas bs = new Business.Business_Despesas();
             bs.inserir(tabela);
             MessageBox.Show("Nova Despesa Adicionada");
         }

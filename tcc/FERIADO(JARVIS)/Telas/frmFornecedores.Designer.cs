@@ -36,13 +36,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtValorPago = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCEP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtEndereço = new System.Windows.Forms.TextBox();
-            this.txtCNPJ = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNMProduto = new System.Windows.Forms.TextBox();
@@ -50,6 +47,9 @@
             this.txtNMFornecedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::FERIADO_JARVIS_.Properties.Resources.saida_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(682, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(638, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -70,6 +70,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 8);
             this.panel1.Name = "panel1";
@@ -90,17 +91,17 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtCNPJ);
+            this.groupBox1.Controls.Add(this.txtTelefone);
+            this.groupBox1.Controls.Add(this.txtCEP);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtValorPago);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtCEP);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtEndereço);
-            this.groupBox1.Controls.Add(this.txtCNPJ);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtNMProduto);
@@ -119,19 +120,20 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(97, 205);
+            this.button3.Location = new System.Drawing.Point(114, 214);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 41);
             this.button3.TabIndex = 20;
             this.button3.Text = "Inserir ";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(190, 205);
+            this.button2.Location = new System.Drawing.Point(207, 214);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 41);
             this.button2.TabIndex = 19;
@@ -143,7 +145,7 @@
             this.txtValorPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorPago.Location = new System.Drawing.Point(249, 95);
             this.txtValorPago.Name = "txtValorPago";
-            this.txtValorPago.Size = new System.Drawing.Size(100, 20);
+            this.txtValorPago.Size = new System.Drawing.Size(111, 20);
             this.txtValorPago.TabIndex = 14;
             // 
             // label8
@@ -156,14 +158,6 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Valor pago:";
             // 
-            // txtCEP
-            // 
-            this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEP.Location = new System.Drawing.Point(249, 147);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(100, 20);
-            this.txtCEP.TabIndex = 12;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -174,20 +168,12 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "CEP:";
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(249, 69);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 10;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(279, 207);
+            this.button1.Location = new System.Drawing.Point(296, 216);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 39);
             this.button1.TabIndex = 3;
@@ -209,16 +195,8 @@
             this.txtEndereço.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereço.Location = new System.Drawing.Point(249, 173);
             this.txtEndereço.Name = "txtEndereço";
-            this.txtEndereço.Size = new System.Drawing.Size(100, 20);
+            this.txtEndereço.Size = new System.Drawing.Size(111, 20);
             this.txtEndereço.TabIndex = 8;
-            // 
-            // txtCNPJ
-            // 
-            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNPJ.Location = new System.Drawing.Point(249, 121);
-            this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.Size = new System.Drawing.Size(100, 20);
-            this.txtCNPJ.TabIndex = 8;
             // 
             // label5
             // 
@@ -245,7 +223,7 @@
             this.txtNMProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNMProduto.Location = new System.Drawing.Point(249, 43);
             this.txtNMProduto.Name = "txtNMProduto";
-            this.txtNMProduto.Size = new System.Drawing.Size(100, 20);
+            this.txtNMProduto.Size = new System.Drawing.Size(111, 20);
             this.txtNMProduto.TabIndex = 6;
             // 
             // label3
@@ -263,7 +241,7 @@
             this.txtNMFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNMFornecedor.Location = new System.Drawing.Point(249, 16);
             this.txtNMFornecedor.Name = "txtNMFornecedor";
-            this.txtNMFornecedor.Size = new System.Drawing.Size(100, 20);
+            this.txtNMFornecedor.Size = new System.Drawing.Size(111, 20);
             this.txtNMFornecedor.TabIndex = 2;
             // 
             // label2
@@ -285,6 +263,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(252, 274);
             this.dataGridView1.TabIndex = 8;
             // 
+            // txtCEP
+            // 
+            this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEP.Location = new System.Drawing.Point(249, 147);
+            this.txtCEP.Mask = "00000-000";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(111, 20);
+            this.txtCEP.TabIndex = 21;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(249, 69);
+            this.txtTelefone.Mask = "(00)0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(111, 20);
+            this.txtTelefone.TabIndex = 22;
+            // 
+            // txtCNPJ
+            // 
+            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNPJ.Location = new System.Drawing.Point(249, 121);
+            this.txtCNPJ.Mask = "00.000.000/0000-00";
+            this.txtCNPJ.Name = "txtCNPJ";
+            this.txtCNPJ.Size = new System.Drawing.Size(111, 20);
+            this.txtCNPJ.TabIndex = 23;
+            // 
             // frmFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,7 +298,6 @@
             this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.choco_icone;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(721, 344);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
@@ -322,13 +326,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtValorPago;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEndereço;
-        private System.Windows.Forms.TextBox txtCNPJ;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNMProduto;
@@ -336,5 +337,8 @@
         private System.Windows.Forms.TextBox txtNMFornecedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.MaskedTextBox txtCNPJ;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

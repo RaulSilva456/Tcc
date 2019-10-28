@@ -36,7 +36,7 @@ namespace FERIADO_JARVIS_.Telas
             mod.nm_funcionario = txtNomeFuncionario.Text;
             mod.fun_cpf = Convert.ToInt32( cpf.Text);
             mod.fun_rg = Convert.ToInt32(rg.Text);
-            mod.dt_nasc = Convert.ToDateTime(nacimento.Value);
+            mod.dt_nasc = Convert.ToDateTime(nascimento.Value);
             bs.inserirFuncionario(mod);
             MessageBox.Show("inserido");
             
@@ -88,7 +88,7 @@ namespace FERIADO_JARVIS_.Telas
             tb.nm_funcionario = txtNomeFuncionario.Text;
             tb.fun_cpf = Convert.ToInt32(cpf.Text);
             tb.fun_rg = Convert.ToInt32(rg.Text);
-            tb.dt_nasc = Convert.ToDateTime(nacimento.Value);
+            tb.dt_nasc = Convert.ToDateTime(nascimento.Value);
 
            
             Business.funcionarios_bsiness business = new Business.funcionarios_bsiness();
@@ -145,7 +145,7 @@ namespace FERIADO_JARVIS_.Telas
             mod.nm_funcionario = txtNomeFuncionario.Text;
             mod.fun_cpf = Convert.ToInt32(cpf.Text);
             mod.fun_rg = Convert.ToInt32(rg.Text);
-            mod.dt_nasc = Convert.ToDateTime(nacimento.Value);
+            mod.dt_nasc = Convert.ToDateTime(nascimento.Value);
             bs.inserirFuncionario(mod);
             MessageBox.Show("inserido");
 
@@ -166,7 +166,7 @@ namespace FERIADO_JARVIS_.Telas
             mod.nm_funcionario = txtNomeFuncionario.Text;
             mod.fun_cpf = Convert.ToInt32(cpf.Text);
             mod.fun_rg = Convert.ToInt32(rg.Text);
-            mod.dt_nasc = Convert.ToDateTime(nacimento.Value);
+            mod.dt_nasc = Convert.ToDateTime(nascimento.Value);
             bs.inserirFuncionario(mod);
             MessageBox.Show("inserido");
 
@@ -190,6 +190,16 @@ namespace FERIADO_JARVIS_.Telas
             //Atualizar a DataGrid
             List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void salario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace FERIADO_JARVIS_.Mod
     {
         public int id_despesas { get; set; }
         public Nullable<decimal> vl_valor { get; set; }
-        public Nullable<System.DateTime> dt_data { get; set; }
+        public Nullable<System.DateTime> dt_data_pagamento { get; set; }
         public string tp_conta { get; set; }
     }
 }

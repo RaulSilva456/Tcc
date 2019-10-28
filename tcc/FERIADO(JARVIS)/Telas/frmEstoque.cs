@@ -33,9 +33,9 @@ namespace FERIADO_JARVIS_.Telas
         private void btnEstoque_Click(object sender, EventArgs e)
         {
             Mod.tb_estoque tabela = new Mod.tb_estoque();
-            tabela.nm_produto = txtNomeProduto.Text;
-            tabela.pr_preço = Convert.ToDecimal( txtPreço.Text);
-            tabela.vl_validade_produto = dtpValidadeProduto.Value;
+            tabela.nm_produto = txtNome.Text;
+            tabela.pr_preco = Convert.ToDecimal( txtPreço.Text);
+            
             Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.inserir(tabela);
             MessageBox.Show("Inserido Com Sucesso");
@@ -60,9 +60,7 @@ namespace FERIADO_JARVIS_.Telas
         private void button1_Click(object sender, EventArgs e)
         {
             Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
-            tabela.nm_produto = txtNomeProduto.Text;
-            tabela.pr_preço = Convert.ToDecimal(txtPreço.Text);
-            tabela.vl_validade_produto = dtpValidadeProduto.Value;
+            
             Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.alterar(tabela);
             MessageBox.Show("Alterado Com Sucesso");
@@ -70,6 +68,36 @@ namespace FERIADO_JARVIS_.Telas
 
             //Atualizar datagrid
             dataGridView1.DataSource = bs.listar();
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nascimento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEstoque_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

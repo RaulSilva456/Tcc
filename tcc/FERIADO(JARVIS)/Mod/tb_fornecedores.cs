@@ -22,5 +22,6 @@ namespace FERIADO_JARVIS_.Mod
         public string fr_cep { get; set; }
         public string fr_cnpj { get; set; }
         public Nullable<decimal> vl_valor_produto { get; set; }
+        public Nullable<System.DateTime> dt_entrada_do_produto { get; set; }
     }
 }

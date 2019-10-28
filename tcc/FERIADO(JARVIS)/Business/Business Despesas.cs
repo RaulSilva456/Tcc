@@ -8,10 +8,10 @@ namespace FERIADO_JARVIS_.Business
 {
     class Business_Despesas
     {
-        Database.DatabaseCliente db = new Database.DatabaseCliente();
+        Database.DataBaseDespesas db = new Database.DataBaseDespesas();
         public void inserir(Mod.tb_despesas tabela)
         {
-            db.inserir(tabela);
+            db.inseir(tabela);
         }
     }
 }

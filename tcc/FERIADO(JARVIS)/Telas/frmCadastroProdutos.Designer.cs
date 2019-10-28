@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgtFuncionario = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtFuncionario)).BeginInit();
@@ -53,18 +55,32 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 76);
+            this.panel1.Size = new System.Drawing.Size(697, 76);
             this.panel1.TabIndex = 50;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::FERIADO_JARVIS_.Properties.Resources.voltar_icone2;
+            this.pictureBox2.Location = new System.Drawing.Point(649, 42);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(268, 19);
+            this.label5.Location = new System.Drawing.Point(295, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 36);
             this.label5.TabIndex = 0;
@@ -74,12 +90,13 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::FERIADO_JARVIS_.Properties.Resources.saida_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(664, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(652, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
@@ -194,6 +211,7 @@
             this.btnInserirProduto.TabIndex = 69;
             this.btnInserirProduto.Text = "Inserir";
             this.btnInserirProduto.UseVisualStyleBackColor = false;
+            this.btnInserirProduto.Click += new System.EventHandler(this.btnInserirProduto_Click_1);
             // 
             // txtNomeProduto
             // 
@@ -215,7 +233,7 @@
             // 
             // dgtFuncionario
             // 
-            this.dgtFuncionario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgtFuncionario.BackgroundColor = System.Drawing.Color.White;
             this.dgtFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgtFuncionario.Location = new System.Drawing.Point(313, 94);
             this.dgtFuncionario.Name = "dgtFuncionario";
@@ -231,7 +249,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(721, 344);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgtFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -241,6 +258,7 @@
             this.Load += new System.EventHandler(this.frmCadastroProdutos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -267,5 +285,6 @@
         private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgtFuncionario;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

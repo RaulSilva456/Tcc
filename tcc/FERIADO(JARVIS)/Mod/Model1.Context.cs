@@ -13,10 +13,10 @@ namespace FERIADO_JARVIS_.Mod
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class tccEntities5 : DbContext
+    public partial class tccEntities10 : DbContext
     {
-        public tccEntities5()
-            : base("name=tccEntities5")
+        public tccEntities10()
+            : base("name=tccEntities10")
         {
         }
     
@@ -26,7 +26,6 @@ namespace FERIADO_JARVIS_.Mod
         }
     
         public virtual DbSet<tb_clientes> tb_clientes { get; set; }
-        public virtual DbSet<tb_compras_cliente> tb_compras_cliente { get; set; }
         public virtual DbSet<tb_despesas> tb_despesas { get; set; }
         public virtual DbSet<tb_estoque> tb_estoque { get; set; }
         public virtual DbSet<tb_folhapagamento> tb_folhapagamento { get; set; }

@@ -8,7 +8,7 @@ namespace FERIADO_JARVIS_.Database
 {
     class DataBaseDespesas
     {
-        Mod.tccEntities5 md = new Mod.tccEntities5();
+        Mod.tccEntities10 md = new Mod.tccEntities10();
         public void inseir(Mod.tb_despesas tabela)
         {
             md.tb_despesas.Add(tabela);

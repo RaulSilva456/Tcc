@@ -16,7 +16,9 @@ namespace FERIADO_JARVIS_.Mod
     {
         public int id_produto { get; set; }
         public string nm_produto { get; set; }
-        public Nullable<System.DateTime> vl_validade_produto { get; set; }
-        public Nullable<decimal> pr_preço { get; set; }
+        public Nullable<int> qtd_quantidade_do_produto { get; set; }
+        public Nullable<bool> pro_vencido { get; set; }
+        public Nullable<decimal> pr_preco { get; set; }
+        public Nullable<System.DateTime> dt_saida_do_produto { get; set; }
     }
 }

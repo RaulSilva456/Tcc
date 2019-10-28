@@ -8,7 +8,7 @@ namespace FERIADO_JARVIS_
 {
     class Objetos
     {
-        Mod.tccEntities5 md = new Mod.tccEntities5();
+        Mod.tccEntities10 md = new Mod.tccEntities10();
         public bool login(string login, string senha, string email)
         {
          

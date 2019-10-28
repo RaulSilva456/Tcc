@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="tccModelStoreContainer" CdmEntityContainer="tccEntities5">
+  <EntityContainerMapping StorageEntityContainer="tccModelStoreContainer" CdmEntityContainer="tccEntities10">
     <EntitySetMapping Name="tb_clientes">
       <EntityTypeMapping TypeName="tccModel.tb_clientes">
         <MappingFragment StoreEntitySet="tb_clientes">
@@ -14,23 +14,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tb_compras_cliente">
-      <EntityTypeMapping TypeName="tccModel.tb_compras_cliente">
-        <MappingFragment StoreEntitySet="tb_compras_cliente">
-          <ScalarProperty Name="id_compra" ColumnName="id_compra" />
-          <ScalarProperty Name="dt_compra" ColumnName="dt_compra" />
-          <ScalarProperty Name="vl_compra" ColumnName="vl_compra" />
-          <ScalarProperty Name="nm_produto_estoque" ColumnName="nm_produto_estoque" />
-          <ScalarProperty Name="id_cliente_produto" ColumnName="id_cliente_produto" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tb_despesas">
       <EntityTypeMapping TypeName="tccModel.tb_despesas">
         <MappingFragment StoreEntitySet="tb_despesas">
           <ScalarProperty Name="id_despesas" ColumnName="id_despesas" />
           <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
-          <ScalarProperty Name="dt_data" ColumnName="dt_data" />
+          <ScalarProperty Name="dt_data_pagamento" ColumnName="dt_data_pagamento" />
           <ScalarProperty Name="tp_conta" ColumnName="tp_conta" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -40,8 +29,10 @@
         <MappingFragment StoreEntitySet="tb_estoque">
           <ScalarProperty Name="id_produto" ColumnName="id_produto" />
           <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
-          <ScalarProperty Name="vl_validade_produto" ColumnName="vl_validade_produto" />
-          <ScalarProperty Name="pr_preço" ColumnName="pr_preço" />
+          <ScalarProperty Name="qtd_quantidade_do_produto" ColumnName="qtd_quantidade_do_produto" />
+          <ScalarProperty Name="pro_vencido" ColumnName="pro_vencido" />
+          <ScalarProperty Name="pr_preco" ColumnName="pr_preco" />
+          <ScalarProperty Name="dt_saida_do_produto" ColumnName="dt_saida_do_produto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -74,6 +65,7 @@
           <ScalarProperty Name="fr_cep" ColumnName="fr_cep" />
           <ScalarProperty Name="fr_cnpj" ColumnName="fr_cnpj" />
           <ScalarProperty Name="vl_valor_produto" ColumnName="vl_valor_produto" />
+          <ScalarProperty Name="dt_entrada_do_produto" ColumnName="dt_entrada_do_produto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -90,6 +82,7 @@
           <ScalarProperty Name="sl_salario" ColumnName="sl_salario" />
           <ScalarProperty Name="dt_data_de_contratacao" ColumnName="dt_data_de_contratacao" />
           <ScalarProperty Name="fun_cargo" ColumnName="fun_cargo" />
+          <ScalarProperty Name="dt_pagamento_do_funcionario" ColumnName="dt_pagamento_do_funcionario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -116,7 +109,7 @@
       <EntityTypeMapping TypeName="tccModel.tb_produto">
         <MappingFragment StoreEntitySet="tb_produto">
           <ScalarProperty Name="id_produto" ColumnName="id_produto" />
-          <ScalarProperty Name="nm_fornecedor_produto" ColumnName="nm_fornecedor_produto" />
+          <ScalarProperty Name="id_fornecedor_produto" ColumnName="id_fornecedor_produto" />
           <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
           <ScalarProperty Name="cat_categoria" ColumnName="cat_categoria" />
           <ScalarProperty Name="sb_sabor" ColumnName="sb_sabor" />

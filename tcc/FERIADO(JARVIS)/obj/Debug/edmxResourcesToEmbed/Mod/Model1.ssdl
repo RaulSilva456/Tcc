@@ -12,23 +12,13 @@
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
     <Property Name="tel_telefone" Type="varchar" MaxLength="11" />
   </EntityType>
-  <EntityType Name="tb_compras_cliente">
-    <Key>
-      <PropertyRef Name="id_compra" />
-    </Key>
-    <Property Name="id_compra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="dt_compra" Type="date" />
-    <Property Name="vl_compra" Type="decimal" Precision="15" Scale="5" />
-    <Property Name="nm_produto_estoque" Type="char" MaxLength="60" />
-    <Property Name="id_cliente_produto" Type="int" />
-  </EntityType>
   <EntityType Name="tb_despesas">
     <Key>
       <PropertyRef Name="id_despesas" />
     </Key>
     <Property Name="id_despesas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="15" Scale="5" />
-    <Property Name="dt_data" Type="date" />
+    <Property Name="dt_data_pagamento" Type="date" />
     <Property Name="tp_conta" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tb_estoque">
@@ -37,24 +27,26 @@
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
-    <Property Name="vl_validade_produto" Type="date" />
-    <Property Name="pr_preço" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="qtd_quantidade_do_produto" Type="int" />
+    <Property Name="pro_vencido" Type="bool" />
+    <Property Name="pr_preco" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="dt_saida_do_produto" Type="date" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
     <Key>
       <PropertyRef Name="id_folha_pagamento" />
     </Key>
     <Property Name="id_folha_pagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ds_inss" Type="decimal" Precision="10" Scale="5" />
-    <Property Name="hora_extra" Type="decimal" Precision="10" Scale="5" />
-    <Property Name="ad_gratificação" Type="decimal" Precision="10" Scale="5" />
-    <Property Name="imposto_renda" Type="decimal" Precision="10" Scale="5" />
-    <Property Name="vl_alimentação" Type="decimal" Precision="10" Scale="5" />
-    <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="ds_inss" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="hora_extra" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="ad_gratificação" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="imposto_renda" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="vl_alimentação" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="vl_transporte" Type="decimal" Precision="15" Scale="5" />
     <Property Name="ds_faltas" Type="int" />
-    <Property Name="sl_salario_liquido" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="sl_salario_liquido" Type="decimal" Precision="15" Scale="5" />
     <Property Name="id_funcionario" Type="int" />
-    <Property Name="sl_salario_bruto" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="sl_salario_bruto" Type="decimal" Precision="15" Scale="5" />
     <Property Name="dt_pagamento" Type="date" />
   </EntityType>
   <EntityType Name="tb_fornecedores">
@@ -68,7 +60,8 @@
     <Property Name="tl_telefone" Type="varchar" MaxLength="50" />
     <Property Name="fr_cep" Type="varchar" MaxLength="50" />
     <Property Name="fr_cnpj" Type="varchar" MaxLength="50" />
-    <Property Name="vl_valor_produto" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="vl_valor_produto" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="dt_entrada_do_produto" Type="date" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
     <Key>
@@ -80,10 +73,11 @@
     <Property Name="fun_rg" Type="int" />
     <Property Name="fun_cpf" Type="int" />
     <Property Name="fun_endereço" Type="varchar" MaxLength="50" />
-    <Property Name="ad_fgts" Type="decimal" Precision="10" Scale="5" />
-    <Property Name="sl_salario" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="ad_fgts" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="sl_salario" Type="decimal" Precision="15" Scale="5" />
     <Property Name="dt_data_de_contratacao" Type="date" />
     <Property Name="fun_cargo" Type="varchar" MaxLength="20" />
+    <Property Name="dt_pagamento_do_funcionario" Type="decimal" Precision="15" Scale="5" />
   </EntityType>
   <EntityType Name="tb_login">
     <Key>
@@ -94,20 +88,28 @@
     <Property Name="pes_senha" Type="varchar" MaxLength="20" />
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tb_mostruario">
+          <Property Name="id_produto_mostruario" Type="int" />
+          <Property Name="tp_produto" Type="varchar" MaxLength="100" />
+          <Property Name="vl_preco" Type="decimal" Precision="15" Scale="5" />
+          <Property Name="dt_vendido" Type="date" />
+        </EntityType>-->
   <EntityType Name="tb_pedido_cliente">
     <Key>
       <PropertyRef Name="id_pedido" />
     </Key>
     <Property Name="id_pedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="qtd_quantidade" Type="int" />
-    <Property Name="nm_produto_cliente" Type="varchar" MaxLength="60" />
+    <Property Name="nm_produto_cliente" Type="varchar" MaxLength="40" />
   </EntityType>
   <EntityType Name="tb_produto">
     <Key>
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nm_fornecedor_produto" Type="varchar" MaxLength="50" />
+    <Property Name="id_fornecedor_produto" Type="int" />
     <Property Name="nm_produto" Type="varchar" MaxLength="40" />
     <Property Name="cat_categoria" Type="varchar" MaxLength="10" />
     <Property Name="sb_sabor" Type="varchar" MaxLength="20" />
@@ -117,14 +119,13 @@
       <PropertyRef Name="id_venda" />
     </Key>
     <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="vl_venda" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="vl_venda" Type="decimal" Precision="15" Scale="5" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
     <Property Name="id_cliente_venda" Type="int" />
     <Property Name="dt_venda_produto" Type="date" />
   </EntityType>
   <EntityContainer Name="tccModelStoreContainer">
     <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" Schema="tcc" store:Type="Tables" />
-    <EntitySet Name="tb_compras_cliente" EntityType="Self.tb_compras_cliente" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_folhapagamento" EntityType="Self.tb_folhapagamento" Schema="tcc" store:Type="Tables" />
