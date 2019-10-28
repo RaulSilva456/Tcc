@@ -114,7 +114,7 @@ warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key
             <PropertyRef Name="id_produto" />
           </Key>
           <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="id_fornecedor_produto" Type="int" />
+          <Property Name="nm_fornecedor_produto" Type="varchar" MaxLength="10" />
           <Property Name="nm_produto" Type="varchar" MaxLength="40" />
           <Property Name="cat_categoria" Type="varchar" MaxLength="10" />
           <Property Name="sb_sabor" Type="varchar" MaxLength="20" />
@@ -247,7 +247,7 @@ warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key
             <PropertyRef Name="id_produto" />
           </Key>
           <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_fornecedor_produto" Type="Int32" />
+          <Property Name="nm_fornecedor_produto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="nm_produto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="cat_categoria" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="sb_sabor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -388,7 +388,7 @@ warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key
             <EntityTypeMapping TypeName="tccModel.tb_produto">
               <MappingFragment StoreEntitySet="tb_produto">
                 <ScalarProperty Name="id_produto" ColumnName="id_produto" />
-                <ScalarProperty Name="id_fornecedor_produto" ColumnName="id_fornecedor_produto" />
+                <ScalarProperty Name="nm_fornecedor_produto" ColumnName="nm_fornecedor_produto" />
                 <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
                 <ScalarProperty Name="cat_categoria" ColumnName="cat_categoria" />
                 <ScalarProperty Name="sb_sabor" ColumnName="sb_sabor" />

@@ -129,7 +129,7 @@ namespace FERIADO_JARVIS_.Telas
 
             // tabela.nm_fornecedor_produto = cboFornecedor.Text;
 
-
+            tabela.nm_fornecedor_produto = cboFornecedor.Text;
             tabela.cat_categoria = txtCategoria.Text;
             tabela.nm_produto = txtNomeProduto.Text;
             tabela.sb_sabor = txtSabor.Text;

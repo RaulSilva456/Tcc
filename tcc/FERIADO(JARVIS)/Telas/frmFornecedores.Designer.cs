@@ -32,6 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtValorPago = new System.Windows.Forms.TextBox();
@@ -47,9 +50,6 @@
             this.txtNMFornecedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -115,6 +115,33 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
+            // txtCNPJ
+            // 
+            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNPJ.Location = new System.Drawing.Point(249, 121);
+            this.txtCNPJ.Mask = "00.000.000/0000-00";
+            this.txtCNPJ.Name = "txtCNPJ";
+            this.txtCNPJ.Size = new System.Drawing.Size(111, 20);
+            this.txtCNPJ.TabIndex = 23;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(249, 69);
+            this.txtTelefone.Mask = "(00)0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(111, 20);
+            this.txtTelefone.TabIndex = 22;
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEP.Location = new System.Drawing.Point(249, 147);
+            this.txtCEP.Mask = "00000-000";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(111, 20);
+            this.txtCEP.TabIndex = 21;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -139,6 +166,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Deletar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // txtValorPago
             // 
@@ -179,6 +207,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label6
             // 
@@ -262,33 +291,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(252, 274);
             this.dataGridView1.TabIndex = 8;
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEP.Location = new System.Drawing.Point(249, 147);
-            this.txtCEP.Mask = "00000-000";
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(111, 20);
-            this.txtCEP.TabIndex = 21;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(249, 69);
-            this.txtTelefone.Mask = "(00)0000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(111, 20);
-            this.txtTelefone.TabIndex = 22;
-            // 
-            // txtCNPJ
-            // 
-            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNPJ.Location = new System.Drawing.Point(249, 121);
-            this.txtCNPJ.Mask = "00.000.000/0000-00";
-            this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.Size = new System.Drawing.Size(111, 20);
-            this.txtCNPJ.TabIndex = 23;
             // 
             // frmFornecedores
             // 

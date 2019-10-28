@@ -94,6 +94,48 @@ namespace FERIADO_JARVIS_.Telas
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
+            tabela.end_endereço = txtEndereço.Text;
+            tabela.fr_cep = txtCEP.Text;
+            tabela.fr_cnpj = txtCNPJ.Text;
+            tabela.nm_fornecedor = txtNMFornecedor.Text;
+            tabela.nm_produto = txtNMProduto.Text;
+            tabela.tl_telefone = txtTelefone.Text;
+            tabela.vl_valor_produto = Convert.ToDecimal(txtValorPago.Text);
+            Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
+            bs.inserir(tabela);
+            MessageBox.Show("Cadastrado");
+
+
+            //atualizar Datagrid
+            dataGridView1.DataSource = bs.listar();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
+            Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
+            bs.deletar(tabela);
+            MessageBox.Show("Deletado");
+            //atualizar Datagrid
+            dataGridView1.DataSource = bs.listar();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
+            tabela.end_endereço = txtEndereço.Text;
+            tabela.fr_cep = txtCEP.Text;
+            tabela.fr_cnpj = txtCNPJ.Text;
+            tabela.nm_fornecedor = txtNMFornecedor.Text;
+            tabela.nm_produto = txtNMProduto.Text;
+            tabela.tl_telefone = txtTelefone.Text;
+            tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
+            Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
+            bs.alterar(tabela);
+            MessageBox.Show("Alteração com sucesso");
+            //atualizar Datagrid
+            dataGridView1.DataSource = bs.listar();
 
         }
     }

@@ -109,7 +109,7 @@
       <EntityTypeMapping TypeName="tccModel.tb_produto">
         <MappingFragment StoreEntitySet="tb_produto">
           <ScalarProperty Name="id_produto" ColumnName="id_produto" />
-          <ScalarProperty Name="id_fornecedor_produto" ColumnName="id_fornecedor_produto" />
+          <ScalarProperty Name="nm_fornecedor_produto" ColumnName="nm_fornecedor_produto" />
           <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
           <ScalarProperty Name="cat_categoria" ColumnName="cat_categoria" />
           <ScalarProperty Name="sb_sabor" ColumnName="sb_sabor" />

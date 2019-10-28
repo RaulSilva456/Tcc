@@ -364,6 +364,9 @@
     <None Include="Resources\voltar icone.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\voltar icone2.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Mod\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -374,7 +377,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\voltar icone2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
