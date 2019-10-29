@@ -28,7 +28,7 @@
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
     <Property Name="qtd_quantidade_do_produto" Type="decimal" Precision="15" Scale="5" />
-    <Property Name="pro_vencido" Type="bool" />
+    <Property Name="pro_vencido" Type="varchar" MaxLength="50" />
     <Property Name="pr_preco" Type="decimal" Precision="15" Scale="5" />
     <Property Name="dt_saida_do_produto" Type="date" />
   </EntityType>

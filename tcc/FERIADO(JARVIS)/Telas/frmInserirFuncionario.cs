@@ -34,8 +34,8 @@ namespace FERIADO_JARVIS_.Telas
             mod.fun_endereço =  endereço.Text;
             mod.sl_salario =Convert.ToDecimal( salario.Text);
             mod.nm_funcionario = txtNomeFuncionario.Text;
-            mod.fun_cpf = cpf.Text;
-            mod.fun_rg = rg.Text;
+            mod.fun_cpf =  cpf.Text;
+            mod.fun_rg =  rg.Text;
             mod.dt_nasc = Convert.ToDateTime(nascimento.Value);
             bs.inserirFuncionario(mod);
             MessageBox.Show("inserido");
@@ -87,7 +87,7 @@ namespace FERIADO_JARVIS_.Telas
             tb.sl_salario = Convert.ToDecimal(salario.Text);
             tb.nm_funcionario = txtNomeFuncionario.Text;
             tb.fun_cpf = cpf.Text;
-            tb.fun_rg = rg.Text;
+            tb.fun_rg =rg.Text;
             tb.dt_nasc = Convert.ToDateTime(nascimento.Value);
 
            
@@ -144,7 +144,7 @@ namespace FERIADO_JARVIS_.Telas
             mod.sl_salario = Convert.ToDecimal(salario.Text);
             mod.nm_funcionario = txtNomeFuncionario.Text;
             mod.fun_cpf = cpf.Text;
-            mod.fun_rg = rg.Text;
+            mod.fun_rg =  rg.Text;
             mod.dt_nasc = Convert.ToDateTime(nascimento.Value);
             bs.inserirFuncionario(mod);
             MessageBox.Show("inserido");
@@ -164,8 +164,8 @@ namespace FERIADO_JARVIS_.Telas
             mod.fun_endereço = endereço.Text;
             mod.sl_salario = Convert.ToDecimal(salario.Text);
             mod.nm_funcionario = txtNomeFuncionario.Text;
-            mod.fun_cpf = cpf.Text;
-            mod.fun_rg = rg.Text;
+            mod.fun_cpf =  cpf.Text;
+            mod.fun_rg =  rg.Text;
             mod.dt_nasc = Convert.ToDateTime(nascimento.Value);
             bs.inserirFuncionario(mod);
             MessageBox.Show("inserido");

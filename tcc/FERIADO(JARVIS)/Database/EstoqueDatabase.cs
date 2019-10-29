@@ -12,6 +12,7 @@ namespace FERIADO_JARVIS_.Database
 
         public void inserir(Mod.tb_estoque tabela)
         {
+           
             md.tb_estoque.Add(tabela);
             md.SaveChanges();
         }
@@ -25,12 +26,13 @@ namespace FERIADO_JARVIS_.Database
         {
            
                 
-            Mod.tb_estoque altear = md.tb_estoque.FirstOrDefault(x => x.id_produto == tabela.id_produto);
+            Mod.tb_estoque altear = md.tb_estoque.First(x => x.id_produto == tabela.id_produto);
             altear.nm_produto = tabela.nm_produto;
             altear.pr_preco = tabela.pr_preco;
             altear.dt_saida_do_produto = tabela.dt_saida_do_produto ;
             altear.qtd_quantidade_do_produto = tabela.qtd_quantidade_do_produto;
             altear.pro_vencido = altear.pro_vencido;
+           
            
 
             md.SaveChanges();

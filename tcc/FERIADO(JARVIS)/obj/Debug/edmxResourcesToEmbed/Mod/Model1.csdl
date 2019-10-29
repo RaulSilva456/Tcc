@@ -28,7 +28,7 @@
     <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="qtd_quantidade_do_produto" Type="Decimal" />
-    <Property Name="pro_vencido" Type="Boolean" />
+    <Property Name="pro_vencido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="pr_preco" Type="Decimal" />
     <Property Name="dt_saida_do_produto" Type="DateTime" />
   </EntityType>

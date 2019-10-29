@@ -33,20 +33,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPreço = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rdbNao = new System.Windows.Forms.RadioButton();
+            this.dtpSaidaProduto = new System.Windows.Forms.DateTimePicker();
+            this.rdbSim = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Deletar = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rdbSim = new System.Windows.Forms.RadioButton();
-            this.dtpSaidaProduto = new System.Windows.Forms.DateTimePicker();
-            this.rdbNao = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPreço = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -120,114 +120,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // txtPreço
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(246, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 33);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Deletar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.txtPreço.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreço.Location = new System.Drawing.Point(73, 100);
+            this.txtPreço.Name = "txtPreço";
+            this.txtPreço.Size = new System.Drawing.Size(100, 20);
+            this.txtPreço.TabIndex = 35;
             // 
-            // Deletar
+            // label6
             // 
-            this.Deletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.Deletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Deletar.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.Deletar.Location = new System.Drawing.Point(153, 200);
-            this.Deletar.Name = "Deletar";
-            this.Deletar.Size = new System.Drawing.Size(87, 33);
-            this.Deletar.TabIndex = 23;
-            this.Deletar.Text = "Alterar";
-            this.Deletar.UseVisualStyleBackColor = false;
-            // 
-            // btnEstoque
-            // 
-            this.btnEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnEstoque.Location = new System.Drawing.Point(42, 200);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(105, 33);
-            this.btnEstoque.TabIndex = 21;
-            this.btnEstoque.Text = "Inserir";
-            this.btnEstoque.UseVisualStyleBackColor = false;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 24);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Vencido:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // rdbSim
-            // 
-            this.rdbSim.AutoSize = true;
-            this.rdbSim.Location = new System.Drawing.Point(87, 123);
-            this.rdbSim.Name = "rdbSim";
-            this.rdbSim.Size = new System.Drawing.Size(60, 28);
-            this.rdbSim.TabIndex = 26;
-            this.rdbSim.TabStop = true;
-            this.rdbSim.Text = "Sim";
-            this.rdbSim.UseVisualStyleBackColor = true;
-            // 
-            // dtpSaidaProduto
-            // 
-            this.dtpSaidaProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpSaidaProduto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpSaidaProduto.Location = new System.Drawing.Point(162, 154);
-            this.dtpSaidaProduto.Name = "dtpSaidaProduto";
-            this.dtpSaidaProduto.Size = new System.Drawing.Size(87, 20);
-            this.dtpSaidaProduto.TabIndex = 27;
-            this.dtpSaidaProduto.ValueChanged += new System.EventHandler(this.nascimento_ValueChanged);
-            // 
-            // rdbNao
-            // 
-            this.rdbNao.AutoSize = true;
-            this.rdbNao.Location = new System.Drawing.Point(147, 123);
-            this.rdbNao.Name = "rdbNao";
-            this.rdbNao.Size = new System.Drawing.Size(64, 28);
-            this.rdbNao.TabIndex = 28;
-            this.rdbNao.TabStop = true;
-            this.rdbNao.Text = "Não";
-            this.rdbNao.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 24);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Saida do Produto:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 24);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Nome do Produto:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(166, 28);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
-            this.txtNome.TabIndex = 31;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 24);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Preço:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtQuantidade
             // 
@@ -246,23 +155,115 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Quantidade:";
             // 
-            // txtPreço
+            // txtNome
             // 
-            this.txtPreço.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreço.Location = new System.Drawing.Point(73, 100);
-            this.txtPreço.Name = "txtPreço";
-            this.txtPreço.Size = new System.Drawing.Size(100, 20);
-            this.txtPreço.TabIndex = 35;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(166, 28);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.TabIndex = 31;
             // 
-            // label6
+            // label3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 24);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Preço:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 24);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Nome do Produto:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 24);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Saida do Produto:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // rdbNao
+            // 
+            this.rdbNao.AutoSize = true;
+            this.rdbNao.Location = new System.Drawing.Point(147, 123);
+            this.rdbNao.Name = "rdbNao";
+            this.rdbNao.Size = new System.Drawing.Size(64, 28);
+            this.rdbNao.TabIndex = 28;
+            this.rdbNao.TabStop = true;
+            this.rdbNao.Text = "Não";
+            this.rdbNao.UseVisualStyleBackColor = true;
+            // 
+            // dtpSaidaProduto
+            // 
+            this.dtpSaidaProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpSaidaProduto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpSaidaProduto.Location = new System.Drawing.Point(162, 154);
+            this.dtpSaidaProduto.Name = "dtpSaidaProduto";
+            this.dtpSaidaProduto.Size = new System.Drawing.Size(87, 20);
+            this.dtpSaidaProduto.TabIndex = 27;
+            this.dtpSaidaProduto.ValueChanged += new System.EventHandler(this.nascimento_ValueChanged);
+            // 
+            // rdbSim
+            // 
+            this.rdbSim.AutoSize = true;
+            this.rdbSim.Location = new System.Drawing.Point(87, 123);
+            this.rdbSim.Name = "rdbSim";
+            this.rdbSim.Size = new System.Drawing.Size(60, 28);
+            this.rdbSim.TabIndex = 26;
+            this.rdbSim.Text = "Sim";
+            this.rdbSim.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 24);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Vencido:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(246, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 33);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Deletar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Deletar
+            // 
+            this.Deletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Deletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Deletar.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Deletar.Location = new System.Drawing.Point(153, 200);
+            this.Deletar.Name = "Deletar";
+            this.Deletar.Size = new System.Drawing.Size(87, 33);
+            this.Deletar.TabIndex = 23;
+            this.Deletar.Text = "Alterar";
+            this.Deletar.UseVisualStyleBackColor = false;
+            this.Deletar.Click += new System.EventHandler(this.Deletar_Click_1);
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnEstoque.Location = new System.Drawing.Point(42, 200);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(105, 33);
+            this.btnEstoque.TabIndex = 21;
+            this.btnEstoque.Text = "Inserir";
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click_1);
             // 
             // frmEstoque
             // 
