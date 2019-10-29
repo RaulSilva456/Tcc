@@ -17,8 +17,8 @@ namespace FERIADO_JARVIS_.Mod
         public int id_funcionario { get; set; }
         public string nm_funcionario { get; set; }
         public Nullable<System.DateTime> dt_nasc { get; set; }
-        public Nullable<int> fun_rg { get; set; }
-        public Nullable<int> fun_cpf { get; set; }
+        public string fun_rg { get; set; }
+        public string fun_cpf { get; set; }
         public string fun_endereço { get; set; }
         public Nullable<decimal> ad_fgts { get; set; }
         public Nullable<decimal> sl_salario { get; set; }

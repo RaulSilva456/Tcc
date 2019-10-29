@@ -48,7 +48,7 @@
           <ScalarProperty Name="vl_transporte" ColumnName="vl_transporte" />
           <ScalarProperty Name="ds_faltas" ColumnName="ds_faltas" />
           <ScalarProperty Name="sl_salario_liquido" ColumnName="sl_salario_liquido" />
-          <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
+          <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />
           <ScalarProperty Name="sl_salario_bruto" ColumnName="sl_salario_bruto" />
           <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
         </MappingFragment>
@@ -96,6 +96,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tb_mostruario">
+      <EntityTypeMapping TypeName="tccModel.tb_mostruario">
+        <MappingFragment StoreEntitySet="tb_mostruario">
+          <ScalarProperty Name="id_produto_mostruario" ColumnName="id_produto_mostruario" />
+          <ScalarProperty Name="nm_fornecedor_produto" ColumnName="nm_fornecedor_produto" />
+          <ScalarProperty Name="nm_produtomostruario" ColumnName="nm_produtomostruario" />
+          <ScalarProperty Name="cat_categoria" ColumnName="cat_categoria" />
+          <ScalarProperty Name="sb_sabor" ColumnName="sb_sabor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_mostruariovenda">
+      <EntityTypeMapping TypeName="tccModel.tb_mostruariovenda">
+        <MappingFragment StoreEntitySet="tb_mostruariovenda">
+          <ScalarProperty Name="id_mostruariovenda" ColumnName="id_mostruariovenda" />
+          <ScalarProperty Name="nm_produto_mostruario" ColumnName="nm_produto_mostruario" />
+          <ScalarProperty Name="tp_produto" ColumnName="tp_produto" />
+          <ScalarProperty Name="vl_preco" ColumnName="vl_preco" />
+          <ScalarProperty Name="dt_vendido" ColumnName="dt_vendido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_pedido_cliente">
       <EntityTypeMapping TypeName="tccModel.tb_pedido_cliente">
         <MappingFragment StoreEntitySet="tb_pedido_cliente">
@@ -122,7 +144,7 @@
           <ScalarProperty Name="id_venda" ColumnName="id_venda" />
           <ScalarProperty Name="vl_venda" ColumnName="vl_venda" />
           <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
-          <ScalarProperty Name="id_cliente_venda" ColumnName="id_cliente_venda" />
+          <ScalarProperty Name="nm_cliente_venda" ColumnName="nm_cliente_venda" />
           <ScalarProperty Name="dt_venda_produto" ColumnName="dt_venda_produto" />
         </MappingFragment>
       </EntityTypeMapping>

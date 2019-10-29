@@ -32,6 +32,8 @@ namespace FERIADO_JARVIS_.Mod
         public virtual DbSet<tb_fornecedores> tb_fornecedores { get; set; }
         public virtual DbSet<tb_funcionarios> tb_funcionarios { get; set; }
         public virtual DbSet<tb_login> tb_login { get; set; }
+        public virtual DbSet<tb_mostruario> tb_mostruario { get; set; }
+        public virtual DbSet<tb_mostruariovenda> tb_mostruariovenda { get; set; }
         public virtual DbSet<tb_pedido_cliente> tb_pedido_cliente { get; set; }
         public virtual DbSet<tb_produto> tb_produto { get; set; }
         public virtual DbSet<tb_venda_cliente> tb_venda_cliente { get; set; }

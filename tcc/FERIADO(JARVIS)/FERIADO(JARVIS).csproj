@@ -132,6 +132,12 @@
     <Compile Include="Mod\tb_login.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Mod\tb_mostruario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mod\tb_mostruariovenda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Mod\tb_pedido_cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="039f2f34dc3548bdadb3da3fd5bb6c1c" Name="Diagram1">
+      <Diagram DiagramId="e29502d50cd345ab8bc8423d07bcfa83" Name="Diagram1">
         <EntityTypeShape EntityType="tccModel.tb_clientes" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="tccModel.tb_despesas" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="tccModel.tb_estoque" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -12,9 +12,11 @@
         <EntityTypeShape EntityType="tccModel.tb_fornecedores" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="tccModel.tb_funcionarios" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="tccModel.tb_login" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="tccModel.tb_pedido_cliente" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="tccModel.tb_produto" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="tccModel.tb_venda_cliente" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tccModel.tb_mostruario" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tccModel.tb_mostruariovenda" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tccModel.tb_pedido_cliente" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tccModel.tb_produto" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tccModel.tb_venda_cliente" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -27,7 +27,7 @@
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
-    <Property Name="qtd_quantidade_do_produto" Type="int" />
+    <Property Name="qtd_quantidade_do_produto" Type="decimal" Precision="15" Scale="5" />
     <Property Name="pro_vencido" Type="bool" />
     <Property Name="pr_preco" Type="decimal" Precision="15" Scale="5" />
     <Property Name="dt_saida_do_produto" Type="date" />
@@ -45,9 +45,9 @@
     <Property Name="vl_transporte" Type="decimal" Precision="15" Scale="5" />
     <Property Name="ds_faltas" Type="int" />
     <Property Name="sl_salario_liquido" Type="decimal" Precision="15" Scale="5" />
-    <Property Name="id_funcionario" Type="int" />
+    <Property Name="nm_funcionario" Type="varchar" MaxLength="50" />
     <Property Name="sl_salario_bruto" Type="decimal" Precision="15" Scale="5" />
-    <Property Name="dt_pagamento" Type="date" />
+    <Property Name="dt_pagamento" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_fornecedores">
     <Key>
@@ -61,7 +61,7 @@
     <Property Name="fr_cep" Type="varchar" MaxLength="50" />
     <Property Name="fr_cnpj" Type="varchar" MaxLength="50" />
     <Property Name="vl_valor_produto" Type="decimal" Precision="15" Scale="5" />
-    <Property Name="dt_entrada_do_produto" Type="date" />
+    <Property Name="dt_entrada_do_produto" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_funcionarios">
     <Key>
@@ -70,12 +70,12 @@
     <Property Name="id_funcionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_funcionario" Type="varchar" MaxLength="50" />
     <Property Name="dt_nasc" Type="datetime" Precision="0" />
-    <Property Name="fun_rg" Type="int" />
-    <Property Name="fun_cpf" Type="int" />
+    <Property Name="fun_rg" Type="varchar" MaxLength="50" />
+    <Property Name="fun_cpf" Type="varchar" MaxLength="50" />
     <Property Name="fun_endereço" Type="varchar" MaxLength="50" />
     <Property Name="ad_fgts" Type="decimal" Precision="15" Scale="5" />
     <Property Name="sl_salario" Type="decimal" Precision="15" Scale="5" />
-    <Property Name="dt_data_de_contratacao" Type="date" />
+    <Property Name="dt_data_de_contratacao" Type="datetime" Precision="0" />
     <Property Name="fun_cargo" Type="varchar" MaxLength="20" />
     <Property Name="dt_pagamento_do_funcionario" Type="decimal" Precision="15" Scale="5" />
   </EntityType>
@@ -88,14 +88,26 @@
     <Property Name="pes_senha" Type="varchar" MaxLength="20" />
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="tb_mostruario">
-          <Property Name="id_produto_mostruario" Type="int" />
-          <Property Name="tp_produto" Type="varchar" MaxLength="100" />
-          <Property Name="vl_preco" Type="decimal" Precision="15" Scale="5" />
-          <Property Name="dt_vendido" Type="date" />
-        </EntityType>-->
+  <EntityType Name="tb_mostruario">
+    <Key>
+      <PropertyRef Name="id_produto_mostruario" />
+    </Key>
+    <Property Name="id_produto_mostruario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_fornecedor_produto" Type="varchar" MaxLength="10" />
+    <Property Name="nm_produtomostruario" Type="varchar" MaxLength="40" />
+    <Property Name="cat_categoria" Type="varchar" MaxLength="10" />
+    <Property Name="sb_sabor" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tb_mostruariovenda">
+    <Key>
+      <PropertyRef Name="id_mostruariovenda" />
+    </Key>
+    <Property Name="id_mostruariovenda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_produto_mostruario" Type="varchar" MaxLength="50" />
+    <Property Name="tp_produto" Type="varchar" MaxLength="100" />
+    <Property Name="vl_preco" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="dt_vendido" Type="date" />
+  </EntityType>
   <EntityType Name="tb_pedido_cliente">
     <Key>
       <PropertyRef Name="id_pedido" />
@@ -109,7 +121,7 @@ warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nm_fornecedor_produto" Type="varchar" MaxLength="10" />
+    <Property Name="nm_fornecedor_produto" Type="varchar" MaxLength="50" />
     <Property Name="nm_produto" Type="varchar" MaxLength="40" />
     <Property Name="cat_categoria" Type="varchar" MaxLength="10" />
     <Property Name="sb_sabor" Type="varchar" MaxLength="20" />
@@ -121,7 +133,7 @@ warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key
     <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="vl_venda" Type="decimal" Precision="15" Scale="5" />
     <Property Name="nm_produto" Type="varchar" MaxLength="50" />
-    <Property Name="id_cliente_venda" Type="int" />
+    <Property Name="nm_cliente_venda" Type="varchar" MaxLength="50" />
     <Property Name="dt_venda_produto" Type="date" />
   </EntityType>
   <EntityContainer Name="tccModelStoreContainer">
@@ -132,6 +144,8 @@ warning 6013: The table/view 'def.tcc.tb_mostruario' does not have a primary key
     <EntitySet Name="tb_fornecedores" EntityType="Self.tb_fornecedores" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_funcionarios" EntityType="Self.tb_funcionarios" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_login" EntityType="Self.tb_login" Schema="tcc" store:Type="Tables" />
+    <EntitySet Name="tb_mostruario" EntityType="Self.tb_mostruario" Schema="tcc" store:Type="Tables" />
+    <EntitySet Name="tb_mostruariovenda" EntityType="Self.tb_mostruariovenda" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_pedido_cliente" EntityType="Self.tb_pedido_cliente" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_produto" EntityType="Self.tb_produto" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_venda_cliente" EntityType="Self.tb_venda_cliente" Schema="tcc" store:Type="Tables" />

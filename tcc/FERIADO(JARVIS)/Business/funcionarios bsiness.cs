@@ -11,8 +11,24 @@ namespace FERIADO_JARVIS_.Business
         Database.Database_Funcionarios data = new Database.Database_Funcionarios();
         public void inserirFuncionario(Mod.tb_funcionarios Tabela)
         {
-            
-            data.inserirFuncionario(Tabela);
+            if (Tabela.nm_funcionario == string.Empty)
+
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Naoaoo");
+                }
+        
+
+
+
+
+
+        data.inserirFuncionario(Tabela);
         }
         public void deleta(   Mod.tb_funcionarios tabela)
         {
