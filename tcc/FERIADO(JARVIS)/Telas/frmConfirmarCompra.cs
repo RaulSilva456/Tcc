@@ -32,7 +32,8 @@ namespace FERIADO_JARVIS_.Telas
 
         private void frmConfirmarCompra_Load(object sender, EventArgs e)
         {
-           
+            Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
+            bs.listar();
 
         }
 
@@ -41,6 +42,11 @@ namespace FERIADO_JARVIS_.Telas
             frmMenu r = new frmMenu();
             r.Show();
             Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

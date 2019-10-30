@@ -11,6 +11,46 @@ namespace FERIADO_JARVIS_.Business
         Database.DatabaseProduto db = new Database.DatabaseProduto();
         public void inerir(Mod.tb_produto tabela)
         {
+
+            if(tabela.cat_categoria == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Categoria Vazio");
+                }
+
+            if (tabela.nm_produto == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Nome produto Vazio");
+                }
+
+            if (tabela.sb_sabor == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Sabor Vazio");
+                }
+
+            
+
+
+
+
+
             db.inerir(tabela);
         }
         public void deletar(Mod.tb_produto tabela)
@@ -18,7 +58,41 @@ namespace FERIADO_JARVIS_.Business
             db.deletar(tabela);
         }
         public void alterar(Mod.tb_produto tabela)
+
         {
+            if (tabela.cat_categoria == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Categoria Vazio");
+                }
+
+            if (tabela.nm_produto == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Nome produto Vazio");
+                }
+
+            if (tabela.sb_sabor == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Sabor Vazio");
+                }
+
             db.alterar(tabela);
            
         }

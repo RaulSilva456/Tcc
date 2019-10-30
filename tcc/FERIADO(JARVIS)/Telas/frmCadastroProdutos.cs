@@ -118,7 +118,9 @@ namespace FERIADO_JARVIS_.Telas
 
         private void btnInserirProduto_Click_1(object sender, EventArgs e)
         {
-            Mod.tb_produto tabela = new Mod.tb_produto();
+            try
+            {
+                Mod.tb_produto tabela = new Mod.tb_produto();
 
             Business.Business_Produtos bs = new Business.Business_Produtos();
 
@@ -127,8 +129,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
 
-            // tabela.nm_fornecedor_produto = cboFornecedor.Text;
-
+            
             tabela.nm_fornecedor_produto = cboFornecedor.Text;
             tabela.cat_categoria = txtCategoria.Text;
             tabela.nm_produto = txtNomeProduto.Text;
@@ -142,6 +143,79 @@ namespace FERIADO_JARVIS_.Telas
 
             //Atualizar Datagrid
             dgtFuncionario.DataSource = bs.listar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+           
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Mod.tb_produto tabela = new Mod.tb_produto();
+
+            Business.Business_Produtos bs = new Business.Business_Produtos();
+
+            tabela.nm_fornecedor_produto = cboFornecedor.Text;
+            tabela.cat_categoria = txtCategoria.Text;
+            tabela.nm_produto = txtNomeProduto.Text;
+            tabela.sb_sabor = txtSabor.Text;
+
+
+
+
+            bs.alterar(tabela);
+            MessageBox.Show("Alterado Com Sucesso");
+            //Atualizar Datagrid
+            dgtFuncionario.DataSource = bs.listar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+           
+
+
+
+
+
+
+
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            { Mod.tb_produto tabela = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_produto;
+
+            Business.Business_Produtos bs = new Business.Business_Produtos();
+            bs.deletar(tabela);
+            MessageBox.Show("Delatado Com Sucesso");
+            dgtFuncionario.DataSource = bs.listar();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

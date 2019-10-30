@@ -24,6 +24,6 @@ namespace FERIADO_JARVIS_.Mod
         public Nullable<decimal> sl_salario { get; set; }
         public Nullable<System.DateTime> dt_data_de_contratacao { get; set; }
         public string fun_cargo { get; set; }
-        public Nullable<decimal> dt_pagamento_do_funcionario { get; set; }
+        public Nullable<System.DateTime> dt_pagamento_do_funcionario { get; set; }
     }
 }

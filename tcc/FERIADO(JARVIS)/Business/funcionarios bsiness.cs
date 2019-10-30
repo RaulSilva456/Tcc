@@ -11,6 +11,8 @@ namespace FERIADO_JARVIS_.Business
         Database.Database_Funcionarios data = new Database.Database_Funcionarios();
         public void inserirFuncionario(Mod.tb_funcionarios Tabela)
         {
+            //validacoes
+
             if (Tabela.nm_funcionario == string.Empty)
 
                 try
@@ -19,9 +21,103 @@ namespace FERIADO_JARVIS_.Business
                 }
                 catch (Exception)
                 {
-
-                    throw new ArgumentException("Naoaoo");
+                    
+                    throw new ArgumentException("Campo  Nome Funcionario Vazio");
+           
                 }
+            
+            if(Tabela.fun_cpf == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Cpf Vazio");
+                }
+            
+            if(Tabela.fun_endereço == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Endereço Vazio");
+
+                }
+
+            if(Tabela.fun_rg == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Rg Vazio");
+                }
+          
+            if(Tabela.fun_cargo == string.Empty)
+                try
+                {
+                    throw new Exception();
+
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Cargo Vazio");
+                }
+            if(Tabela.dt_nasc == DateTime.Now)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Data de Nacimento Invalida");
+
+                }
+            if(Tabela.dt_pagamento_do_funcionario < DateTime.Now)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Data De Pagamento Invalida");
+                }
+            if(Tabela.ad_fgts == 0)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Fgts Invalido ");
+                }
+            if(Tabela.sl_salario == 0)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Salario Invalido");
+                    
+                }
+            
+            
+
+            
+
         
 
 
@@ -36,10 +132,113 @@ namespace FERIADO_JARVIS_.Business
             
 
         }
-        public void alterar(Mod.tb_funcionarios tabela)
+        public void alterar(Mod.tb_funcionarios Tabela)
         {
-           
-            data.alterar(tabela);
+            // validacoes
+
+            if (Tabela.nm_funcionario == string.Empty)
+
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo  Nome Funcionario Vazio");
+
+                }
+
+            if (Tabela.fun_cpf == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Cpf Vazio");
+                }
+
+            if (Tabela.fun_endereço == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Endereço Vazio");
+
+                }
+
+            if (Tabela.fun_rg == string.Empty)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Rg Vazio");
+                }
+
+            if (Tabela.fun_cargo == string.Empty)
+                try
+                {
+                    throw new Exception();
+
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Cargo Vazio");
+                }
+            if (Tabela.dt_nasc == DateTime.Now)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Data de Nacimento Invalida");
+
+                }
+            if (Tabela.dt_pagamento_do_funcionario < DateTime.Now)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Data De Pagamento Invalida");
+                }
+            if (Tabela.ad_fgts == 0)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Fgts Invalido ");
+                }
+            if (Tabela.sl_salario == 0)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Salario Invalido");
+
+                }
+
+
+            data.alterar(Tabela);
         }
         public List<Mod.tb_funcionarios> consultarFuncionarios()
         {

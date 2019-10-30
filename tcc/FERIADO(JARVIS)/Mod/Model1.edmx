@@ -15,7 +15,7 @@
           <Property Name="doc_rg" Type="varchar" MaxLength="50" />
           <Property Name="doc_cep" Type="varchar" MaxLength="50" />
           <Property Name="pes_email" Type="varchar" MaxLength="50" />
-          <Property Name="tel_telefone" Type="varchar" MaxLength="11" />
+          <Property Name="tel_telefone" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tb_despesas">
           <Key>
@@ -82,7 +82,7 @@
           <Property Name="sl_salario" Type="decimal" Precision="15" Scale="5" />
           <Property Name="dt_data_de_contratacao" Type="datetime" Precision="0" />
           <Property Name="fun_cargo" Type="varchar" MaxLength="20" />
-          <Property Name="dt_pagamento_do_funcionario" Type="decimal" Precision="15" Scale="5" />
+          <Property Name="dt_pagamento_do_funcionario" Type="datetime" Precision="0" />
         </EntityType>
         <EntityType Name="tb_login">
           <Key>
@@ -170,7 +170,7 @@
           <Property Name="doc_rg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="doc_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="tel_telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="tel_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_despesas">
           <Key>
@@ -237,7 +237,7 @@
           <Property Name="sl_salario" Type="Decimal" />
           <Property Name="dt_data_de_contratacao" Type="DateTime" />
           <Property Name="fun_cargo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="dt_pagamento_do_funcionario" Type="Decimal" />
+          <Property Name="dt_pagamento_do_funcionario" Type="DateTime" />
         </EntityType>
         <EntityType Name="tb_login">
           <Key>

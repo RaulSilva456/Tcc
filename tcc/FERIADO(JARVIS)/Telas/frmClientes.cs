@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,6 +34,24 @@ namespace FERIADO_JARVIS_.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
             Mod.tb_clientes tabela = new Mod.tb_clientes();
             tabela.doc_cep = txtCep.Text;
             tabela.doc_rg = txtRg.Text;
@@ -42,17 +61,48 @@ namespace FERIADO_JARVIS_.Telas
             tabela.tel_telefone = txtTelefone.Text;
 
             Business.BusinessCliente bs = new Business.BusinessCliente();
-            bs.inserir(tabela);
-            MessageBox.Show(" Cadastrado");
+           
+              
+
+
+
+                Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+
+
+
+                if (rg.IsMatch(tabela.pes_email))
+                {
+                    bs.inserir(tabela);
+                    MessageBox.Show(" Cadastrado");
+
+                }
+                else
+                {
+                    MessageBox.Show("Email Invalido");
+                }
+
+
+
+
+
 
             //atualizar Datagrid
-             dataGridView1.DataSource = bs.consu();
+            dataGridView1.DataSource = bs.consu();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-
-            Mod.tb_clientes tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_clientes;
+            try
+            {Mod.tb_clientes tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_clientes;
             Business.BusinessCliente bs = new Business.BusinessCliente();
 
             bs.remover(tabela);
@@ -60,11 +110,21 @@ namespace FERIADO_JARVIS_.Telas
             //atualizar Datagrid 
             dataGridView1.DataSource = bs.consu();
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-            Mod.tb_clientes tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_clientes;
+
+            try
+            {Mod.tb_clientes tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_clientes;
             tabela.doc_cep = txtCep.Text;
             tabela.doc_rg = txtRg.Text;
             tabela.end_endereco = txtEndereço.Text;
@@ -74,16 +134,34 @@ namespace FERIADO_JARVIS_.Telas
 
 
             Business.BusinessCliente bs = new Business.BusinessCliente();
-            bs.alterar(tabela);
+
+                Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+
+                if(rg.IsMatch((tabela.pes_email)))
+                {
+                bs.alterar(tabela);
             MessageBox.Show("Alterado Com sucesso");
+
+                }
+                else
+                {
+                    MessageBox.Show("Email Invalido");
+
+                }
+
 
             //atualizar Datagrid 
             dataGridView1.DataSource = bs.consu();
-        }
 
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+            
+
+    
         }
     }
 }

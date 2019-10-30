@@ -10,7 +10,7 @@
     <Property Name="doc_rg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="doc_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="tel_telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="tel_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tb_despesas">
     <Key>
@@ -77,7 +77,7 @@
     <Property Name="sl_salario" Type="Decimal" />
     <Property Name="dt_data_de_contratacao" Type="DateTime" />
     <Property Name="fun_cargo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="dt_pagamento_do_funcionario" Type="Decimal" />
+    <Property Name="dt_pagamento_do_funcionario" Type="DateTime" />
   </EntityType>
   <EntityType Name="tb_login">
     <Key>

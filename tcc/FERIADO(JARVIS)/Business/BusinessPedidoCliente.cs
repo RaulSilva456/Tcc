@@ -12,6 +12,18 @@ namespace FERIADO_JARVIS_.Business
 
         public void inseri(Mod.tb_pedido_cliente tabela)
         {
+           if(tabela.nm_produto_cliente == string.Empty)
+                try
+                {
+                    throw new Exception();
+
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Nome Produto Invalido");
+                }
+
             db.inseri(tabela);
         }
         public void deletar(Mod.tb_pedido_cliente tabela)

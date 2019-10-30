@@ -10,7 +10,7 @@
     <Property Name="doc_rg" Type="varchar" MaxLength="50" />
     <Property Name="doc_cep" Type="varchar" MaxLength="50" />
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
-    <Property Name="tel_telefone" Type="varchar" MaxLength="11" />
+    <Property Name="tel_telefone" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tb_despesas">
     <Key>
@@ -77,7 +77,7 @@
     <Property Name="sl_salario" Type="decimal" Precision="15" Scale="5" />
     <Property Name="dt_data_de_contratacao" Type="datetime" Precision="0" />
     <Property Name="fun_cargo" Type="varchar" MaxLength="20" />
-    <Property Name="dt_pagamento_do_funcionario" Type="decimal" Precision="15" Scale="5" />
+    <Property Name="dt_pagamento_do_funcionario" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_login">
     <Key>

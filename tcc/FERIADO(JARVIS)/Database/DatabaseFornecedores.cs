@@ -31,6 +31,7 @@ namespace FERIADO_JARVIS_.Database
             alterar.fr_cnpj = tabela.fr_cnpj;
             alterar.fr_cep = tabela.fr_cep;
             alterar.end_endereço = tabela.end_endereço;
+            alterar.dt_entrada_do_produto = tabela.dt_entrada_do_produto;
             md.SaveChanges();
 
             

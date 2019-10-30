@@ -46,55 +46,24 @@ namespace FERIADO_JARVIS_.Telas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
-            tabela.end_endereço = txtEndereço.Text;
-            tabela.fr_cep =txtCEP.Text;
-            tabela.fr_cnpj = txtCNPJ.Text;
-            tabela.nm_fornecedor = txtNMFornecedor.Text;
-            tabela.nm_produto = txtNMProduto.Text;
-            tabela.tl_telefone =  txtTelefone.Text;
-            tabela.vl_valor_produto = Convert.ToDecimal(txtValorPago.Text);
-            Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
-            bs.inserir(tabela);
-            MessageBox.Show("Cadastrado");
-            
-            
-            //atualizar Datagrid
-            dataGridView1.DataSource = bs.listar();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
-            Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
-            bs.deletar(tabela);
-            MessageBox.Show("Deletado");
-            //atualizar Datagrid
-            dataGridView1.DataSource = bs.listar();
+           
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
-            tabela.end_endereço = txtEndereço.Text;
-            tabela.fr_cep = txtCEP.Text;
-            tabela.fr_cnpj = txtCNPJ.Text;
-            tabela.nm_fornecedor = txtNMFornecedor.Text;
-            tabela.nm_produto = txtNMProduto.Text;
-            tabela.tl_telefone = txtTelefone.Text;
-            tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
-            Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
-            bs.alterar(tabela);
-            MessageBox.Show("Alteração com sucesso");
-            //atualizar Datagrid
-            dataGridView1.DataSource = bs.listar();
 
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
+            try
+            { Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;
@@ -102,6 +71,7 @@ namespace FERIADO_JARVIS_.Telas
             tabela.nm_produto = txtNMProduto.Text;
             tabela.tl_telefone = txtTelefone.Text;
             tabela.vl_valor_produto = Convert.ToDecimal(txtValorPago.Text);
+             tabela.dt_entrada_do_produto = DataProduto.Value;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.inserir(tabela);
             MessageBox.Show("Cadastrado");
@@ -109,21 +79,41 @@ namespace FERIADO_JARVIS_.Telas
 
             //atualizar Datagrid
             dataGridView1.DataSource = bs.listar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
+           
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
+            try
+            { Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.deletar(tabela);
             MessageBox.Show("Deletado");
             //atualizar Datagrid
             dataGridView1.DataSource = bs.listar();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Erro Volta Mais Tarde ");
+            }
+
+           
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
+            try
+            {Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;
@@ -136,6 +126,14 @@ namespace FERIADO_JARVIS_.Telas
             MessageBox.Show("Alteração com sucesso");
             //atualizar Datagrid
             dataGridView1.DataSource = bs.listar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
 
         }
     }
