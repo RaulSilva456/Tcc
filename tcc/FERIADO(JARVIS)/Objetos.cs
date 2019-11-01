@@ -13,7 +13,7 @@ namespace FERIADO_JARVIS_
         {
          
 
-            var usuario = md.tb_login.FirstOrDefault(x => x.nm_nome == login && x.pes_senha == senha && x.nm_nome == email);
+            var usuario = md.tb_login.FirstOrDefault(x =>( x.nm_nome == login || x.pes_email == email) && x.pes_senha == senha );
             if (usuario != null)
             {
                 return true;

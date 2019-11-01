@@ -19,35 +19,27 @@ namespace FERIADO_JARVIS_.Telas
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Close();
+       
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            frmSuprimentos r = new frmSuprimentos();
-            r.Show();
-            Hide();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            frmRH r = new frmRH();
-            r.Show();
-            Hide();
+           
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            frmFinanceiro r = new frmFinanceiro();
-            r.Show();
-            Hide();
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            frmEstoqueDirecionador r = new frmEstoqueDirecionador();
-            r.Show();
-            Hide();
+           
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -73,6 +65,44 @@ namespace FERIADO_JARVIS_.Telas
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            frmRH r = new frmRH();
+            r.Show();
+            Hide();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            frmFinanceiro r = new frmFinanceiro();
+            r.Show();
+            Hide();
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            frmSuprimentos r = new frmSuprimentos();
+            r.Show();
+            Hide();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            frmEstoqueDirecionador r = new frmEstoqueDirecionador();
+            r.Show();
+            Hide();
         }
     }
 }

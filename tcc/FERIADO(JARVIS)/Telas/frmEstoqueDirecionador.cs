@@ -16,5 +16,12 @@ namespace FERIADO_JARVIS_.Telas
         {
             InitializeComponent();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
+        }
     }
 }

@@ -25,26 +25,44 @@ namespace FERIADO_JARVIS_.Telas
         private void button1_Click(object sender, EventArgs e)
         {
            
-
-            Objetos funcao = new Objetos();
-
             string login, senha,email;
             login = txtNome.Text;
             senha = txtSenha.Text;
             email = txtNome.Text;
             
 
-            if(!funcao.login(login,senha,email))
+            Objetos funcao = new Objetos();
+
+            if(txtNome.Text == string.Empty)
             {
-                MessageBox.Show("Campos inválidos", "ATENÇÃO");
+                MessageBox.Show("Campo Nome Vazio");
+                
+            }
+           else  if  (txtSenha.Text == string.Empty)
+            {
+                MessageBox.Show("Campo Senha Vazio");
             }
             else
             {
-                MessageBox.Show("Logado");
-                frmSplash r = new frmSplash();
-                r.Show();
-                Hide();
+                if (funcao.login(login,senha,email)== false)
+                {
+                    MessageBox.Show("Senha Ou Usuario Incorretos");
+                }
+                else
+                {
+                    
+                    frmSplash r = new frmSplash();
+                    r.Show();
+                    Hide();
+
+                }
+
+
+
             }
+            
+
+
 
         
         }
@@ -138,5 +156,9 @@ namespace FERIADO_JARVIS_.Telas
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+                    }
     }
 }

@@ -19,10 +19,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
-
+           
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -148,6 +145,18 @@ namespace FERIADO_JARVIS_.Telas
             }
             
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

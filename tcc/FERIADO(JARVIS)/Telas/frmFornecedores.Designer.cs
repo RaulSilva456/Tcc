@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DataProduto = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
@@ -50,8 +52,7 @@
             this.txtNMFornecedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DataProduto = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -61,22 +62,24 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::FERIADO_JARVIS_.Properties.Resources.saida_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(638, 3);
+            this.pictureBox1.Image = global::FERIADO_JARVIS_.Properties.Resources.voltar_icone2;
+            this.pictureBox1.Location = new System.Drawing.Point(671, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 49);
+            this.panel1.Size = new System.Drawing.Size(708, 49);
             this.panel1.TabIndex = 9;
             // 
             // label1
@@ -118,6 +121,27 @@
             this.groupBox1.Size = new System.Drawing.Size(460, 287);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
+            // 
+            // DataProduto
+            // 
+            this.DataProduto.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataProduto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DataProduto.Location = new System.Drawing.Point(247, 204);
+            this.DataProduto.Name = "DataProduto";
+            this.DataProduto.Size = new System.Drawing.Size(113, 22);
+            this.DataProduto.TabIndex = 45;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(57, 205);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(184, 24);
+            this.label11.TabIndex = 44;
+            this.label11.Text = " Entrega do Produto:";
             // 
             // txtCNPJ
             // 
@@ -293,29 +317,19 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(467, 63);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(252, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(242, 274);
             this.dataGridView1.TabIndex = 8;
             // 
-            // DataProduto
+            // label12
             // 
-            this.DataProduto.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataProduto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DataProduto.Location = new System.Drawing.Point(247, 204);
-            this.DataProduto.Name = "DataProduto";
-            this.DataProduto.Size = new System.Drawing.Size(113, 22);
-            this.DataProduto.TabIndex = 45;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(57, 205);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(184, 24);
-            this.label11.TabIndex = 44;
-            this.label11.Text = " Entrega do Produto:";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(680, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(25, 24);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "X";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // frmFornecedores
             // 
@@ -369,5 +383,6 @@
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.DateTimePicker DataProduto;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -37,8 +37,6 @@
             this.panelErro = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblEsqueceuSenha = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -95,8 +93,6 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.panelErro);
             this.groupBox1.Controls.Add(this.lblEsqueceuSenha);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
@@ -145,22 +141,6 @@
             this.lblEsqueceuSenha.Text = "Esqueceu senha?";
             this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(338, 123);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 2);
-            this.panel2.TabIndex = 15;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(338, 162);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 2);
-            this.panel1.TabIndex = 14;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -201,7 +181,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(268, 105);
+            this.label4.Location = new System.Drawing.Point(269, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 7;
@@ -210,12 +190,12 @@
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.White;
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSenha.Location = new System.Drawing.Point(338, 148);
+            this.txtSenha.Location = new System.Drawing.Point(338, 142);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(110, 15);
+            this.txtSenha.Size = new System.Drawing.Size(110, 22);
             this.txtSenha.TabIndex = 4;
             this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
@@ -237,11 +217,11 @@
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.Location = new System.Drawing.Point(338, 110);
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.Location = new System.Drawing.Point(338, 105);
             this.txtNome.MaxLength = 35;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(144, 15);
+            this.txtNome.Size = new System.Drawing.Size(110, 22);
             this.txtNome.TabIndex = 3;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
@@ -278,8 +258,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
