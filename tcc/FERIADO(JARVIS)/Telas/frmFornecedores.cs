@@ -63,7 +63,13 @@ namespace FERIADO_JARVIS_.Telas
         private void button3_Click_1(object sender, EventArgs e)
         {
             try
-            { Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
+            {
+                if(txtValorPago.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Valor Pago Vazio");
+                }
+                
+                Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;
@@ -113,7 +119,14 @@ namespace FERIADO_JARVIS_.Telas
         private void button1_Click_1(object sender, EventArgs e)
         {
             try
-            {Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
+            {
+
+                if (txtValorPago.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Valor Pago Vazio");
+                }
+
+                Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;

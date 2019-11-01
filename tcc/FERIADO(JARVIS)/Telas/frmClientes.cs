@@ -51,7 +51,7 @@ namespace FERIADO_JARVIS_.Telas
         private void Button1_Click_1(object sender, EventArgs e)
         {
             try
-            {
+            {Business.BusinessCliente bs = new Business.BusinessCliente();
             Mod.tb_clientes tabela = new Mod.tb_clientes();
             tabela.doc_cep = txtCep.Text;
             tabela.doc_rg = txtRg.Text;
@@ -60,11 +60,6 @@ namespace FERIADO_JARVIS_.Telas
             tabela.pes_email = txtEmail.Text;
             tabela.tel_telefone = txtTelefone.Text;
 
-            Business.BusinessCliente bs = new Business.BusinessCliente();
-           
-              
-
-
 
                 Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
@@ -72,14 +67,23 @@ namespace FERIADO_JARVIS_.Telas
 
                 if (rg.IsMatch(tabela.pes_email))
                 {
-                    bs.inserir(tabela);
-                    MessageBox.Show(" Cadastrado");
+                bs.inserir(tabela);
+                MessageBox.Show("Cadastrado");
 
                 }
                 else
                 {
                     MessageBox.Show("Email Invalido");
                 }
+
+
+                    
+           
+              
+
+
+
+                
 
 
 

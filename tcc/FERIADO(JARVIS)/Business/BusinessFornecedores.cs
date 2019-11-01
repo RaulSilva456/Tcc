@@ -84,7 +84,7 @@ namespace FERIADO_JARVIS_.Business
                     throw new ArgumentException("Campo Telefone Vazio");
                 }
 
-            if (tabela.vl_valor_produto <0)
+            if (tabela.vl_valor_produto <= 0)
                 try
                 {
                     throw new Exception();

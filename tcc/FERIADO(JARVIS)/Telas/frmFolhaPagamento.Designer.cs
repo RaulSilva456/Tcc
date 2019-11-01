@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pagamento = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.txtGratificação = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtSalarioLiquido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtIDFuncionario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSalarioBruto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,12 +52,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtINSS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pagamento = new System.Windows.Forms.DateTimePicker();
+            this.cboFuncionario = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboFuncionario);
             this.groupBox1.Controls.Add(this.pagamento);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtGratificação);
@@ -72,7 +73,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtSalarioLiquido);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtIDFuncionario);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtSalarioBruto);
             this.groupBox1.Controls.Add(this.label4);
@@ -88,6 +88,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Folha de Pagamento";
+            // 
+            // pagamento
+            // 
+            this.pagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.pagamento.Location = new System.Drawing.Point(368, 169);
+            this.pagamento.Name = "pagamento";
+            this.pagamento.Size = new System.Drawing.Size(97, 20);
+            this.pagamento.TabIndex = 70;
             // 
             // label12
             // 
@@ -196,21 +204,14 @@
             this.label6.TabIndex = 57;
             this.label6.Text = "salario liquido:";
             // 
-            // txtIDFuncionario
-            // 
-            this.txtIDFuncionario.Location = new System.Drawing.Point(118, 45);
-            this.txtIDFuncionario.Name = "txtIDFuncionario";
-            this.txtIDFuncionario.Size = new System.Drawing.Size(100, 20);
-            this.txtIDFuncionario.TabIndex = 56;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(39, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 55;
-            this.label5.Text = "id funcionario:";
+            this.label5.Text = "Funcionario:";
             // 
             // txtSalarioBruto
             // 
@@ -279,13 +280,13 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "inss:";
             // 
-            // pagamento
+            // cboFuncionario
             // 
-            this.pagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.pagamento.Location = new System.Drawing.Point(368, 169);
-            this.pagamento.Name = "pagamento";
-            this.pagamento.Size = new System.Drawing.Size(97, 20);
-            this.pagamento.TabIndex = 70;
+            this.cboFuncionario.FormattingEnabled = true;
+            this.cboFuncionario.Location = new System.Drawing.Point(118, 45);
+            this.cboFuncionario.Name = "cboFuncionario";
+            this.cboFuncionario.Size = new System.Drawing.Size(100, 21);
+            this.cboFuncionario.TabIndex = 71;
             // 
             // frmFolhaPagamento
             // 
@@ -298,6 +299,7 @@
             this.Name = "frmFolhaPagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFolhaPagamento";
+            this.Load += new System.EventHandler(this.frmFolhaPagamento_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -319,7 +321,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSalarioLiquido;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtIDFuncionario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSalarioBruto;
         private System.Windows.Forms.Label label4;
@@ -331,5 +332,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker pagamento;
+        private System.Windows.Forms.ComboBox cboFuncionario;
     }
 }

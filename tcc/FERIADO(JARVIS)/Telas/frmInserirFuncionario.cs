@@ -96,7 +96,18 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-    Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
+                if(salario.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Salario Vazio");
+                }
+                if (fgts.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo fgts Vazio");
+                }
+               
+
+
+                Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
             Mod.tb_funcionarios mod = new Mod.tb_funcionarios();
             mod.ad_fgts = Convert.ToDecimal(fgts.Text);
             mod.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
@@ -133,7 +144,17 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-  Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
+
+
+                if (salario.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Salario Vazio");
+                }
+                if (fgts.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo fgts Vazio");
+                }
+                Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
 
             tb.ad_fgts = Convert.ToDecimal(fgts.Text);
             tb.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);

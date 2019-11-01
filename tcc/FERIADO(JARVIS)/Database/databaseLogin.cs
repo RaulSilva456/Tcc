@@ -12,7 +12,13 @@ namespace FERIADO_JARVIS_.Database
         
         public void Cadastrar(Mod.tb_login tabela)
         {
-             md.tb_login.Add(tabela);
+          
+
+
+
+
+
+            md.tb_login.Add(tabela);
             md.SaveChanges();
         }
     }

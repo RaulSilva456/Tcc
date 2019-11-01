@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -115,36 +116,63 @@ namespace FERIADO_JARVIS_.Telas
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            Mod.tb_login tabela = new Mod.tb_login();
-            tabela.nm_nome = txtUsuario.Text;
-            tabela.pes_email = txtEmail.Text;
-            tabela.pes_senha = txtSenha.Text;
 
-
-            if (txtconfi.Text == txtSenha.Text)
+            try
             {
-                bs.Cadastrar(tabela);
-                MessageBox.Show("cadastrado realizado com sucesso");
+                Mod.tb_login tabela = new Mod.tb_login();
+                tabela.nm_nome = txtUsuario.Text;
+                tabela.pes_email = txtEmail.Text;
+                tabela.pes_senha = txtSenha.Text;
+                Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
-                frmLogin r = new frmLogin();
-                r.Show();
-                Hide();
+
+               
+                if (rg.IsMatch(tabela.pes_email))
+                {
+                    if (txtconfi.Text == txtSenha.Text)
+                {
+                    bs.Cadastrar(tabela);
+                    MessageBox.Show("cadastrado realizado com sucesso");
+
+                    frmLogin r = new frmLogin();
+                    r.Show();
+                    Hide();
+
+                }  
+
+                }
+                else
+                {
+                    MessageBox.Show("Email Invalido");
+                }
+                
+
+
+
+              
+
+                //validação na verificação de senha
+                if (txtconfi.Text != txtSenha.Text)
+                {
+                    try
+                    {
+                        throw new Exception();
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Senha Nao se Coecidem");
+                    }
+                }
+
 
             }
-
-            //validação na verificação de senha
-            if (txtconfi.Text != txtSenha.Text)
+            catch (Exception ex)
             {
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
 
-                    MessageBox.Show("Senha Nao se Coecidem");
-                }
+                MessageBox.Show(ex.Message);
             }
+            
 
 
         }

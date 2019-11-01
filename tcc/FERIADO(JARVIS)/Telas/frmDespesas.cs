@@ -26,7 +26,14 @@ namespace FERIADO_JARVIS_.Telas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Mod.tb_despesas tabela = new Mod.tb_despesas();
+            try
+            {
+                if(txtValor.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Valor Vazio");
+                }
+
+        Mod.tb_despesas tabela = new Mod.tb_despesas();
             tabela.tp_conta = txtCompra.Text;
             tabela.dt_data_pagamento = dtpDiaCompra.Value;
             tabela.vl_valor = Convert.ToInt32( txtValor.Text);
@@ -36,6 +43,14 @@ namespace FERIADO_JARVIS_.Telas
             Business.Business_Despesas bs = new Business.Business_Despesas();
             bs.inserir(tabela);
             MessageBox.Show("Nova Despesa Adicionada");
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+              
+            }
+
+          
         }
     }
 }

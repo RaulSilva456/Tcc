@@ -98,12 +98,30 @@ namespace FERIADO_JARVIS_.Telas
 
         private void btnEstoque_Click_1(object sender, EventArgs e)
         {
+            try
+            { 
+                
+                if (txtPreço.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Preço Vazio");
+                }
+                if (txtQuantidade.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Quantidade Vazio");
+                }
+
+
+
             Mod.tb_estoque tabela = new Mod.tb_estoque();
             tabela.dt_saida_do_produto = dtpSaidaProduto.Value;
             tabela.nm_produto = txtNome.Text;
             tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
             tabela.qtd_quantidade_do_produto = Convert.ToDecimal(txtQuantidade.Text);
 
+
+                //validaçoes
+
+               
            
 
             if(rdbSim.Checked == true)
@@ -126,29 +144,72 @@ namespace FERIADO_JARVIS_.Telas
 
             //atualizar datagrid 
             dataGridView1.DataSource = bs.listar();
+
+            }
+        catch (Exception EX)
+           {
+
+            MessageBox.Show(EX.Message);
+         }
+
+           
             
             
         }
 
         private void Deletar_Click_1(object sender, EventArgs e)
         {
-            Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
+            try
+            {
+
+                if (txtPreço.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Preço Vazio");
+                }
+                if (txtQuantidade.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Quantidade Vazio");
+                }
+
+
+                Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
             tabela.dt_saida_do_produto = dtpSaidaProduto.Value;
             tabela.nm_produto = txtNome.Text;
             tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
             tabela.qtd_quantidade_do_produto = Convert.ToInt32(txtQuantidade.Text);
 
-            Business.Estoque_Business bs = new Business.Estoque_Business();
+                if (rdbSim.Checked == true)
+                {
+                    tabela.pro_vencido = "Perecivel";
+                }
+
+                if (rdbNao.Checked == true)
+                {
+                    tabela.pro_vencido = "vencido";
+                }
+
+                Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.alterar(tabela);
             MessageBox.Show("Alterado Com Sucesso");
 
 
             //Atualizar datagrid
             dataGridView1.DataSource = bs.listar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
+
             Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
             Business.Estoque_Business bs = new Business.Estoque_Business();
 
