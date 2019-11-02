@@ -27,6 +27,18 @@ namespace FERIADO_JARVIS_.Telas
                 r.Show();
                 Hide();
             }
+            if (escolha == "Despesas")
+            {
+                frmDespesas r = new frmDespesas();
+                r.Show();
+                Hide();
+            }
+            if (escolha == "Fornecedores")
+            {
+                frmFornecedores r = new frmFornecedores();
+                r.Show();
+                Hide();
+            }
 
         }
 

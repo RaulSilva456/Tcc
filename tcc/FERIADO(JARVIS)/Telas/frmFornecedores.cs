@@ -156,6 +156,11 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label12_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

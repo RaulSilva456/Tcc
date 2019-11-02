@@ -89,7 +89,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label6_Click(object sender, EventArgs e)
         {
-            Close();
+        
         }
 
         private void Label5_Click_1(object sender, EventArgs e)
@@ -175,6 +175,18 @@ namespace FERIADO_JARVIS_.Telas
             
 
 
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            frmLogin r = new frmLogin();
+            r.Show();
+            Hide();
         }
     }
 }

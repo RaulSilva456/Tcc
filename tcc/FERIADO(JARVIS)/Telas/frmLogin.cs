@@ -142,23 +142,21 @@ namespace FERIADO_JARVIS_.Telas
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            bool ativo = false;
-
-            if(ativo == true)
-            {
-                panelErro.BackColor = Color.Blue;
-            }
+          
            
           
         }
 
         private void lblEsqueceuSenha_Click(object sender, EventArgs e)
         {
-
+            Telas.frmEsqueceuSenha r = new Telas.frmEsqueceuSenha();
+            r.Show();
+            Hide();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-                    }
+
+        }
     }
 }

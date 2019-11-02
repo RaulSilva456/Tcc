@@ -37,16 +37,12 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label7_Click(object sender, EventArgs e)
         {
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
+            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Telas.frmConfirmarCompra r = new Telas.frmConfirmarCompra();
-            r.Show();
-            Hide();
+        
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -78,7 +74,10 @@ namespace FERIADO_JARVIS_.Telas
                 MessageBox.Show(ex.Message);
                 
             }
-            
+
+            frmConfirmarCompra r = new frmConfirmarCompra();
+            r.Show();
+            Hide();
 
         }
 
@@ -100,6 +99,13 @@ namespace FERIADO_JARVIS_.Telas
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Telas.frmMenu r = new Telas.frmMenu();
+            r.Show();
+            Hide();
         }
     }
 }

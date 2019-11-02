@@ -23,5 +23,24 @@ namespace FERIADO_JARVIS_.Telas
             r.Show();
             Hide();
         }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string escolha = comboBox1.Text;
+
+            if(escolha == "Estoque")
+            {
+                frmEstoque r = new frmEstoque();
+                r.Show();
+                Hide();
+            }
+        }
+
+        private void PictureBox2_Click_1(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
+        }
     }
 }

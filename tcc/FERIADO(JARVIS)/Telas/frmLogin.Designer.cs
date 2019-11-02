@@ -34,8 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panelErro = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblEsqueceuSenha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,7 +43,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.panelErro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +88,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.panelErro);
             this.groupBox1.Controls.Add(this.lblEsqueceuSenha);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label6);
@@ -108,26 +104,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // panelErro
-            // 
-            this.panelErro.BackColor = System.Drawing.Color.Transparent;
-            this.panelErro.Controls.Add(this.textBox1);
-            this.panelErro.Location = new System.Drawing.Point(499, 200);
-            this.panelErro.Name = "panelErro";
-            this.panelErro.Size = new System.Drawing.Size(153, 31);
-            this.panelErro.TabIndex = 17;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(6, 9);
-            this.textBox1.MaxLength = 35;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 15);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblEsqueceuSenha
             // 
@@ -240,11 +216,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panelErro.ResumeLayout(false);
-            this.panelErro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,7 +239,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblEsqueceuSenha;
-        private System.Windows.Forms.Panel panelErro;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

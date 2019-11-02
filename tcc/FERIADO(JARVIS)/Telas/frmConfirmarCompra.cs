@@ -39,7 +39,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-            frmMenu r = new frmMenu();
+            frmPedidoCliente r = new frmPedidoCliente();
             r.Show();
             Hide();
         }
@@ -47,6 +47,16 @@ namespace FERIADO_JARVIS_.Telas
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

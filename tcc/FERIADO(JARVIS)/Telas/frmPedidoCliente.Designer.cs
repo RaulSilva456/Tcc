@@ -35,12 +35,14 @@
             this.nudQuantidadePedido = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvEstoque = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadePedido)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             this.groupBox1.Controls.Add(this.dgvEstoque);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(480, 445);
+            this.groupBox1.Size = new System.Drawing.Size(434, 358);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pedido";
@@ -64,7 +66,7 @@
             // CboProduto
             // 
             this.CboProduto.FormattingEnabled = true;
-            this.CboProduto.Location = new System.Drawing.Point(158, 133);
+            this.CboProduto.Location = new System.Drawing.Point(147, 269);
             this.CboProduto.Name = "CboProduto";
             this.CboProduto.Size = new System.Drawing.Size(105, 21);
             this.CboProduto.TabIndex = 36;
@@ -75,7 +77,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnLogin.Location = new System.Drawing.Point(327, 153);
+            this.btnLogin.Location = new System.Drawing.Point(268, 278);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(112, 36);
             this.btnLogin.TabIndex = 35;
@@ -88,7 +90,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(50, 168);
+            this.label2.Location = new System.Drawing.Point(26, 305);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 24);
             this.label2.TabIndex = 20;
@@ -97,9 +99,9 @@
             // 
             // nudQuantidadePedido
             // 
-            this.nudQuantidadePedido.Location = new System.Drawing.Point(170, 169);
+            this.nudQuantidadePedido.Location = new System.Drawing.Point(147, 305);
             this.nudQuantidadePedido.Name = "nudQuantidadePedido";
-            this.nudQuantidadePedido.Size = new System.Drawing.Size(38, 20);
+            this.nudQuantidadePedido.Size = new System.Drawing.Size(105, 20);
             this.nudQuantidadePedido.TabIndex = 19;
             this.nudQuantidadePedido.Value = new decimal(new int[] {
             1,
@@ -113,7 +115,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(50, 130);
+            this.label1.Location = new System.Drawing.Point(39, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 24);
             this.label1.TabIndex = 16;
@@ -123,12 +125,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(0, -30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 86);
             this.panel1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.voltar_icone2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(403, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // label8
             // 
@@ -147,7 +162,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(454, 30);
+            this.label7.Location = new System.Drawing.Point(409, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(25, 24);
             this.label7.TabIndex = 12;
@@ -158,9 +173,9 @@
             // 
             this.dgvEstoque.BackgroundColor = System.Drawing.Color.White;
             this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstoque.Location = new System.Drawing.Point(54, 246);
+            this.dgvEstoque.Location = new System.Drawing.Point(23, 62);
             this.dgvEstoque.Name = "dgvEstoque";
-            this.dgvEstoque.Size = new System.Drawing.Size(385, 154);
+            this.dgvEstoque.Size = new System.Drawing.Size(391, 177);
             this.dgvEstoque.TabIndex = 7;
             // 
             // frmPedidoCliente
@@ -168,9 +183,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.choco_icone;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(504, 469);
+            this.ClientSize = new System.Drawing.Size(461, 391);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPedidoCliente";
@@ -182,6 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadePedido)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
             this.ResumeLayout(false);
 
@@ -199,5 +215,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.ComboBox CboProduto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

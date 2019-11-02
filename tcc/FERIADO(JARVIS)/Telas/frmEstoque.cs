@@ -19,15 +19,13 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
+           
         }
 
         private void frmEstoque_Load(object sender, EventArgs e)
         {
             Business.Estoque_Business bs = new Business.Estoque_Business();
-            dataGridView1.DataSource = bs.listar();
+            dgvEstoque.DataSource = bs.listar();
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
@@ -41,25 +39,25 @@ namespace FERIADO_JARVIS_.Telas
             MessageBox.Show("Inserido Com Sucesso");
 
             //Atualizar datagrid
-            dataGridView1.DataSource = bs.listar();
+            dgvEstoque.DataSource = bs.listar();
         }
 
         private void Deletar_Click(object sender, EventArgs e)
         {
-            Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
+            Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
             Business.Estoque_Business bs = new Business.Estoque_Business();
 
             bs.remover(tabela);
             MessageBox.Show("Deletado");
 
             //Atualizar datagrid);
-            dataGridView1.DataSource = bs.listar();
+            dgvEstoque.DataSource = bs.listar();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
+            Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
             
             Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.alterar(tabela);
@@ -67,7 +65,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             //Atualizar datagrid
-            dataGridView1.DataSource = bs.listar();
+            dgvEstoque.DataSource = bs.listar();
 
         }
 
@@ -143,7 +141,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             //atualizar datagrid 
-            dataGridView1.DataSource = bs.listar();
+            dgvEstoque.DataSource = bs.listar();
 
             }
         catch (Exception EX)
@@ -172,7 +170,7 @@ namespace FERIADO_JARVIS_.Telas
                 }
 
 
-                Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
+                Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
             tabela.dt_saida_do_produto = dtpSaidaProduto.Value;
             tabela.nm_produto = txtNome.Text;
             tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
@@ -194,7 +192,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             //Atualizar datagrid
-            dataGridView1.DataSource = bs.listar();
+            dgvEstoque.DataSource = bs.listar();
 
             }
             catch (Exception ex)
@@ -210,16 +208,28 @@ namespace FERIADO_JARVIS_.Telas
         {
             
 
-            Mod.tb_estoque tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_estoque;
+            Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
             Business.Estoque_Business bs = new Business.Estoque_Business();
 
             bs.remover(tabela);
             MessageBox.Show("Deletado");
 
             //Atualizar datagrid);
-            dataGridView1.DataSource = bs.listar();
+            dgvEstoque.DataSource = bs.listar();
 
 
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
         }
     }
 }

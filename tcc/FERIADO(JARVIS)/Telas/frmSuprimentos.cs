@@ -23,5 +23,17 @@ namespace FERIADO_JARVIS_.Telas
             r.Show();
             Hide();
         }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string escolha = comboBox1.Text;
+
+            if(escolha == "Produtos")
+            {
+                frmCadastroProdutos r = new frmCadastroProdutos();
+                r.Show();
+                Hide();
+            }
+        }
     }
 }
