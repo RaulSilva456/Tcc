@@ -419,6 +419,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\olho senha2.jpg" />
+    <None Include="Resources\olho senha1.jpg" />
+    <None Include="Resources\olho senha.jpg" />
     <None Include="Resources\Financeiro logo.png" />
     <None Include="Resources\Wallpaper.jpg" />
     <None Include="Resources\logo choco-frei.jpg" />

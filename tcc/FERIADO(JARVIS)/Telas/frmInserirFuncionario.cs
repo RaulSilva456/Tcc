@@ -168,7 +168,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.funcionarios_bsiness business = new Business.funcionarios_bsiness();
             business.alterar(tb);
-            MessageBox.Show("alterado Com Sucesso");
+            MessageBox.Show("Funcionario alterado com Sucesso");
 
 
             //atualizar datagrid

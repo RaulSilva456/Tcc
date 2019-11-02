@@ -106,7 +106,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Close();
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -217,6 +217,16 @@ namespace FERIADO_JARVIS_.Telas
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

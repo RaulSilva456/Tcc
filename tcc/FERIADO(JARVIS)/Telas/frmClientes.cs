@@ -29,7 +29,7 @@ namespace FERIADO_JARVIS_.Telas
         {
            Business.BusinessCliente bs = new Business.BusinessCliente();
 
-          dataGridView1.DataSource =  bs.consu();
+          dgvClientes.DataSource =  bs.consu();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             //atualizar Datagrid
-            dataGridView1.DataSource = bs.consu();
+            dgvClientes.DataSource = bs.consu();
 
 
             }
@@ -106,13 +106,13 @@ namespace FERIADO_JARVIS_.Telas
         private void button2_Click_1(object sender, EventArgs e)
         {
             try
-            {Mod.tb_clientes tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_clientes;
+            {Mod.tb_clientes tabela = dgvClientes.CurrentRow.DataBoundItem as Mod.tb_clientes;
             Business.BusinessCliente bs = new Business.BusinessCliente();
 
             bs.remover(tabela);
             MessageBox.Show("Deletado Com Suceso");
             //atualizar Datagrid 
-            dataGridView1.DataSource = bs.consu();
+            dgvClientes.DataSource = bs.consu();
 
             }
             catch (Exception ex)
@@ -128,7 +128,7 @@ namespace FERIADO_JARVIS_.Telas
         {
 
             try
-            {Mod.tb_clientes tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_clientes;
+            {Mod.tb_clientes tabela = dgvClientes.CurrentRow.DataBoundItem as Mod.tb_clientes;
             tabela.doc_cep = txtCep.Text;
             tabela.doc_rg = txtRg.Text;
             tabela.end_endereco = txtEndereço.Text;
@@ -155,7 +155,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             //atualizar Datagrid 
-            dataGridView1.DataSource = bs.consu();
+            dgvClientes.DataSource = bs.consu();
 
             }
             catch (Exception ex)
@@ -166,6 +166,18 @@ namespace FERIADO_JARVIS_.Telas
             
 
     
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
         }
     }
 }

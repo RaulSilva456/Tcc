@@ -16,7 +16,7 @@ namespace FERIADO_JARVIS_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Telas.frmSplash ());
+            Application.Run(new Telas.frmLogin ());
         }
     }
 }
