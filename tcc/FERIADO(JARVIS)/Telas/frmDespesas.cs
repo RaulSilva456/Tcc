@@ -30,7 +30,7 @@ namespace FERIADO_JARVIS_.Telas
             {
                 if(txtValor.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Valor Vazio");
+                    MessageBox.Show("Preencha todos os campos corretamente.");
                 }
 
             Mod.tb_despesas tabela = new Mod.tb_despesas();
@@ -42,7 +42,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.Business_Despesas bs = new Business.Business_Despesas();
             bs.inserir(tabela);
-            MessageBox.Show("Nova Despesa Adicionada");
+            MessageBox.Show("Nova despesa adicionada.");
               //Atualizar a DataGrid
           
             dgvDespesas.DataSource = bs.consultarFuncionarios(); 
@@ -84,7 +84,7 @@ namespace FERIADO_JARVIS_.Telas
 
             if (txtCompra.Text == string.Empty || txtValor.Text == string.Empty)
             {
-                MessageBox.Show("Todos os campos precisam ser preenchidos");
+                MessageBox.Show("Todos os campos precisam ser preenchidos.");
             }
    
             Mod.tb_despesas tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesas;
@@ -98,7 +98,7 @@ namespace FERIADO_JARVIS_.Telas
             
              
 
-                MessageBox.Show("Despesa alterada com sucesso");
+                MessageBox.Show("Despesa alterada com sucesso.");
 
             //atualizar datagrid
           
@@ -120,7 +120,7 @@ namespace FERIADO_JARVIS_.Telas
 
                 Business.Business_Despesas bs = new Business.Business_Despesas();
                 bs.deletar(tb);
-                MessageBox.Show("Removido Com Sucesso");
+                MessageBox.Show("Despesa removido com sucesso.");
 
 
 

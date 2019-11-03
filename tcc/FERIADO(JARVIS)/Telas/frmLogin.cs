@@ -35,18 +35,18 @@ namespace FERIADO_JARVIS_.Telas
 
             if(txtNome.Text == string.Empty)
             {
-                MessageBox.Show("Campo Nome Vazio");
+                MessageBox.Show("Campo de usuário vazio.");
                 
             }
            else  if  (txtSenha.Text == string.Empty)
             {
-                MessageBox.Show("Campo Senha Vazio");
+                MessageBox.Show("Campo de senha vazio.");
             }
             else
             {
                 if (funcao.login(login,senha,email)== false)
                 {
-                    MessageBox.Show("Senha Ou Usuario Incorretos");
+                    MessageBox.Show("Senha ou Usuário incorreto.");
                 }
                 else
                 {

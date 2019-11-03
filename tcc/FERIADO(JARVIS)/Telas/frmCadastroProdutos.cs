@@ -65,8 +65,7 @@ namespace FERIADO_JARVIS_.Telas
                                         
             
             bs.inerir(tabela);
-            MessageBox.Show("Cadastrado!");
-
+            MessageBox.Show("Produto cadastrado.");
             //Atualizar Datagrid
             dgtFuncionario.DataSource = bs.listar();
 
@@ -81,7 +80,7 @@ namespace FERIADO_JARVIS_.Telas
             tabela.sb_sabor = txtSabor.Text;
             Business.Business_Produtos bs = new Business.Business_Produtos();
             bs.alterar(tabela);
-            MessageBox.Show("Alterardo");
+            MessageBox.Show("Produto alterardo.");
             //Atualizar Datagrid
             dgtFuncionario.DataSource = bs.listar();
 
@@ -94,7 +93,7 @@ namespace FERIADO_JARVIS_.Telas
             Mod.tb_produto tabela = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_produto;
             Business.Business_Produtos bs = new Business.Business_Produtos();
             bs.deletar(tabela);
-            MessageBox.Show("Deletado");
+            MessageBox.Show("Produto retirado.");
             
             
             //Atualizar Datagrid
@@ -139,7 +138,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             bs.inerir(tabela);
-            MessageBox.Show("Cadastrado!");
+            MessageBox.Show("Produto cadastrado.");
 
             //Atualizar Datagrid
             dgtFuncionario.DataSource = bs.listar();
@@ -173,7 +172,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             bs.alterar(tabela);
-            MessageBox.Show("Alterado Com Sucesso");
+            MessageBox.Show("Produto alterado.");
             //Atualizar Datagrid
             dgtFuncionario.DataSource = bs.listar();
             }
@@ -201,7 +200,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.Business_Produtos bs = new Business.Business_Produtos();
             bs.deletar(tabela);
-            MessageBox.Show("Delatado Com Sucesso");
+            MessageBox.Show("Produto foi removido com sucesso.");
             dgtFuncionario.DataSource = bs.listar();
 
             }

@@ -101,11 +101,11 @@ namespace FERIADO_JARVIS_.Telas
                 
                 if (txtPreço.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Preço Vazio");
+                    MessageBox.Show("Campo de preço vazio.");
                 }
                 if (txtQuantidade.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Quantidade Vazio");
+                    MessageBox.Show("Campo de quantidade vazio.");
                 }
 
 
@@ -136,7 +136,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.inserir(tabela);
-            MessageBox.Show("Inserido");
+            MessageBox.Show("Produto inserido no estoque.");
 
 
 
@@ -162,11 +162,11 @@ namespace FERIADO_JARVIS_.Telas
 
                 if (txtPreço.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Preço Vazio");
+                    MessageBox.Show("Campo de preço vazio.");
                 }
                 if (txtQuantidade.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Quantidade Vazio");
+                    MessageBox.Show("Campo de quantidade vazio.");
                 }
 
 
@@ -188,7 +188,7 @@ namespace FERIADO_JARVIS_.Telas
 
                 Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.alterar(tabela);
-            MessageBox.Show("Alterado Com Sucesso");
+            MessageBox.Show("Produto alterado.");
 
 
             //Atualizar datagrid
@@ -212,7 +212,7 @@ namespace FERIADO_JARVIS_.Telas
             Business.Estoque_Business bs = new Business.Estoque_Business();
 
             bs.remover(tabela);
-            MessageBox.Show("Deletado");
+            MessageBox.Show("Produto deletado.");
 
             //Atualizar datagrid);
             dgvEstoque.DataSource = bs.listar();

@@ -63,7 +63,7 @@ namespace FERIADO_JARVIS_.Telas
             {
                 if(txtValorPago.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Valor Pago Vazio");
+                    MessageBox.Show("Campo de valor pago vazio.");
                 }
                 
                 Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
@@ -77,7 +77,7 @@ namespace FERIADO_JARVIS_.Telas
              tabela.dt_entrada_do_produto = DataProduto.Value;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.inserir(tabela);
-            MessageBox.Show("Cadastrado");
+            MessageBox.Show("Fornecedor novo adicionado.");
 
 
             //atualizar Datagrid
@@ -99,7 +99,7 @@ namespace FERIADO_JARVIS_.Telas
             { Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.deletar(tabela);
-            MessageBox.Show("Deletado");
+            MessageBox.Show("Fornecedor deletado.");
             //atualizar Datagrid
             dataGridView1.DataSource = bs.listar();
 
@@ -107,7 +107,7 @@ namespace FERIADO_JARVIS_.Telas
             catch (Exception)
             {
 
-                MessageBox.Show("Erro Volta Mais Tarde ");
+                MessageBox.Show("Erro!");
             }
 
            
@@ -120,7 +120,7 @@ namespace FERIADO_JARVIS_.Telas
 
                 if (txtValorPago.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Valor Pago Vazio");
+                    MessageBox.Show("Campo de valor pago vazio.");
                 }
 
                 Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
@@ -133,7 +133,7 @@ namespace FERIADO_JARVIS_.Telas
             tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.alterar(tabela);
-            MessageBox.Show("Alteração com sucesso");
+            MessageBox.Show("Fornecedor alterado.");
             //atualizar Datagrid
             dataGridView1.DataSource = bs.listar();
 

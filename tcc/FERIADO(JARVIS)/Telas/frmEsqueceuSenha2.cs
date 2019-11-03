@@ -44,7 +44,7 @@ namespace FERIADO_JARVIS_.Telas
             {
             if(txtCodigo.Text == string.Empty)
             {
-                MessageBox.Show("Nao Mecha No Campo Do Codigo Renicie O Programa");
+                MessageBox.Show("Não mexa no campo de código! Renicie o programa.");
             }
             else
             {
@@ -52,7 +52,7 @@ namespace FERIADO_JARVIS_.Telas
                 tabela.cd_verificacao = Convert.ToInt32(txtCodigo.Text);
                 Business.BusinessLogin bs = new Business.BusinessLogin();
                 bs.icd(tabela);
-                if(MessageBox.Show("Voçe Copiou O Codigo?","Codigo de Recuperação", MessageBoxButtons.YesNo)== DialogResult.Yes) 
+                if(MessageBox.Show("Você copiou o código?","Código de Recuperação", MessageBoxButtons.YesNo)== DialogResult.Yes) 
                     {
  
                     Telas.frmEsqueceuSenha3 tela = new frmEsqueceuSenha3();
@@ -72,7 +72,7 @@ namespace FERIADO_JARVIS_.Telas
             catch (Exception)
             {
 
-                MessageBox.Show("Tente Mais Tarde");
+                MessageBox.Show("Tente mais Tarde.");
             }
         }
     }

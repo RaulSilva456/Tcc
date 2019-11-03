@@ -96,11 +96,11 @@ namespace FERIADO_JARVIS_.Telas
             {
                 if(salario.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Salario Vazio");
+                    MessageBox.Show("Campo de salário vazio.");
                 }
                 if (fgts.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo fgts Vazio");
+                    MessageBox.Show("Campo de FGTS vazio.");
                 }
                
 
@@ -118,7 +118,7 @@ namespace FERIADO_JARVIS_.Telas
             mod.dt_pagamento_do_funcionario = DtpDiaPagamento.Value;
             mod.fun_cargo = txtCargo.Text;
             bs.inserirFuncionario(mod);
-            MessageBox.Show("inserido");
+            MessageBox.Show("Funcionário cadastrado.");
 
 
             //Atualizar a DataGrid
@@ -146,11 +146,11 @@ namespace FERIADO_JARVIS_.Telas
 
                 if (salario.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Salario Vazio");
+                    MessageBox.Show("Campo de salário vazio.");
                 }
                 if (fgts.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo fgts Vazio");
+                    MessageBox.Show("Campo de FGTS vazio.");
                 }
                 Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
 
@@ -168,7 +168,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.funcionarios_bsiness business = new Business.funcionarios_bsiness();
             business.alterar(tb);
-            MessageBox.Show("Funcionario alterado com Sucesso");
+            MessageBox.Show("Funcionário alterado.");
 
 
             //atualizar datagrid
@@ -190,7 +190,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
             bs.deleta(tb);
-            MessageBox.Show("Removido Com Sucesso");
+            MessageBox.Show("Funcionário removido.");
 
 
 
@@ -202,7 +202,7 @@ namespace FERIADO_JARVIS_.Telas
             catch (Exception)
             {
 
-                MessageBox.Show("Erro");
+                MessageBox.Show("Erro!");
             }
            
         }

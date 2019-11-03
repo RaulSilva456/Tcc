@@ -30,7 +30,7 @@ namespace FERIADO_JARVIS_.Telas
             if (txtconfi.Text == txtSenha.Text)
             {
                 bs.Cadastrar(tabela);
-                MessageBox.Show("cadastrado realizado com sucesso");
+                MessageBox.Show("Cadastrado realizado com sucesso");
 
                 frmLogin r = new frmLogin();
                 r.Show();
@@ -48,7 +48,7 @@ namespace FERIADO_JARVIS_.Telas
                 catch (Exception)
                 {
 
-                    MessageBox.Show("Senha Nao se Coecidem");
+                    MessageBox.Show("Senhas diferentes.");
                 }
             }
 
@@ -132,7 +132,7 @@ namespace FERIADO_JARVIS_.Telas
                     if (txtconfi.Text == txtSenha.Text)
                 {
                     bs.Cadastrar(tabela);
-                    MessageBox.Show("cadastrado realizado com sucesso");
+                    MessageBox.Show("Cadastrado realizado com sucesso.");
 
                     frmLogin r = new frmLogin();
                     r.Show();
@@ -143,7 +143,7 @@ namespace FERIADO_JARVIS_.Telas
                 }
                 else
                 {
-                    MessageBox.Show("Email Invalido");
+                    MessageBox.Show("Email inválido.");
                 }
                 
 
@@ -161,7 +161,7 @@ namespace FERIADO_JARVIS_.Telas
                     catch (Exception)
                     {
 
-                        MessageBox.Show("Senha Nao se Coecidem");
+                        MessageBox.Show("Senhas diferentes.");
                     }
                 }
 

@@ -68,12 +68,12 @@ namespace FERIADO_JARVIS_.Telas
                 if (rg.IsMatch(tabela.pes_email))
                 {
                 bs.inserir(tabela);
-                MessageBox.Show("Cadastrado");
+                MessageBox.Show("Cadastro realizado com sucesso.");
 
                 }
                 else
                 {
-                    MessageBox.Show("Email Invalido");
+                    MessageBox.Show("Email inválido.");
                 }
 
 
@@ -110,7 +110,7 @@ namespace FERIADO_JARVIS_.Telas
             Business.BusinessCliente bs = new Business.BusinessCliente();
 
             bs.remover(tabela);
-            MessageBox.Show("Deletado Com Suceso");
+            MessageBox.Show("Cliente foi removido.");
             //atualizar Datagrid 
             dgvClientes.DataSource = bs.consu();
 
@@ -144,12 +144,12 @@ namespace FERIADO_JARVIS_.Telas
                 if(rg.IsMatch((tabela.pes_email)))
                 {
                 bs.alterar(tabela);
-            MessageBox.Show("Alterado Com sucesso");
+            MessageBox.Show("Dados do cliente alterados.");
 
                 }
                 else
                 {
-                    MessageBox.Show("Email Invalido");
+                    MessageBox.Show("Email inválido.");
 
                 }
 

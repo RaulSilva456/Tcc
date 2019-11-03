@@ -33,7 +33,7 @@ namespace FERIADO_JARVIS_.Telas
 
             if(txtEmailConfirmação.Text == string.Empty)
             {
-                MessageBox.Show("Campo Vazio");
+                MessageBox.Show("Campo vazio.");
             }
 
            
@@ -41,12 +41,12 @@ namespace FERIADO_JARVIS_.Telas
             if (!fun.esqueceusenha(email))
             {
 
-             MessageBox.Show("Email Invalido");
+             MessageBox.Show("Email inválido.");
 
             }
           else
             {
-                MessageBox.Show(" Email Valido! Rederecionamos Voçe Para Tela De codigo De Recuperação");
+                MessageBox.Show("Email válido! Rederecionamos você para a tela de código de recuperação.");
             frmEsqueceuSenha2 r = new frmEsqueceuSenha2();
             r.Show();
             Hide();
@@ -90,7 +90,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             smp.Send(mensagem);
-            MessageBox.Show("codigo de verificação enviado com sucesso");
+            MessageBox.Show("Código de verificação enviado.");
         }
     }
 }

@@ -36,47 +36,47 @@ namespace FERIADO_JARVIS_.Telas
             {
                 if (txtHRExtra.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Hora Extra Vazio");
+                    MessageBox.Show("Campo de hora extra vazio.");
 
                 }
                 else if (txtFaltas.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Faltas Vazio");
+                    MessageBox.Show("Campo de faltas vazio");
 
                 }
                 else if (txtGratificação.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo  Gratificação Vazio");
+                    MessageBox.Show("Campo de gratificação vazio.");
 
                 }
                 else if (txtINSS.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo  INSS Vazio");
+                    MessageBox.Show("Campo de INSS Vazio.");
 
                 }
                 else if (txtImpostoRenda.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Imposto de Renda Vazio");
+                    MessageBox.Show("Campo de imposto de renda vazio.");
 
                 }
                 else if (txtSalarioBruto.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Salario bruto Vazio");
+                    MessageBox.Show("Campo de salário bruto vazio.");
 
                 }
                 else if (txtSalarioLiquido.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Salario Liquido Vazio");
+                    MessageBox.Show("Campo de salário liquido vazio.");
 
                 }
                 else if (txtVA.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Vale Alimentação Vazio");
+                    MessageBox.Show("Campo de vale alimentação vazio.");
 
                 }
                 else if (txtVT.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo Vale Tranporte Vazio");
+                    MessageBox.Show("Campo de vale tranporte vazio.");
 
                 }
 
@@ -105,7 +105,7 @@ namespace FERIADO_JARVIS_.Telas
 
                 Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
                 bs.inserir(tabela);
-                MessageBox.Show("Inserido com sucesso");
+                MessageBox.Show("Funcionário inserido com sucesso.");
 
                 //Atualizar DataGrid
                 dgvFolhaPagamento.DataSource = bs.listar();
@@ -163,7 +163,7 @@ namespace FERIADO_JARVIS_.Telas
             catch (Exception)
             {
 
-                MessageBox.Show("Erro Renicie Seu Computador");
+                MessageBox.Show("Erro!");
             }
 
         }
@@ -189,7 +189,7 @@ namespace FERIADO_JARVIS_.Telas
 
                 Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
                 bs.alterar(tabela);
-                MessageBox.Show("Alterado");
+                MessageBox.Show("Funcionário alterado.");
 
 
 
@@ -218,7 +218,7 @@ namespace FERIADO_JARVIS_.Telas
                 Mod.tb_folhapagamento tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamento;
                 Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
                 bs.remover(tabela);
-                MessageBox.Show("deletado");
+                MessageBox.Show(" Funcionário deletado.");
 
                 //Atualizar DataGrid
                 dgvFolhaPagamento.DataSource = bs.listar();
@@ -227,8 +227,13 @@ namespace FERIADO_JARVIS_.Telas
             catch (Exception)
             {
 
-                MessageBox.Show("Erro Renicie Seu Computador");
+                MessageBox.Show("Erro!");
             }
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

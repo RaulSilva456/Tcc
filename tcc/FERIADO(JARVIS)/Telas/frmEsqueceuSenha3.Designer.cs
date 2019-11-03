@@ -31,13 +31,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -80,23 +80,11 @@
             this.txtcodigo.Size = new System.Drawing.Size(161, 20);
             this.txtcodigo.TabIndex = 5;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(68, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Usuario:";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(120, 186);
             this.button1.Name = "button1";
@@ -105,14 +93,6 @@
             this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Enabled = false;
-            this.txtUsuario.Location = new System.Drawing.Point(170, 303);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(161, 20);
-            this.txtUsuario.TabIndex = 2;
             // 
             // panel1
             // 
@@ -148,13 +128,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(10, 13);
+            this.label1.Location = new System.Drawing.Point(31, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 33);
+            this.label1.Size = new System.Drawing.Size(281, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recuperação de Senha";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(68, 298);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Usuario:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Enabled = false;
+            this.txtUsuario.Location = new System.Drawing.Point(170, 298);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(161, 20);
+            this.txtUsuario.TabIndex = 2;
             // 
             // label5
             // 
@@ -191,7 +191,7 @@
             // txtNovaSenha
             // 
             this.txtNovaSenha.Enabled = false;
-            this.txtNovaSenha.Location = new System.Drawing.Point(170, 329);
+            this.txtNovaSenha.Location = new System.Drawing.Point(170, 334);
             this.txtNovaSenha.Name = "txtNovaSenha";
             this.txtNovaSenha.Size = new System.Drawing.Size(161, 20);
             this.txtNovaSenha.TabIndex = 5;
@@ -200,13 +200,13 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(162, 404);
+            this.button2.Location = new System.Drawing.Point(106, 404);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 36);
             this.button2.TabIndex = 9;
-            this.button2.Text = "Conirmar";
+            this.button2.Text = "Confirmar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

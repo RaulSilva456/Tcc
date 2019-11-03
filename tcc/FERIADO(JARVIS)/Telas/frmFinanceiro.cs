@@ -19,9 +19,22 @@ namespace FERIADO_JARVIS_.Telas
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
+        }
+
+        private void ComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
             string escolha = comboBox1.Text;
 
-            if(escolha == "Folha de Pagamento")
+            if (escolha == "Folha de Pagamento")
             {
                 frmFolhaPagamento r = new frmFolhaPagamento();
                 r.Show();
@@ -39,14 +52,6 @@ namespace FERIADO_JARVIS_.Telas
                 r.Show();
                 Hide();
             }
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            frmMenu r = new frmMenu();
-            r.Show();
-            Hide();
         }
     }
 }

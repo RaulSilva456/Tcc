@@ -35,7 +35,7 @@ namespace FERIADO_JARVIS_.Telas
                
                 Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
                 bs.alterar(tabela);
-                MessageBox.Show("Pedido Alterado");
+                MessageBox.Show("Pedido alterado com sucesso.");
 
                 //atualizar Data Grid
                 dataGridView1.DataSource = bs.listar();

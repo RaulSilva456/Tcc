@@ -63,7 +63,7 @@ namespace FERIADO_JARVIS_.Telas
             tabela.qtd_quantidade = Convert.ToInt32(nudQuantidadePedido.Value);
             Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
             bs.inseri(tabela);
-                MessageBox.Show("Pedido Enviado");
+                MessageBox.Show("Pedido enviado.");
             
             //atualizar Data Grid
             dgvEstoque.DataSource = bs.listar();

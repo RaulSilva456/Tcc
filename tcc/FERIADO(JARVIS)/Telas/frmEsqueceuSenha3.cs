@@ -33,20 +33,20 @@ namespace FERIADO_JARVIS_.Telas
 
                 if (txtcodigo.Text == string.Empty)
                 {
-                    MessageBox.Show("Campo codigo vazio");
+                    MessageBox.Show("Campo de código vazio");
                 }
                 else
                 {
                     Objetos fun = new Objetos();
                     if (!fun.cod(codigo))
                     {
-                        MessageBox.Show("codigo Invalido ");
+                        MessageBox.Show("Código inválido ");
 
                     }
                     else
 
                     {
-                        MessageBox.Show("codigo Esta correto Pode Proseguir Nos Campos Abaixo ");
+                        MessageBox.Show("Código correto, Continue preenchendo os campos abaixo.");
 
                         db.remover(tabela);
                     txtUsuario.Enabled = true;
@@ -61,7 +61,7 @@ namespace FERIADO_JARVIS_.Telas
            catch (Exception)
             {
 
-                MessageBox.Show("Erro Nao Pode Conter Letras No Campo De Codigos Ou Pode Estar Vazio o Campo");
+                MessageBox.Show("Erro! Não pode conter letras ou deixar o campo vazio.");
             }
 
 
