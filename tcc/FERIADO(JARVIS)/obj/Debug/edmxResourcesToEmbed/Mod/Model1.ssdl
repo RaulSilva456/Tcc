@@ -12,6 +12,13 @@
     <Property Name="pes_email" Type="varchar" MaxLength="50" />
     <Property Name="tel_telefone" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="tb_codigo">
+    <Key>
+      <PropertyRef Name="id_codigo" />
+    </Key>
+    <Property Name="id_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cd_verificacao" Type="int" />
+  </EntityType>
   <EntityType Name="tb_despesas">
     <Key>
       <PropertyRef Name="id_despesas" />
@@ -138,6 +145,7 @@
   </EntityType>
   <EntityContainer Name="tccModelStoreContainer">
     <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" Schema="tcc" store:Type="Tables" />
+    <EntitySet Name="tb_codigo" EntityType="Self.tb_codigo" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" Schema="tcc" store:Type="Tables" />
     <EntitySet Name="tb_folhapagamento" EntityType="Self.tb_folhapagamento" Schema="tcc" store:Type="Tables" />

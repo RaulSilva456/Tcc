@@ -160,7 +160,7 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-                Mod.tb_produto tabela = new Mod.tb_produto();
+                Mod.tb_produto tabela = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_produto;
 
             Business.Business_Produtos bs = new Business.Business_Produtos();
 

@@ -34,6 +34,7 @@ namespace FERIADO_JARVIS_.Database
             alterar.ad_fgts = tabela.ad_fgts;
             alterar.fun_cargo = tabela.fun_cargo;
             alterar.dt_pagamento_do_funcionario = tabela.dt_pagamento_do_funcionario;
+          
             mod.SaveChanges();
 
 

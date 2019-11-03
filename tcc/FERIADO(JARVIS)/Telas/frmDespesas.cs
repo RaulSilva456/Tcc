@@ -33,7 +33,7 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Campo Valor Vazio");
                 }
 
-        Mod.tb_despesas tabela = new Mod.tb_despesas();
+            Mod.tb_despesas tabela = new Mod.tb_despesas();
             tabela.tp_conta = txtCompra.Text;
             tabela.dt_data_pagamento = dtpDiaCompra.Value;
             tabela.vl_valor = Convert.ToInt32( txtValor.Text);
@@ -43,6 +43,9 @@ namespace FERIADO_JARVIS_.Telas
             Business.Business_Despesas bs = new Business.Business_Despesas();
             bs.inserir(tabela);
             MessageBox.Show("Nova Despesa Adicionada");
+              //Atualizar a DataGrid
+          
+            dgvDespesas.DataSource = bs.consultarFuncionarios(); 
             }
             catch (Exception ex )
             {
@@ -50,15 +53,9 @@ namespace FERIADO_JARVIS_.Telas
               
             }
 
-            //Atualizar a DataGrid
-            List<Mod.tb_despesas> tabela = bs.consultarFuncionarios();
-            dgvDespesas.DataSource = tabela;
+           
         
-            catch (Exception ee)
-            {
-
-             MessageBox.Show(ee.Message);
-            }
+          
 
 
         }
@@ -95,14 +92,17 @@ namespace FERIADO_JARVIS_.Telas
             tb.vl_valor = Convert.ToDecimal(txtCompra.Text);
             tb.dt_data_pagamento = Convert.ToDateTime(dtpDiaCompra.Value);
             tb.tp_conta = txtCompra.Text;
+                Business.Business_Despesas Bs = new Business.Business_Despesas();
+                Bs.alterar(tb);
+
             
              
 
                 MessageBox.Show("Despesa alterada com sucesso");
 
             //atualizar datagrid
-            List<Mod.tb_despesas> tabela = Business.consultarDespesas();
-            dgvDespesas.DataSource = tabela;
+          
+            dgvDespesas.DataSource =  Bs.consultarFuncionarios();
         }
             catch (Exception ex)
             {
@@ -125,7 +125,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
                 //Atualizar a DataGrid
-                List<Mod.tb_despesas> tabela = bs.consultarDespesas();
+                List<Mod.tb_despesas> tabela = bs.consultarFuncionarios();
                 dgvDespesas.DataSource = tabela;
 
             }
@@ -135,6 +135,14 @@ namespace FERIADO_JARVIS_.Telas
                 MessageBox.Show("Erro");
             }
 
+        }
+
+        private void frmDespesas_Load(object sender, EventArgs e)
+        {
+            Business.Business_Despesas bs = new Business.Business_Despesas();
+            //Atualizar a DataGrid
+            List<Mod.tb_despesas> tabela = bs.consultarFuncionarios();
+            dgvDespesas.DataSource = tabela;
         }
     }
 }

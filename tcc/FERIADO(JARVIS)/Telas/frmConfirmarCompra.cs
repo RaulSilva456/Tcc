@@ -46,7 +46,10 @@ namespace FERIADO_JARVIS_.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Mod.tb_pedido_cliente tb = dgvPedido.CurrentRow.DataBoundItem as Mod.tb_pedido_cliente;
+            Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
+            bs.deletar(tb);
+            MessageBox.Show("Pedido Confirmado com Sucesso");
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)

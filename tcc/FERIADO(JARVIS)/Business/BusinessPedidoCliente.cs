@@ -28,6 +28,8 @@ namespace FERIADO_JARVIS_.Business
         }
         public void deletar(Mod.tb_pedido_cliente tabela)
         {
+            
+
             db.deletar(tabela);
 
         }

@@ -12,6 +12,13 @@
     <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="tel_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="tb_codigo">
+    <Key>
+      <PropertyRef Name="id_codigo" />
+    </Key>
+    <Property Name="id_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cd_verificacao" Type="Int32" />
+  </EntityType>
   <EntityType Name="tb_despesas">
     <Key>
       <PropertyRef Name="id_despesas" />
@@ -138,6 +145,7 @@
   </EntityType>
   <EntityContainer Name="tccEntities10" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tb_clientes" EntityType="Self.tb_clientes" />
+    <EntitySet Name="tb_codigo" EntityType="Self.tb_codigo" />
     <EntitySet Name="tb_despesas" EntityType="Self.tb_despesas" />
     <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" />
     <EntitySet Name="tb_folhapagamento" EntityType="Self.tb_folhapagamento" />

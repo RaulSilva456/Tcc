@@ -8,20 +8,10 @@ namespace FERIADO_JARVIS_.Business
 {
     class Business_Despesas
     {
-        Database.DataBaseDespesas db = new Database.DataBaseDespesas();
+        Database.Database_Despesas db = new Database.Database_Despesas();
         public void inserir(Mod.tb_despesas tabela)
         {
-            if(tabela.dt_data_pagamento < DateTime.Now)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Data Invalida No Campo Dia de Compra");
-                }
-
+            
             
             if(tabela.tp_conta == string.Empty)
                 try
@@ -51,7 +41,7 @@ namespace FERIADO_JARVIS_.Business
 
 
 
-            db.inseir(tabela);
+            db.inserir(tabela);
         }
         public void alterar (Mod.tb_despesas tabela)
         {
@@ -78,7 +68,7 @@ namespace FERIADO_JARVIS_.Business
                     throw new ArgumentException("Campo de compra Invalido");
 
                 }
-          
+
 
 
             db.alterar(tabela);

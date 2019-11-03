@@ -14,6 +14,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tb_codigo">
+      <EntityTypeMapping TypeName="tccModel.tb_codigo">
+        <MappingFragment StoreEntitySet="tb_codigo">
+          <ScalarProperty Name="id_codigo" ColumnName="id_codigo" />
+          <ScalarProperty Name="cd_verificacao" ColumnName="cd_verificacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_despesas">
       <EntityTypeMapping TypeName="tccModel.tb_despesas">
         <MappingFragment StoreEntitySet="tb_despesas">

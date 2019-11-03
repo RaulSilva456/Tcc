@@ -32,6 +32,7 @@ namespace FERIADO_JARVIS_.Database
             altera.nm_produto = tabela.nm_produto;
             altera.sb_sabor = tabela.sb_sabor;
             altera.cat_categoria = tabela.cat_categoria;
+            altera.nm_fornecedor_produto = altera.nm_fornecedor_produto;
             md.SaveChanges();
          }
         public List<Mod.tb_produto> listar()

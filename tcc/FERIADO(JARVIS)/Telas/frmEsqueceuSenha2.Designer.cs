@@ -58,32 +58,34 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(85, 195);
+            this.button1.Location = new System.Drawing.Point(87, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 36);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Conferir Codigo";
+            this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(62, 146);
+            this.txtCodigo.Location = new System.Drawing.Point(146, 169);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(220, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(46, 20);
             this.txtCodigo.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(19, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 50);
+            this.label2.Size = new System.Drawing.Size(319, 90);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Coloque o codigo que foi enviado para seu E-mail:";
+            this.label2.Text = "Este Eo Codigo De Recuperação Copie E Redirecionamos Para Tela De Alteração De se" +
+    "nha";
             // 
             // panel1
             // 
@@ -121,11 +123,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(44, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 36);
+            this.label1.Size = new System.Drawing.Size(319, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recuperação de Senha";
             // 
@@ -141,6 +143,7 @@
             this.Name = "frmEsqueceuSenha2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEsqueceuSenha2";
+            this.Load += new System.EventHandler(this.frmEsqueceuSenha2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

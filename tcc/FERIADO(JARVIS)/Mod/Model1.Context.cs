@@ -26,6 +26,7 @@ namespace FERIADO_JARVIS_.Mod
         }
     
         public virtual DbSet<tb_clientes> tb_clientes { get; set; }
+        public virtual DbSet<tb_codigo> tb_codigo { get; set; }
         public virtual DbSet<tb_despesas> tb_despesas { get; set; }
         public virtual DbSet<tb_estoque> tb_estoque { get; set; }
         public virtual DbSet<tb_folhapagamento> tb_folhapagamento { get; set; }

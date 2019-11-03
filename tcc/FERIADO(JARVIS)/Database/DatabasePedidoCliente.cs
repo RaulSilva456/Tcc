@@ -28,6 +28,7 @@ namespace FERIADO_JARVIS_.Database
             Mod.tb_pedido_cliente altera = md.tb_pedido_cliente.FirstOrDefault(x => x.id_pedido == tabela.id_pedido);
             altera.nm_produto_cliente = tabela.nm_produto_cliente;
             altera.qtd_quantidade = tabela.qtd_quantidade;
+            altera.nm_produto_cliente = tabela.nm_produto_cliente;
             md.SaveChanges();
         }
         public List<Mod.tb_pedido_cliente>listar()

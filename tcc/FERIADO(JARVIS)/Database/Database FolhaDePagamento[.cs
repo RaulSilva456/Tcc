@@ -33,6 +33,7 @@ namespace FERIADO_JARVIS_.Database
             altera.sl_salario_liquido = tabela.sl_salario_liquido;
             altera.vl_alimentação = tabela.vl_alimentação;
             altera.vl_transporte = tabela.vl_transporte;
+            altera.nm_funcionario = tabela.nm_funcionario;
             md.SaveChanges();
 
 

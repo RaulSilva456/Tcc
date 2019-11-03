@@ -34,17 +34,17 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-                if(txtHRExtra.Text == string.Empty )
+                if (txtHRExtra.Text == string.Empty)
                 {
                     MessageBox.Show("Campo Hora Extra Vazio");
 
                 }
-              else  if (txtFaltas.Text == string.Empty)
+                else if (txtFaltas.Text == string.Empty)
                 {
                     MessageBox.Show("Campo Faltas Vazio");
 
                 }
-             else   if (txtGratificação.Text == string.Empty)
+                else if (txtGratificação.Text == string.Empty)
                 {
                     MessageBox.Show("Campo  Gratificação Vazio");
 
@@ -91,21 +91,116 @@ namespace FERIADO_JARVIS_.Telas
 
                 Mod.tb_folhapagamento tabela = new Mod.tb_folhapagamento();
 
-            tabela.ad_gratificação =Convert.ToDecimal( txtGratificação.Text);
-            tabela.ds_faltas = Convert.ToInt32(txtFaltas.Text);
-            tabela.ds_inss = Convert.ToInt32(txtINSS.Text);
-            tabela.dt_pagamento = pagamento.Value;
-            tabela.hora_extra = Convert.ToInt32(txtHRExtra.Text);
-            tabela.imposto_renda = Convert.ToInt32(txtImpostoRenda.Text);
-            tabela.sl_salario_bruto = Convert.ToInt32(txtSalarioBruto.Text);
-            tabela.sl_salario_liquido = Convert.ToInt32(txtSalarioLiquido.Text);
-            tabela.vl_alimentação = Convert.ToInt32(txtVA.Text);
-            tabela.vl_transporte = Convert.ToInt32(txtVT.Text);
-            tabela.nm_funcionario = cboFuncionario.Text;
+                tabela.ad_gratificação = Convert.ToDecimal(txtGratificação.Text);
+                tabela.ds_faltas = Convert.ToInt32(txtFaltas.Text);
+                tabela.ds_inss = Convert.ToInt32(txtINSS.Text);
+                tabela.dt_pagamento = pagamento.Value;
+                tabela.hora_extra = Convert.ToInt32(txtHRExtra.Text);
+                tabela.imposto_renda = Convert.ToInt32(txtImpostoRenda.Text);
+                tabela.sl_salario_bruto = Convert.ToInt32(txtSalarioBruto.Text);
+                tabela.sl_salario_liquido = Convert.ToInt32(txtSalarioLiquido.Text);
+                tabela.vl_alimentação = Convert.ToInt32(txtVA.Text);
+                tabela.vl_transporte = Convert.ToInt32(txtVT.Text);
+                tabela.nm_funcionario = cboFuncionario.Text;
 
-            Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
-            bs.inserir(tabela);
-            MessageBox.Show("Inserido com sucesso");
+                Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
+                bs.inserir(tabela);
+                MessageBox.Show("Inserido com sucesso");
+
+                //Atualizar DataGrid
+                dgvFolhaPagamento.DataSource = bs.listar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        private void frmFolhaPagamento_Load(object sender, EventArgs e)
+        {
+
+
+            Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
+            Business.Business_Folha_de_Pagamento bss = new Business.Business_Folha_de_Pagamento();
+            dgvFolhaPagamento.DataSource = bss.listar();
+
+
+
+            List<Mod.tb_funcionarios> funcionario = bs.consultarFuncionarios();
+
+            cboFuncionario.DisplayMember = nameof(Mod.tb_funcionarios.nm_funcionario);
+            cboFuncionario.DataSource = funcionario;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+           
+
+
+
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Mod.tb_folhapagamento tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamento;
+                Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
+                bs.remover(tabela);
+
+                //Atualizar DataGrid
+                dgvFolhaPagamento.DataSource = bs.listar();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Erro Renicie Seu Computador");
+            }
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Mod.tb_folhapagamento tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamento;
+
+                tabela.ad_gratificação = Convert.ToDecimal(txtGratificação.Text);
+                tabela.ds_faltas = Convert.ToInt32(txtFaltas.Text);
+                tabela.ds_inss = Convert.ToInt32(txtINSS.Text);
+                tabela.dt_pagamento = pagamento.Value;
+                tabela.hora_extra = Convert.ToInt32(txtHRExtra.Text);
+                tabela.imposto_renda = Convert.ToInt32(txtImpostoRenda.Text);
+                tabela.sl_salario_bruto = Convert.ToInt32(txtSalarioBruto.Text);
+                tabela.sl_salario_liquido = Convert.ToInt32(txtSalarioLiquido.Text);
+                tabela.vl_alimentação = Convert.ToInt32(txtVA.Text);
+                tabela.vl_transporte = Convert.ToInt32(txtVT.Text);
+                tabela.nm_funcionario = cboFuncionario.Text;
+
+
+                Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
+                bs.alterar(tabela);
+                MessageBox.Show("Alterado");
+
+
+
+
+
+
+
+
+
+                //Atualizar DataGrid
+                dgvFolhaPagamento.DataSource = bs.listar();
 
             }
             catch (Exception ex)
@@ -114,20 +209,27 @@ namespace FERIADO_JARVIS_.Telas
                 MessageBox.Show(ex.Message);
             }
 
-            
         }
 
-        private void frmFolhaPagamento_Load(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                Mod.tb_folhapagamento tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamento;
+                Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
+                bs.remover(tabela);
+                MessageBox.Show("deletado");
 
+                //Atualizar DataGrid
+                dgvFolhaPagamento.DataSource = bs.listar();
 
-            Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
+            }
+            catch (Exception)
+            {
 
-            List<Mod.tb_funcionarios> funcionario = bs.consultarFuncionarios();
-
-            cboFuncionario.DisplayMember = nameof(Mod.tb_funcionarios.nm_funcionario);
-            cboFuncionario.DataSource = funcionario;
-
+                MessageBox.Show("Erro Renicie Seu Computador");
+            }
         }
     }
 }
+

@@ -31,6 +31,7 @@ namespace FERIADO_JARVIS_.Database
             alterar.end_endereco = tabela.end_endereco;
             alterar.doc_rg = tabela.doc_rg;
             alterar.doc_cep = tabela.doc_cep;
+            
             md.SaveChanges();
 
 

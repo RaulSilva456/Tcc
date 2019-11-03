@@ -32,6 +32,7 @@ namespace FERIADO_JARVIS_.Database
             altear.dt_saida_do_produto = tabela.dt_saida_do_produto ;
             altear.qtd_quantidade_do_produto = tabela.qtd_quantidade_do_produto;
             altear.pro_vencido = altear.pro_vencido;
+            
            
            
 
