@@ -52,5 +52,39 @@ namespace FERIADO_JARVIS_
             return false;
 
         }
+        public void EnviarEmail(string emailPara, string assunto, string mensagem)
+        {
+            Task.Factory.StartNew(() =>
+            {
+                System.Net.Mail.MailMessage email = new System.Net.Mail.MailMessage();
+
+                string remetente = "raulger456@gmail.com";
+                string senha = "01082002Rr";
+
+                // Configura Remetente, Destinatário
+                email.From = new System.Net.Mail.MailAddress(remetente);
+                email.To.Add(emailPara);
+
+                // Configura Assunto, Corpo e se o Corpo está em Html
+                email.Subject = assunto;
+                email.Body = mensagem;
+                email.IsBodyHtml = true;
+
+                // Configura os parâmetros do objeto SMTP
+                System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+
+                // Atribui credenciais
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new System.Net.NetworkCredential(remetente, senha);
+
+                // Envia a mensagem
+                smtp.Send(email);
+
+
+            });
+        }
     }
 }
