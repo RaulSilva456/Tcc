@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
@@ -48,7 +49,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -57,7 +57,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -65,6 +65,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 61);
             this.panel1.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(342, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 24);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "X";
+            this.label8.Click += new System.EventHandler(this.Label8_Click);
             // 
             // label7
             // 
@@ -152,7 +163,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button3.BackColor = System.Drawing.Color.Gold;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -166,7 +177,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.BackColor = System.Drawing.Color.Gold;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -249,7 +260,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -279,23 +290,12 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "Nome completo:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(342, 2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(25, 24);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "X";
-            this.label8.Click += new System.EventHandler(this.Label8_Click);
-            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.wallpaper_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(388, 448);
             this.Controls.Add(this.panel1);

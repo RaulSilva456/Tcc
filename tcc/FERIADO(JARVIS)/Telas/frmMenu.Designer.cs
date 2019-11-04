@@ -85,11 +85,12 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(84, 358);
+            this.label3.Location = new System.Drawing.Point(75, 354);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 41;
             this.label3.Text = "Suprimentos";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label2
             // 
@@ -97,11 +98,12 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(84, 281);
+            this.label2.Location = new System.Drawing.Point(75, 276);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 40;
             this.label2.Text = "Estoque";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
@@ -109,11 +111,12 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(83, 191);
+            this.label5.Location = new System.Drawing.Point(75, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 39;
             this.label5.Text = "Financeiro";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // label1
             // 
@@ -121,11 +124,12 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Harrington", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(83, 114);
+            this.label1.Location = new System.Drawing.Point(75, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 19);
             this.label1.TabIndex = 38;
             this.label1.Text = "RH";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label8
             // 

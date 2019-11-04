@@ -25,11 +25,25 @@ namespace FERIADO_JARVIS_.Telas
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            Random rdn = new Random();
+            rdn.Next();
+            string codigo = rdn.Next(0, 1000) + Environment.NewLine;
             string  email;
-         
-           email = txtEmailConfirmação.Text;
-            Mod.tb_login tabela = new Mod.tb_login();
+            email = txtEmailConfirmação.Text;
+            string assunto = "Codigo de Verificação";
+            Mod.tb_codigo tabela = new Mod.tb_codigo();
+            tabela.cd_verificacao = Convert.ToInt32(codigo);
+            Business.BusinessLogin bs = new Business.BusinessLogin();
+            bs.icd(tabela);
+            
+
+
+            Objetos fub = new Objetos();
+            fub.EnviarEmail(email, assunto, codigo);
+
+
+           
+           
 
             if(txtEmailConfirmação.Text == string.Empty)
             {
@@ -47,7 +61,7 @@ namespace FERIADO_JARVIS_.Telas
           else
             {
                 MessageBox.Show("Email válido! Rederecionamos você para a tela de código de recuperação.");
-            frmEsqueceuSenha2 r = new frmEsqueceuSenha2();
+            frmEsqueceuSenha3 r = new frmEsqueceuSenha3();
             r.Show();
             Hide();
             }

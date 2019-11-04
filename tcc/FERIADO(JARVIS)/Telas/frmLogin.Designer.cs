@@ -122,9 +122,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::FERIADO_JARVIS_.Properties.Resources.olho_senha2;
-            this.pictureBox1.Location = new System.Drawing.Point(253, 135);
+            this.pictureBox1.Location = new System.Drawing.Point(253, 144);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -168,22 +168,22 @@
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.White;
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSenha.Location = new System.Drawing.Point(137, 135);
+            this.txtSenha.Location = new System.Drawing.Point(137, 144);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(110, 22);
+            this.txtSenha.Size = new System.Drawing.Size(110, 15);
             this.txtSenha.TabIndex = 4;
             this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(137, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 31);
@@ -196,17 +196,17 @@
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.Location = new System.Drawing.Point(137, 98);
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Location = new System.Drawing.Point(137, 107);
             this.txtNome.MaxLength = 35;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(110, 22);
+            this.txtNome.Size = new System.Drawing.Size(110, 15);
             this.txtNome.TabIndex = 3;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -218,7 +218,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label8.Location = new System.Drawing.Point(150, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 34);
@@ -230,7 +230,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.wallpaper_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(380, 295);
             this.Controls.Add(this.panel1);

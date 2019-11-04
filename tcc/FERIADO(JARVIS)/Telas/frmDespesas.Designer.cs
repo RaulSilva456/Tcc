@@ -63,13 +63,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(6, 12);
+            this.panel1.Location = new System.Drawing.Point(3, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(421, 60);
+            this.panel1.Size = new System.Drawing.Size(424, 60);
             this.panel1.TabIndex = 4;
             // 
             // label5
@@ -88,7 +88,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(150, 15);
+            this.label4.Location = new System.Drawing.Point(167, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 36);
             this.label4.TabIndex = 0;
@@ -108,11 +108,11 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtCompra);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(6, 2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Location = new System.Drawing.Point(6, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(421, 380);
+            this.groupBox1.Size = new System.Drawing.Size(421, 358);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -120,18 +120,18 @@
             // 
             this.dgvDespesas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDespesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDespesas.Location = new System.Drawing.Point(14, 215);
+            this.dgvDespesas.Location = new System.Drawing.Point(10, 195);
             this.dgvDespesas.Name = "dgvDespesas";
             this.dgvDespesas.Size = new System.Drawing.Size(240, 150);
             this.dgvDespesas.TabIndex = 27;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button3.BackColor = System.Drawing.Color.Gold;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(260, 331);
+            this.button3.Location = new System.Drawing.Point(256, 311);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 34);
             this.button3.TabIndex = 26;
@@ -141,11 +141,11 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.BackColor = System.Drawing.Color.Gold;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(260, 280);
+            this.button2.Location = new System.Drawing.Point(256, 260);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 33);
             this.button2.TabIndex = 25;
@@ -157,7 +157,7 @@
             // 
             this.dtpDiaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDiaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDiaCompra.Location = new System.Drawing.Point(231, 168);
+            this.dtpDiaCompra.Location = new System.Drawing.Point(227, 148);
             this.dtpDiaCompra.Name = "dtpDiaCompra";
             this.dtpDiaCompra.Size = new System.Drawing.Size(100, 20);
             this.dtpDiaCompra.TabIndex = 23;
@@ -166,7 +166,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(78, 168);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(74, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 24);
             this.label3.TabIndex = 22;
@@ -176,7 +177,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(123, 127);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(119, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 24);
             this.label2.TabIndex = 20;
@@ -185,18 +187,18 @@
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(231, 124);
+            this.txtValor.Location = new System.Drawing.Point(227, 104);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 20);
             this.txtValor.TabIndex = 19;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(260, 231);
+            this.button1.Location = new System.Drawing.Point(256, 211);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 33);
             this.button1.TabIndex = 2;
@@ -208,7 +210,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 92);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(107, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 24);
             this.label1.TabIndex = 1;
@@ -217,7 +220,7 @@
             // txtCompra
             // 
             this.txtCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompra.Location = new System.Drawing.Point(231, 89);
+            this.txtCompra.Location = new System.Drawing.Point(227, 69);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(100, 20);
             this.txtCompra.TabIndex = 0;
@@ -227,9 +230,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.wallpaper_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(436, 394);
+            this.ClientSize = new System.Drawing.Size(436, 382);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -47,6 +47,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // comboBox1
             // 
@@ -96,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.choco_icone;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.panel1);

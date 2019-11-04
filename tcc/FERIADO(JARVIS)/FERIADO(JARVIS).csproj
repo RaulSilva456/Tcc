@@ -77,6 +77,7 @@
     <Compile Include="Business\BusinessCliente.cs" />
     <Compile Include="Business\BusinessFornecedores.cs" />
     <Compile Include="Business\BusinessLogin.cs" />
+    <Compile Include="Business\BusinessMostruario.cs" />
     <Compile Include="Business\BusinessPedidoCliente.cs" />
     <Compile Include="Business\Estoque Business.cs" />
     <Compile Include="Business\Financeiro Business.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Database\DatabaseCliente.cs" />
     <Compile Include="Database\DatabaseFornecedores.cs" />
     <Compile Include="Database\databaseLogin.cs" />
+    <Compile Include="Database\DatabaseMostruario.cs" />
     <Compile Include="Database\DatabasePedidoCliente.cs" />
     <Compile Include="Database\DatabaseProduto.cs" />
     <Compile Include="Database\EstoqueDatabase.cs" />
@@ -203,12 +205,6 @@
     <Compile Include="Telas\frmEsqueceuSenha.Designer.cs">
       <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmEsqueceuSenha2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\frmEsqueceuSenha2.Designer.cs">
-      <DependentUpon>frmEsqueceuSenha2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Telas\frmEsqueceuSenha3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +258,12 @@
     </Compile>
     <Compile Include="Telas\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmMostruario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmMostruario.Designer.cs">
+      <DependentUpon>frmMostruario.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmPedidoCliente.cs">
       <SubType>Form</SubType>
@@ -321,9 +323,6 @@
     <EmbeddedResource Include="Telas\frmEsqueceuSenha.resx">
       <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmEsqueceuSenha2.resx">
-      <DependentUpon>frmEsqueceuSenha2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmEsqueceuSenha3.resx">
       <DependentUpon>frmEsqueceuSenha3.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmMostruario.resx">
+      <DependentUpon>frmMostruario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmPedidoCliente.resx">
       <DependentUpon>frmPedidoCliente.cs</DependentUpon>
@@ -429,6 +431,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\wallpaper 2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

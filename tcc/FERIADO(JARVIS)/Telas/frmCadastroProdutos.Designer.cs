@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dgtFuncionario = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.txtSabor = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.btnInserirProduto = new System.Windows.Forms.Button();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgtFuncionario = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label5);
@@ -61,6 +61,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(329, 76);
             this.panel1.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(301, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 24);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "X";
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // pictureBox2
             // 
@@ -128,9 +139,18 @@
             this.label4.TabIndex = 76;
             this.label4.Text = "Nome  Fornecedor:";
             // 
+            // dgtFuncionario
+            // 
+            this.dgtFuncionario.BackgroundColor = System.Drawing.Color.White;
+            this.dgtFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgtFuncionario.Location = new System.Drawing.Point(6, 227);
+            this.dgtFuncionario.Name = "dgtFuncionario";
+            this.dgtFuncionario.Size = new System.Drawing.Size(210, 154);
+            this.dgtFuncionario.TabIndex = 48;
+            // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button3.BackColor = System.Drawing.Color.Gold;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -151,7 +171,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button4.BackColor = System.Drawing.Color.Gold;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -194,7 +214,7 @@
             // 
             // btnInserirProduto
             // 
-            this.btnInserirProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnInserirProduto.BackColor = System.Drawing.Color.Gold;
             this.btnInserirProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserirProduto.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserirProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -224,32 +244,12 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "nome do produto:";
             // 
-            // dgtFuncionario
-            // 
-            this.dgtFuncionario.BackgroundColor = System.Drawing.Color.White;
-            this.dgtFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtFuncionario.Location = new System.Drawing.Point(6, 227);
-            this.dgtFuncionario.Name = "dgtFuncionario";
-            this.dgtFuncionario.Size = new System.Drawing.Size(210, 154);
-            this.dgtFuncionario.TabIndex = 48;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(301, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 24);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "X";
-            this.label6.Click += new System.EventHandler(this.Label6_Click);
-            // 
             // frmCadastroProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.wallpaper_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(352, 417);
             this.Controls.Add(this.groupBox1);

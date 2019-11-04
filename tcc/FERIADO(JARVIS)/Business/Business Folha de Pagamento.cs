@@ -24,7 +24,8 @@ namespace FERIADO_JARVIS_.Business
                 catch (Exception)
                 {
 
-                    throw new ArgumentException("Data Invalida");
+
+                    throw new ArgumentException("Data inválida.");
                 }
 
             

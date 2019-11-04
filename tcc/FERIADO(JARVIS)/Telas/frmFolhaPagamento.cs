@@ -24,15 +24,13 @@ namespace FERIADO_JARVIS_.Telas
 
         private void label12_Click(object sender, EventArgs e)
         {
-            Telas.frmMenu r = new Telas.frmMenu();
-            r.Show();
-            Hide();
+            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            try
+          try
             {
                 if (txtHRExtra.Text == string.Empty)
                 {
@@ -93,14 +91,14 @@ namespace FERIADO_JARVIS_.Telas
 
                 tabela.ad_gratificação = Convert.ToDecimal(txtGratificação.Text);
                 tabela.ds_faltas = Convert.ToInt32(txtFaltas.Text);
-                tabela.ds_inss = Convert.ToInt32(txtINSS.Text);
+                tabela.ds_inss = Convert.ToDecimal(txtINSS.Text);
                 tabela.dt_pagamento = pagamento.Value;
-                tabela.hora_extra = Convert.ToInt32(txtHRExtra.Text);
-                tabela.imposto_renda = Convert.ToInt32(txtImpostoRenda.Text);
-                tabela.sl_salario_bruto = Convert.ToInt32(txtSalarioBruto.Text);
-                tabela.sl_salario_liquido = Convert.ToInt32(txtSalarioLiquido.Text);
-                tabela.vl_alimentação = Convert.ToInt32(txtVA.Text);
-                tabela.vl_transporte = Convert.ToInt32(txtVT.Text);
+                tabela.hora_extra = Convert.ToDecimal(txtHRExtra.Text);
+                tabela.imposto_renda = Convert.ToDecimal(txtImpostoRenda.Text);
+                tabela.sl_salario_bruto = Convert.ToDecimal(txtSalarioBruto.Text);
+                tabela.sl_salario_liquido = Convert.ToDecimal(txtSalarioLiquido.Text);
+                tabela.vl_alimentação = Convert.ToDecimal(txtVA.Text);
+                tabela.vl_transporte = Convert.ToDecimal(txtVT.Text);
                 tabela.nm_funcionario = cboFuncionario.Text;
 
                 Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
@@ -109,7 +107,7 @@ namespace FERIADO_JARVIS_.Telas
 
                 //Atualizar DataGrid
                 dgvFolhaPagamento.DataSource = bs.listar();
-            }
+          }
             catch (Exception ex)
             {
 
@@ -234,6 +232,13 @@ namespace FERIADO_JARVIS_.Telas
         private void GroupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmMenu r = new frmMenu();
+            r.Show();
+            Hide();
         }
     }
 }
