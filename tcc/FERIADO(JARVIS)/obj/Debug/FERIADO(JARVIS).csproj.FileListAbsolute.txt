@@ -476,3 +476,4 @@ C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Te
 C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmEsqueceuSenha.resources
 C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmEsqueceuSenha3.resources
 C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmMostruario.resources
+C:\Users\teste\Source\Repos\Tcc\tcc\FERIADO(JARVIS)\obj\Debug\FERIADO_JARVIS_.Telas.frmSplash1.resources

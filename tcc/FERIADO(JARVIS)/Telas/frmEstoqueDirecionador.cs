@@ -34,6 +34,13 @@ namespace FERIADO_JARVIS_.Telas
                 r.Show();
                 Hide();
             }
+            if(escolha == "Mostruario")
+            {
+                frmMostruario r = new frmMostruario();
+                r.Show();
+                Hide();
+
+            }
         }
 
         private void PictureBox2_Click_1(object sender, EventArgs e)

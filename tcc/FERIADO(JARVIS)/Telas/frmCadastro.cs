@@ -140,7 +140,7 @@ namespace FERIADO_JARVIS_.Telas
 
                         string email = txtEmail.Text;
                         string re = "Choco Frei";
-                        string me = " Cadastro Realizado Com Sucesso Desfrute do Nosso Programa";
+                        string me = "Seja bem-vindo! Esperamos que você tenha uma ótima êxperiencia conosco.";
 
                         Objetos fun = new Objetos();
                         fun.EnviarEmail(email, re, me);

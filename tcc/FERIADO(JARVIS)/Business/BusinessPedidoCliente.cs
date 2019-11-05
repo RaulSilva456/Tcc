@@ -21,7 +21,7 @@ namespace FERIADO_JARVIS_.Business
                 catch (Exception)
                 {
 
-                    throw new ArgumentException("Campo Nome Produto Invalido");
+                    throw new ArgumentException("Campo nome do produto vazio.");
                 }
 
             db.inseri(tabela);

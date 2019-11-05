@@ -124,12 +124,12 @@ namespace FERIADO_JARVIS_.Telas
 
             if(rdbSim.Checked == true)
             {
-               tabela.pro_vencido = "Perecivel" ;
+               tabela.pro_vencido = "Vencido" ;
             }
 
             if (rdbNao.Checked == true)
             {
-                tabela.pro_vencido = "vencido";
+                tabela.pro_vencido = "Perecivel";
             }
 
 

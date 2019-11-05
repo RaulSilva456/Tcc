@@ -90,17 +90,24 @@ namespace FERIADO_JARVIS_.Telas
                 Mod.tb_mostruario tabela = dgvMostruario.CurrentRow.DataBoundItem as Mod.tb_mostruario;
 
                 Business.BusinessMostruario bs = new Business.BusinessMostruario();
-                bs.deletar(tabela);
-                MessageBox.Show("Produto foi removido do mostruário.");
+                
+               if( MessageBox.Show("Tem Certeza que deseja Remover.", "",MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    MessageBox.Show("Removido Com Sucesso");
+
+                    dgvMostruario.DataSource = bs.lista();
+
+                    //Atualizar Datagrid
+                    bs.deletar(tabela);
                 dgvMostruario.DataSource = bs.lista();
 
-                //Atualizar Datagrid
-                dgvMostruario.DataSource = bs.lista();
+                }
+
             }
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show("Erro");
             }
 
         }
