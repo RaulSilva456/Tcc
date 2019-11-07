@@ -53,13 +53,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(329, 76);
+            this.panel1.Size = new System.Drawing.Size(329, 67);
             this.panel1.TabIndex = 50;
             // 
             // label6
@@ -77,9 +77,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::FERIADO_JARVIS_.Properties.Resources.voltar_icone2;
-            this.pictureBox2.Location = new System.Drawing.Point(281, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(291, 30);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
@@ -89,7 +89,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(112, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 36);
@@ -125,14 +125,14 @@
             this.cboFornecedor.FormattingEnabled = true;
             this.cboFornecedor.Location = new System.Drawing.Point(175, 181);
             this.cboFornecedor.Name = "cboFornecedor";
-            this.cboFornecedor.Size = new System.Drawing.Size(100, 21);
+            this.cboFornecedor.Size = new System.Drawing.Size(112, 21);
             this.cboFornecedor.TabIndex = 77;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(6, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 24);
@@ -150,10 +150,10 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Gold;
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button3.ForeColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(222, 341);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 31);
@@ -166,15 +166,15 @@
             // 
             this.txtSabor.Location = new System.Drawing.Point(175, 148);
             this.txtSabor.Name = "txtSabor";
-            this.txtSabor.Size = new System.Drawing.Size(100, 20);
+            this.txtSabor.Size = new System.Drawing.Size(112, 20);
             this.txtSabor.TabIndex = 73;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Gold;
+            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button4.ForeColor = System.Drawing.Color.Red;
             this.button4.Location = new System.Drawing.Point(222, 290);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(98, 32);
@@ -187,7 +187,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(114, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 24);
@@ -198,14 +198,14 @@
             // 
             this.txtCategoria.Location = new System.Drawing.Point(175, 122);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(112, 20);
             this.txtCategoria.TabIndex = 71;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(86, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 24);
@@ -214,10 +214,10 @@
             // 
             // btnInserirProduto
             // 
-            this.btnInserirProduto.BackColor = System.Drawing.Color.Gold;
+            this.btnInserirProduto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnInserirProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserirProduto.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserirProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnInserirProduto.ForeColor = System.Drawing.Color.Red;
             this.btnInserirProduto.Location = new System.Drawing.Point(222, 240);
             this.btnInserirProduto.Name = "btnInserirProduto";
             this.btnInserirProduto.Size = new System.Drawing.Size(98, 32);
@@ -230,17 +230,17 @@
             // 
             this.txtNomeProduto.Location = new System.Drawing.Point(175, 96);
             this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeProduto.Size = new System.Drawing.Size(112, 20);
             this.txtNomeProduto.TabIndex = 68;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(31, 96);
+            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(28, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 24);
+            this.label1.Size = new System.Drawing.Size(151, 26);
             this.label1.TabIndex = 67;
             this.label1.Text = "nome do produto:";
             // 
@@ -249,7 +249,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.wallpaper_2;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(352, 417);
             this.Controls.Add(this.groupBox1);

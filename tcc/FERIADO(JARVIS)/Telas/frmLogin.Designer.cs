@@ -109,22 +109,22 @@
             // lblEsqueceuSenha
             // 
             this.lblEsqueceuSenha.AutoSize = true;
-            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Harlow Solid Italic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.Blue;
+            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Harlow Solid Italic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblEsqueceuSenha.Location = new System.Drawing.Point(146, 160);
             this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(87, 15);
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(92, 16);
             this.lblEsqueceuSenha.TabIndex = 16;
             this.lblEsqueceuSenha.Text = "Esqueceu senha?";
             this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::FERIADO_JARVIS_.Properties.Resources.olho_senha2;
-            this.pictureBox1.Location = new System.Drawing.Point(253, 144);
+            this.pictureBox1.Location = new System.Drawing.Point(264, 142);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 16);
+            this.pictureBox1.Size = new System.Drawing.Size(25, 15);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -134,11 +134,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Harlow Solid Italic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(155, 227);
+            this.label6.Font = new System.Drawing.Font("Harlow Solid Italic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label6.Location = new System.Drawing.Point(146, 227);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 14);
+            this.label6.Size = new System.Drawing.Size(70, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Cadastrar-se";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -147,7 +147,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(67, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 24);
@@ -158,8 +158,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(54, 98);
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(54, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 24);
             this.label4.TabIndex = 7;
@@ -170,20 +170,20 @@
             this.txtSenha.BackColor = System.Drawing.Color.White;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSenha.Location = new System.Drawing.Point(137, 144);
-            this.txtSenha.MaxLength = 20;
+            this.txtSenha.Location = new System.Drawing.Point(137, 142);
+            this.txtSenha.MaxLength = 15;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(110, 15);
+            this.txtSenha.Size = new System.Drawing.Size(152, 15);
             this.txtSenha.TabIndex = 4;
             this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
             this.button1.Location = new System.Drawing.Point(137, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 31);
@@ -200,13 +200,13 @@
             this.txtNome.Location = new System.Drawing.Point(137, 107);
             this.txtNome.MaxLength = 35;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(110, 15);
+            this.txtNome.Size = new System.Drawing.Size(152, 15);
             this.txtNome.TabIndex = 3;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -218,19 +218,19 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(150, 18);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 34);
+            this.label8.Size = new System.Drawing.Size(84, 34);
             this.label8.TabIndex = 11;
-            this.label8.Text = "Login";
+            this.label8.Text = "Log-in";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.wallpaper_2;
+            this.BackgroundImage = global::FERIADO_JARVIS_.Properties.Resources.Wallpaper2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(380, 295);
             this.Controls.Add(this.panel1);

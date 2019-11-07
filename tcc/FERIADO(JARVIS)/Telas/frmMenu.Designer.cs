@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(168, 428);
+            this.panel1.Size = new System.Drawing.Size(175, 428);
             this.panel1.TabIndex = 36;
             // 
             // label3
@@ -196,9 +196,9 @@
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox6.Image = global::FERIADO_JARVIS_.Properties.Resources.saida_logo;
-            this.pictureBox6.Location = new System.Drawing.Point(440, 377);
+            this.pictureBox6.Location = new System.Drawing.Point(449, 381);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox6.Size = new System.Drawing.Size(44, 45);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 35;
             this.pictureBox6.TabStop = false;
@@ -207,9 +207,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::FERIADO_JARVIS_.Properties.Resources.logo_choco_frei;
-            this.pictureBox7.Location = new System.Drawing.Point(168, -2);
+            this.pictureBox7.Location = new System.Drawing.Point(171, -2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(325, 425);
+            this.pictureBox7.Size = new System.Drawing.Size(322, 425);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 34;
             this.pictureBox7.TabStop = false;
