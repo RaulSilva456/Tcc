@@ -8,7 +8,7 @@ namespace FERIADO_JARVIS_.Database
 {
     class databaseLogin
     {
-        Mod.tccEntities10 md = new Mod.tccEntities10();
+        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
 
         public void Cadastrar(Mod.tb_login tabela)
         {

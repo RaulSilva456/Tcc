@@ -15,10 +15,14 @@ namespace FERIADO_JARVIS_.Mod
     public partial class tb_estoque
     {
         public int id_produto { get; set; }
+        public Nullable<int> id_fornecedor { get; set; }
+        public string nm_fornecedor { get; set; }
         public string nm_produto { get; set; }
-        public Nullable<decimal> qtd_quantidade_do_produto { get; set; }
-        public string pro_vencido { get; set; }
+        public Nullable<int> qtd_produto { get; set; }
         public Nullable<decimal> pr_preco { get; set; }
-        public Nullable<System.DateTime> dt_saida_do_produto { get; set; }
+        public Nullable<System.DateTime> dt_entrada { get; set; }
+        public Nullable<System.DateTime> dt_saida { get; set; }
+    
+        public virtual tb_fornecedor tb_fornecedor { get; set; }
     }
 }

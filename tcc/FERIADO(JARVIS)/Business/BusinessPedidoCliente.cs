@@ -12,7 +12,7 @@ namespace FERIADO_JARVIS_.Business
 
         public void inseri(Mod.tb_pedido_cliente tabela)
         {
-           if(tabela.nm_produto_cliente == string.Empty)
+           if(tabela.nm_nome == string.Empty)
                 try
                 {
                     throw new Exception();

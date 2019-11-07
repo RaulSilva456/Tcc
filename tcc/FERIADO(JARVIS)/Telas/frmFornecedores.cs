@@ -66,7 +66,7 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Campo de valor pago vazio.");
                 }
                 
-                Mod.tb_fornecedores tabela = new Mod.tb_fornecedores();
+                Mod.tb_fornecedor tabela = new Mod.tb_fornecedor();
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;
@@ -96,7 +96,7 @@ namespace FERIADO_JARVIS_.Telas
         private void button2_Click_1(object sender, EventArgs e)
         {
             try
-            { Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
+            { Mod.tb_fornecedor tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedor;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.deletar(tabela);
             MessageBox.Show("Fornecedor deletado.");
@@ -123,7 +123,7 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Campo de valor pago vazio.");
                 }
 
-                Mod.tb_fornecedores tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedores;
+                Mod.tb_fornecedor tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedor;
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;

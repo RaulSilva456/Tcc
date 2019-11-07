@@ -8,23 +8,24 @@ namespace FERIADO_JARVIS_.Database
 {
     class DatabaseCliente
     {
-        Mod.tccEntities10 md = new Mod.tccEntities10();
+        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
 
-        public void inserir(Mod.tb_clientes tabela)
+        public void inserir(Mod.tb_cliente tabela)
         {
-            md.tb_clientes.Add(tabela);
+            md.tb_cliente.Add(tabela);
             md.SaveChanges();
 
         }
-        public void remover(Mod.tb_clientes tabela)
+        public void remover(Mod.tb_cliente tabela)
         {
-            tabela = md.tb_clientes.First(x => x.id_clientes == tabela.id_clientes);
-            md.tb_clientes.Remove(tabela);
+            
+            tabela = md.tb_cliente.First(x => x.id_cliente == tabela.id_cliente);
+            md.tb_cliente.Remove(tabela);
             md.SaveChanges();
         }
-        public void alterar(Mod.tb_clientes tabela)
+        public void alterar(Mod.tb_cliente tabela)
         {
-            Mod.tb_clientes alterar = md.tb_clientes.FirstOrDefault(x => x.id_clientes == tabela.id_clientes);
+            Mod.tb_cliente alterar = md.tb_cliente.FirstOrDefault(x => x.id_cliente == tabela.id_cliente);
             alterar.nm_nome = tabela.nm_nome;
             alterar.pes_email = tabela.pes_email;
             alterar.tel_telefone = tabela.tel_telefone;
@@ -36,10 +37,10 @@ namespace FERIADO_JARVIS_.Database
 
 
         }
-        public List<Mod.tb_clientes> listar()
+        public List<Mod.tb_cliente> listar()
         {
 
-            return  md.tb_clientes.ToList();
+            return  md.tb_cliente.ToList();
         }
 
     }

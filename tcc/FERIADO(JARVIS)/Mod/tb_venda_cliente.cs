@@ -16,8 +16,12 @@ namespace FERIADO_JARVIS_.Mod
     {
         public int id_venda { get; set; }
         public Nullable<decimal> vl_venda { get; set; }
+        public Nullable<int> id_produto { get; set; }
         public string nm_produto { get; set; }
-        public string nm_cliente_venda { get; set; }
+        public Nullable<int> id_cliente { get; set; }
         public Nullable<System.DateTime> dt_venda_produto { get; set; }
+    
+        public virtual tb_cliente tb_cliente { get; set; }
+        public virtual tb_produto tb_produto { get; set; }
     }
 }

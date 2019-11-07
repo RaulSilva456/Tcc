@@ -8,17 +8,17 @@ namespace FERIADO_JARVIS_.Database
 {
     class Database_Despesas
     {
-        Mod.tccEntities10 md = new Mod.tccEntities10();
+        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
 
-        public void inserir(Mod.tb_despesas tabela)
+        public void inserir(Mod.tb_despesa tabela)
         {
-            md.tb_despesas.Add(tabela);
+            md.tb_despesa.Add(tabela);
             md.SaveChanges();
 
         }
-        public void alterar(Mod.tb_despesas tabela)
+        public void alterar(Mod.tb_despesa tabela)
         {
-            Mod.tb_despesas alterar = md.tb_despesas.First(t => t.id_despesas == tabela.id_despesas);
+            Mod.tb_despesa alterar = md.tb_despesa.First(t => t.id_despesa == tabela.id_despesa);
             alterar.tp_conta = tabela.tp_conta;
             alterar.dt_data_pagamento = tabela.dt_data_pagamento;
             alterar.vl_valor = tabela.vl_valor;
@@ -27,19 +27,19 @@ namespace FERIADO_JARVIS_.Database
 
 
         }
-        public void deletar(Mod.tb_despesas tabelas)
+        public void deletar(Mod.tb_despesa tabelas)
         {
 
-            tabelas = md.tb_despesas.First(x => x.id_despesas == tabelas.id_despesas);
-            md.tb_despesas.Remove(tabelas);
+            tabelas = md.tb_despesa.First(x => x.id_despesa == tabelas.id_despesa);
+            md.tb_despesa.Remove(tabelas);
             md.SaveChanges();
 
         }
-        public List<Mod.tb_despesas> consultarDespesas()
+        public List<Mod.tb_despesa> consultarDespesas()
         {
 
 
-            return md.tb_despesas.ToList();
+            return md.tb_despesa.ToList();
         }
     }
 }

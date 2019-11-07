@@ -8,22 +8,22 @@ namespace FERIADO_JARVIS_.Database
 {
     class DatabaseFornecedores
     {
-        Mod.tccEntities10 md = new Mod.tccEntities10();
-        public void inserir(Mod.tb_fornecedores tabela)
+        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
+        public void inserir(Mod.tb_fornecedor tabela)
         {
-            md.tb_fornecedores.Add(tabela);
+            md.tb_fornecedor.Add(tabela);
             md.SaveChanges();
         }
-        public void deletar(Mod.tb_fornecedores tabela)
+        public void deletar(Mod.tb_fornecedor tabela)
         {
-          tabela =  md.tb_fornecedores.First(x => x.id_fornecedores == tabela.id_fornecedores);
-            md.tb_fornecedores.Remove(tabela);
+          tabela =  md.tb_fornecedor.First(x => x.id_fornecedor == tabela.id_fornecedor);
+            md.tb_fornecedor.Remove(tabela);
             md.SaveChanges();
 
         }
-        public void alterar(Mod.tb_fornecedores tabela )
+        public void alterar(Mod.tb_fornecedor tabela )
         {
-            Mod.tb_fornecedores alterar = md.tb_fornecedores.FirstOrDefault(x => x.id_fornecedores == tabela.id_fornecedores);
+            Mod.tb_fornecedor alterar = md.tb_fornecedor.FirstOrDefault(x => x.id_fornecedor == tabela.id_fornecedor);
             alterar.nm_fornecedor = tabela.nm_fornecedor;
             alterar.nm_produto = tabela.nm_produto;
             alterar.tl_telefone = tabela.tl_telefone;
@@ -39,9 +39,9 @@ namespace FERIADO_JARVIS_.Database
 
 
         }
-        public List<Mod.tb_fornecedores>listar()
+        public List<Mod.tb_fornecedor>listar()
         {
-            return  md.tb_fornecedores.ToList();
+            return  md.tb_fornecedor.ToList();
         }
     }
 }

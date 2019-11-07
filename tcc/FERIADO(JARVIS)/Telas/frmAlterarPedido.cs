@@ -31,7 +31,7 @@ namespace FERIADO_JARVIS_.Telas
                 Mod.tb_pedido_cliente tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_pedido_cliente;
 
                 tabela.qtd_quantidade = Convert.ToInt32(nudQuantidadeAlteração.Value);
-                tabela.nm_produto_cliente = CboProduto.Text;
+                tabela.nm_nome = CboProduto.Text;
                
                 Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
                 bs.alterar(tabela);

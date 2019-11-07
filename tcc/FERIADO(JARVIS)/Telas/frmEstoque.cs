@@ -111,10 +111,11 @@ namespace FERIADO_JARVIS_.Telas
 
 
             Mod.tb_estoque tabela = new Mod.tb_estoque();
-            tabela.dt_saida_do_produto = dtpSaidaProduto.Value;
+          
             tabela.nm_produto = txtNome.Text;
             tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
-            tabela.qtd_quantidade_do_produto = Convert.ToDecimal(txtQuantidade.Text);
+            tabela.qtd_produto = Convert.ToInt32(txtQuantidade.Text);
+                
 
 
                 //validaçoes
@@ -124,12 +125,12 @@ namespace FERIADO_JARVIS_.Telas
 
             if(rdbSim.Checked == true)
             {
-               tabela.pro_vencido = "Vencido" ;
+               tabela.nm_fornecedor = "Vencido" ;
             }
 
             if (rdbNao.Checked == true)
             {
-                tabela.pro_vencido = "Perecivel";
+                tabela.nm_fornecedor = "Perecivel";
             }
 
 
@@ -171,20 +172,28 @@ namespace FERIADO_JARVIS_.Telas
 
 
                 Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
-            tabela.dt_saida_do_produto = dtpSaidaProduto.Value;
-            tabela.nm_produto = txtNome.Text;
-            tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
-            tabela.qtd_quantidade_do_produto = Convert.ToInt32(txtQuantidade.Text);
+                tabela.nm_produto = txtNome.Text;
+                tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
+                tabela.qtd_produto = Convert.ToInt32(txtQuantidade.Text);
+
+
+
+                //validaçoes
+
+
+
 
                 if (rdbSim.Checked == true)
                 {
-                    tabela.pro_vencido = "Perecivel";
+                    tabela.nm_fornecedor = "Vencido";
                 }
 
                 if (rdbNao.Checked == true)
                 {
-                    tabela.pro_vencido = "vencido";
+                    tabela.nm_fornecedor = "Perecivel";
                 }
+
+
 
                 Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.alterar(tabela);

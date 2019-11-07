@@ -59,7 +59,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {Mod.tb_pedido_cliente tabela = new Mod.tb_pedido_cliente();
-            tabela.nm_produto_cliente = CboProduto.Text;
+            tabela.nm_nome = CboProduto.Text;
             tabela.qtd_quantidade = Convert.ToInt32(nudQuantidadePedido.Value);
             Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
             bs.inseri(tabela);

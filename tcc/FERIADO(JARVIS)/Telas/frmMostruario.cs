@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FERIADO_JARVIS_.Telas
 {
-    public partial class frmMostruario : Form
+   /* public partial class frmMostruario : Form
     {
         public frmMostruario()
         {
@@ -40,9 +40,9 @@ namespace FERIADO_JARVIS_.Telas
             dgvMostruario.DataSource = r.lista();
 
             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
-            List<Mod.tb_funcionarios> funcionario = bs.consultarFuncionarios();
+            List<Mod.tb_funcionario> funcionario = bs.consultarFuncionarios();
 
-            cboFornecedor.DisplayMember = nameof(Mod.tb_funcionarios.nm_funcionario);
+            cboFornecedor.DisplayMember = nameof(Mod.tb_funcionario.nm_funcionario);
             cboFornecedor.DataSource = funcionario;
 
         }
@@ -111,5 +111,5 @@ namespace FERIADO_JARVIS_.Telas
             }
 
         }
-    }
+    }*/
 }

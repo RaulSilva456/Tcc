@@ -11,8 +11,8 @@ namespace FERIADO_JARVIS_.Business
     {
         Database.Estoque_Database db = new Database.Estoque_Database();
         public void inserir(Mod.tb_estoque tabela)
-        {
-            if (tabela.dt_saida_do_produto <= DateTime.Now)
+        {   
+            if (tabela.dt_saida<= DateTime.Now)
                 try
                 {
                     throw new Exception();
@@ -33,11 +33,31 @@ namespace FERIADO_JARVIS_.Business
 
                     throw new ArgumentException("Campo nome Produto Vazio");
                 }
+            if (tabela.pr_preco <= 0)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Preço Invalido");
+                }
+
+            if (tabela.qtd_produto <= 0)
+                try
+                {
+                    throw new Exception();
+                }
+                catch (Exception)
+                {
+
+                    throw new ArgumentException("Campo Quantidade De Produto Invalida");
+                }
 
 
-          
-          
-            
+
+
 
 
 
@@ -67,7 +87,7 @@ namespace FERIADO_JARVIS_.Business
         }
         public void alterar(Mod.tb_estoque tabela)
         {
-            if (tabela.dt_saida_do_produto <= DateTime.Now)
+            if (tabela.dt_saida <= DateTime.Now)
                 try
                 {
                     throw new Exception();
@@ -102,7 +122,7 @@ namespace FERIADO_JARVIS_.Business
                     throw new ArgumentException("Campo Preço Invalido");
                 }
 
-            if (tabela.qtd_quantidade_do_produto <= 0)
+            if (tabela.qtd_produto <= 0)
                 try
                 {
                     throw new Exception();

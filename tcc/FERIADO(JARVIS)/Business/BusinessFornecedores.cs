@@ -9,7 +9,7 @@ namespace FERIADO_JARVIS_.Business
     class BusinessFornecedores
     {
         Database.DatabaseFornecedores db = new Database.DatabaseFornecedores();
-        public void inserir(Mod.tb_fornecedores tabela)
+        public void inserir(Mod.tb_fornecedor tabela)
         {
             if(tabela.fr_cep == string.Empty)
                 try
@@ -114,12 +114,12 @@ namespace FERIADO_JARVIS_.Business
             db.inserir(tabela);
           
         }
-        public void deletar(Mod.tb_fornecedores tabela)
+        public void deletar(Mod.tb_fornecedor tabela)
         {
             db.deletar(tabela);
 
         }
-        public void alterar(Mod.tb_fornecedores tabela)
+        public void alterar(Mod.tb_fornecedor tabela)
         {
             if (tabela.fr_cep == string.Empty)
                 try
@@ -211,7 +211,7 @@ namespace FERIADO_JARVIS_.Business
 
 
         }
-        public List<Mod.tb_fornecedores> listar()
+        public List<Mod.tb_fornecedor> listar()
         {
            return  db.listar();
 

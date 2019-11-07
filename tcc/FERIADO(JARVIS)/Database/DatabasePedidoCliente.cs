@@ -8,7 +8,7 @@ namespace FERIADO_JARVIS_.Database
 {
     class DatabasePedidoCliente
     {
-        Mod.tccEntities10 md = new Mod.tccEntities10();
+        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
         
 
        public void inseri(Mod.tb_pedido_cliente tabela )
@@ -26,9 +26,9 @@ namespace FERIADO_JARVIS_.Database
         public void alterar(Mod.tb_pedido_cliente tabela)
         {
             Mod.tb_pedido_cliente altera = md.tb_pedido_cliente.FirstOrDefault(x => x.id_pedido == tabela.id_pedido);
-            altera.nm_produto_cliente = tabela.nm_produto_cliente;
+            altera.nm_nome = tabela.nm_nome;
             altera.qtd_quantidade = tabela.qtd_quantidade;
-            altera.nm_produto_cliente = tabela.nm_produto_cliente;
+          
             md.SaveChanges();
         }
         public List<Mod.tb_pedido_cliente>listar()

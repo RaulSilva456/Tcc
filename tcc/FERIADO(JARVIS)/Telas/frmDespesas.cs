@@ -33,7 +33,7 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Preencha todos os campos corretamente.");
                 }
 
-            Mod.tb_despesas tabela = new Mod.tb_despesas();
+            Mod.tb_despesa tabela = new Mod.tb_despesa();
             tabela.tp_conta = txtCompra.Text;
             tabela.dt_data_pagamento = dtpDiaCompra.Value;
             tabela.vl_valor = Convert.ToInt32( txtValor.Text);
@@ -87,7 +87,7 @@ namespace FERIADO_JARVIS_.Telas
                 MessageBox.Show("Todos os campos precisam ser preenchidos.");
             }
    
-            Mod.tb_despesas tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesas;
+            Mod.tb_despesa tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesa;
 
             tb.vl_valor = Convert.ToDecimal(txtCompra.Text);
             tb.dt_data_pagamento = Convert.ToDateTime(dtpDiaCompra.Value);
@@ -115,7 +115,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {
-                Mod.tb_despesas tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesas;
+                Mod.tb_despesa tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesa;
 
 
                 Business.Business_Despesas bs = new Business.Business_Despesas();
@@ -125,7 +125,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
                 //Atualizar a DataGrid
-                List<Mod.tb_despesas> tabela = bs.consultarFuncionarios();
+                List<Mod.tb_despesa> tabela = bs.consultarFuncionarios();
                 dgvDespesas.DataSource = tabela;
 
             }
@@ -141,7 +141,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             Business.Business_Despesas bs = new Business.Business_Despesas();
             //Atualizar a DataGrid
-            List<Mod.tb_despesas> tabela = bs.consultarFuncionarios();
+            List<Mod.tb_despesa> tabela = bs.consultarFuncionarios();
             dgvDespesas.DataSource = tabela;
         }
     }

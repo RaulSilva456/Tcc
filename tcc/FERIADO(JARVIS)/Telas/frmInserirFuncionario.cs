@@ -33,7 +33,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
 
-            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            List<Mod.tb_funcionario> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
         }
 
@@ -63,7 +63,7 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
 
-            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            List<Mod.tb_funcionario> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
         }
 
@@ -105,30 +105,31 @@ namespace FERIADO_JARVIS_.Telas
                
 
 
-                Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
-            Mod.tb_funcionarios mod = new Mod.tb_funcionarios();
-            mod.ad_fgts = Convert.ToDecimal(fgts.Text);
-            mod.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
-            mod.fun_endereço = endereço.Text;
-            mod.sl_salario = Convert.ToDecimal(salario.Text);
-            mod.nm_funcionario = txtNomeFuncionario.Text;
-            mod.fun_cpf = cpf.Text;
-            mod.fun_rg =  rg.Text;
-            mod.dt_nasc = Convert.ToDateTime(nascimento.Value);
-            mod.dt_pagamento_do_funcionario = DtpDiaPagamento.Value;
-            mod.fun_cargo = txtCargo.Text;
-            bs.inserirFuncionario(mod);
+             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
+            Mod.tb_funcionario tb = new Mod.tb_funcionario();
+
+                tb.fc_telefone = fgts.Text;
+                tb.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
+                tb.fc_endereço = endereço.Text;
+                tb.sl_salario = Convert.ToDecimal(salario.Text);
+                tb.nm_funcionario = txtNomeFuncionario.Text;
+                tb.fc_cpf = cpf.Text;
+                tb.fc_rg = rg.Text;
+                tb.dt_nasc = Convert.ToDateTime(nascimento.Value);
+                tb.dt_pagamento = DtpDiaPagamento.Value;
+                tb.fc_cargo = txtCargo.Text;
+                bs.inserirFuncionario(tb);
             MessageBox.Show("Funcionário cadastrado.");
 
 
             //Atualizar a DataGrid
-            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            List<Mod.tb_funcionario> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
             }
-            catch (Exception ee)
+            catch (Exception )
             {
 
-             MessageBox.Show(ee.Message);
+             MessageBox.Show("erros");
             }
             
 
@@ -152,18 +153,18 @@ namespace FERIADO_JARVIS_.Telas
                 {
                     MessageBox.Show("Campo de FGTS vazio.");
                 }
-                Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
+                Mod.tb_funcionario tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionario;
 
-            tb.ad_fgts = Convert.ToDecimal(fgts.Text);
+            tb.fc_telefone = fgts.Text;
             tb.dt_data_de_contratacao = Convert.ToDateTime(dateTimePicker1.Value);
-            tb.fun_endereço = endereço.Text;
+            tb.fc_endereço = endereço.Text;
             tb.sl_salario = Convert.ToDecimal(salario.Text);
             tb.nm_funcionario = txtNomeFuncionario.Text;
-            tb.fun_cpf = cpf.Text;
-            tb.fun_rg = rg.Text;
+            tb.fc_cpf = cpf.Text;
+            tb.fc_rg = rg.Text;
             tb.dt_nasc = Convert.ToDateTime(nascimento.Value);
-            tb.dt_pagamento_do_funcionario = DtpDiaPagamento.Value;
-            tb.fun_cargo = txtCargo.Text;
+            tb.dt_pagamento = DtpDiaPagamento.Value;
+            tb.fc_cargo = txtCargo.Text;
 
 
             Business.funcionarios_bsiness business = new Business.funcionarios_bsiness();
@@ -172,7 +173,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             //atualizar datagrid
-            List<Mod.tb_funcionarios> tabela = business.consultarFuncionarios();
+            List<Mod.tb_funcionario> tabela = business.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
             }
             catch (Exception ex)
@@ -185,7 +186,7 @@ namespace FERIADO_JARVIS_.Telas
         private void button2_Click_1(object sender, EventArgs e)
         {
             try
-            { Mod.tb_funcionarios tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionarios;
+            { Mod.tb_funcionario tb = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_funcionario;
 
 
             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
@@ -195,7 +196,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
             //Atualizar a DataGrid
-            List<Mod.tb_funcionarios> tabela = bs.consultarFuncionarios();
+            List<Mod.tb_funcionario> tabela = bs.consultarFuncionarios();
             dgtFuncionario.DataSource = tabela;
 
             }

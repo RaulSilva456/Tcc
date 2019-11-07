@@ -9,7 +9,7 @@ namespace FERIADO_JARVIS_.Business
     class Business_Despesas
     {
         Database.Database_Despesas db = new Database.Database_Despesas();
-        public void inserir(Mod.tb_despesas tabela)
+        public void inserir(Mod.tb_despesa tabela)
         {
             
             
@@ -43,7 +43,7 @@ namespace FERIADO_JARVIS_.Business
 
             db.inserir(tabela);
         }
-        public void alterar (Mod.tb_despesas tabela)
+        public void alterar (Mod.tb_despesa tabela)
         {
             //Validações 
             if (tabela.vl_valor == 0)
@@ -73,13 +73,13 @@ namespace FERIADO_JARVIS_.Business
 
             db.alterar(tabela);
         }
-        public List<Mod.tb_despesas> consultarFuncionarios()
+        public List<Mod.tb_despesa> consultarFuncionarios()
         {
 
-            List<Mod.tb_despesas> tabela = db.consultarDespesas();
+            List<Mod.tb_despesa> tabela = db.consultarDespesas();
             return tabela;
         }
-        public void deletar(Mod.tb_despesas tabela)
+        public void deletar(Mod.tb_despesa tabela)
         {
             db.deletar(tabela);
 

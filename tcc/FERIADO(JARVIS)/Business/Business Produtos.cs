@@ -12,16 +12,8 @@ namespace FERIADO_JARVIS_.Business
         public void inerir(Mod.tb_produto tabela)
         {
 
-            if(tabela.cat_categoria == string.Empty)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Categoria Vazio");
-                }
+          
+               
 
             if (tabela.nm_produto == string.Empty)
                 try
@@ -34,16 +26,8 @@ namespace FERIADO_JARVIS_.Business
                     throw new ArgumentException("Campo Nome produto Vazio");
                 }
 
-            if (tabela.sb_sabor == string.Empty)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Sabor Vazio");
-                }
+            
+                
 
             
 
@@ -60,16 +44,6 @@ namespace FERIADO_JARVIS_.Business
         public void alterar(Mod.tb_produto tabela)
 
         {
-            if (tabela.cat_categoria == string.Empty)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Categoria Vazio");
-                }
 
             if (tabela.nm_produto == string.Empty)
                 try
@@ -82,16 +56,7 @@ namespace FERIADO_JARVIS_.Business
                     throw new ArgumentException("Campo Nome produto Vazio");
                 }
 
-            if (tabela.sb_sabor == string.Empty)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Sabor Vazio");
-                }
+           
 
             db.alterar(tabela);
            
@@ -104,7 +69,7 @@ namespace FERIADO_JARVIS_.Business
         {
           return  db.fornecedores(nome);
         }
-        public List<Mod.tb_fornecedores> listarF()
+        public List<Mod.tb_fornecedor> listarF()
         {
             return db.lista();
         }

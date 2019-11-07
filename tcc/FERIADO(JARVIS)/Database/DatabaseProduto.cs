@@ -8,11 +8,11 @@ namespace FERIADO_JARVIS_.Database
 {
     class DatabaseProduto
     {
-        Mod.tccEntities10 md = new Mod.tccEntities10();
+        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
 
         public void inerir(Mod.tb_produto tabela )
         {
-            
+      
 
 
            
@@ -30,9 +30,10 @@ namespace FERIADO_JARVIS_.Database
         {
             Mod.tb_produto altera = md.tb_produto.First(x => x.id_produto == tabela.id_produto);
             altera.nm_produto = tabela.nm_produto;
-            altera.sb_sabor = tabela.sb_sabor;
-            altera.cat_categoria = tabela.cat_categoria;
-            altera.nm_fornecedor_produto = altera.nm_fornecedor_produto;
+            altera.dt_entrada = tabela.dt_entrada;
+            
+           
+            altera.nm_fornecedor = altera.nm_fornecedor;
             md.SaveChanges();
          }
         public List<Mod.tb_produto> listar()
@@ -41,15 +42,15 @@ namespace FERIADO_JARVIS_.Database
         }
         public  Mod.tb_produto fornecedores(string nome)
         {
-            Mod.tb_fornecedores f = new Mod.tb_fornecedores();
+            Mod.tb_fornecedor f = new Mod.tb_fornecedor();
            Mod.tb_produto fornecedor = md.tb_produto.FirstOrDefault(x => f.nm_fornecedor == nome  );
                                                                        
 
             return fornecedor;
         }
-        public List<Mod.tb_fornecedores> lista()
+        public List<Mod.tb_fornecedor> lista()
         {
-            return md.tb_fornecedores.ToList();
+            return md.tb_fornecedor.ToList();
         }
     }
 }

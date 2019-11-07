@@ -127,9 +127,9 @@ namespace FERIADO_JARVIS_.Telas
 
 
 
-            List<Mod.tb_funcionarios> funcionario = bs.consultarFuncionarios();
+            List<Mod.tb_funcionario> funcionario = bs.consultarFuncionarios();
 
-            cboFuncionario.DisplayMember = nameof(Mod.tb_funcionarios.nm_funcionario);
+            cboFuncionario.DisplayMember = nameof(Mod.tb_funcionario.nm_funcionario);
             cboFuncionario.DataSource = funcionario;
 
         }

@@ -29,9 +29,9 @@ namespace FERIADO_JARVIS_.Telas
             dgtFuncionario.DataSource = bs.listar();
 
 
-            List<Mod.tb_fornecedores> fornecedor = bs.listarF();
+            List<Mod.tb_fornecedor> fornecedor = bs.listarF();
 
-            cboFornecedor.DisplayMember = nameof(Mod.tb_fornecedores.nm_fornecedor);
+            cboFornecedor.DisplayMember = nameof(Mod.tb_fornecedor.nm_fornecedor);
             cboFornecedor.DataSource = fornecedor;
 
 
@@ -54,12 +54,12 @@ namespace FERIADO_JARVIS_.Telas
 
 
 
-            tabela.nm_fornecedor_produto = cboFornecedor.Text;
+            tabela.nm_fornecedor = cboFornecedor.Text;
 
            
-            tabela.cat_categoria = txtCategoria.Text;
+          
             tabela.nm_produto = txtNomeProduto.Text;
-            tabela.sb_sabor = txtSabor.Text;
+          
            
           
                                         
@@ -75,9 +75,9 @@ namespace FERIADO_JARVIS_.Telas
         private void button4_Click(object sender, EventArgs e)
         {
             Mod.tb_produto tabela = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_produto;
-            tabela.cat_categoria = txtCategoria.Text;
+           
             tabela.nm_produto = txtNomeProduto.Text;
-            tabela.sb_sabor = txtSabor.Text;
+          
             Business.Business_Produtos bs = new Business.Business_Produtos();
             bs.alterar(tabela);
             MessageBox.Show("Produto alterardo.");
@@ -129,10 +129,10 @@ namespace FERIADO_JARVIS_.Telas
 
 
             
-            tabela.nm_fornecedor_produto = cboFornecedor.Text;
-            tabela.cat_categoria = txtCategoria.Text;
+            tabela.nm_fornecedor = cboFornecedor.Text;
+            
             tabela.nm_produto = txtNomeProduto.Text;
-            tabela.sb_sabor = txtSabor.Text;
+           
 
 
 
@@ -159,14 +159,13 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-                Mod.tb_produto tabela = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_produto;
-
+            Mod.tb_produto tabela = dgtFuncionario.CurrentRow.DataBoundItem as Mod.tb_produto;
             Business.Business_Produtos bs = new Business.Business_Produtos();
 
-            tabela.nm_fornecedor_produto = cboFornecedor.Text;
-            tabela.cat_categoria = txtCategoria.Text;
+            tabela.nm_fornecedor = cboFornecedor.Text;
+          
             tabela.nm_produto = txtNomeProduto.Text;
-            tabela.sb_sabor = txtSabor.Text;
+           
 
 
 

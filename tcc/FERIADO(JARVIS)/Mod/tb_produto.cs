@@ -14,10 +14,23 @@ namespace FERIADO_JARVIS_.Mod
     
     public partial class tb_produto
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_produto()
+        {
+            this.tb_pedido_cliente = new HashSet<tb_pedido_cliente>();
+            this.tb_venda_cliente = new HashSet<tb_venda_cliente>();
+        }
+    
         public int id_produto { get; set; }
-        public string nm_fornecedor_produto { get; set; }
+        public Nullable<System.DateTime> dt_entrada { get; set; }
+        public Nullable<int> id_fornecedor { get; set; }
+        public string nm_fornecedor { get; set; }
         public string nm_produto { get; set; }
-        public string cat_categoria { get; set; }
-        public string sb_sabor { get; set; }
+    
+        public virtual tb_fornecedor tb_fornecedor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_pedido_cliente> tb_pedido_cliente { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_venda_cliente> tb_venda_cliente { get; set; }
     }
 }

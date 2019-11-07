@@ -15,7 +15,12 @@ namespace FERIADO_JARVIS_.Mod
     public partial class tb_pedido_cliente
     {
         public int id_pedido { get; set; }
+        public Nullable<int> id_cliente { get; set; }
+        public string nm_nome { get; set; }
         public Nullable<int> qtd_quantidade { get; set; }
-        public string nm_produto_cliente { get; set; }
+        public Nullable<int> id_produto { get; set; }
+    
+        public virtual tb_cliente tb_cliente { get; set; }
+        public virtual tb_produto tb_produto { get; set; }
     }
 }

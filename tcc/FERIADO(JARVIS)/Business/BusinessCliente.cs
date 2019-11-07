@@ -10,7 +10,7 @@ namespace FERIADO_JARVIS_.Business
     class BusinessCliente
     {
         Database.DatabaseCliente db = new Database.DatabaseCliente();
-         public void inserir(Mod.tb_clientes tabela)
+         public void inserir(Mod.tb_cliente tabela)
         {
             if(tabela.doc_cep ==string.Empty)
                 try
@@ -87,11 +87,11 @@ namespace FERIADO_JARVIS_.Business
 
             db.inserir(tabela);
         }
-        public void remover(Mod.tb_clientes tabela)
+        public void remover(Mod.tb_cliente tabela)
         {
             db.remover(tabela);
         }
-        public void alterar(Mod.tb_clientes tabela)
+        public void alterar(Mod.tb_cliente tabela)
         {
             if (tabela.doc_cep == string.Empty)
                 try
@@ -164,7 +164,7 @@ namespace FERIADO_JARVIS_.Business
 
             db.alterar(tabela);
         }
-        public List<Mod.tb_clientes>consu()
+        public List<Mod.tb_cliente>consu()
         {
             return db.listar();
         }
