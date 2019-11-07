@@ -61,5 +61,12 @@ namespace FERIADO_JARVIS_.Telas
         {
             Close();
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            frmAlterarPedido r  = new frmAlterarPedido();
+            r.Show();
+            Hide();
+        }
     }
 }

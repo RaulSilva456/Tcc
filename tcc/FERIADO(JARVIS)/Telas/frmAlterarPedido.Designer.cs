@@ -163,7 +163,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(218, 249);
+            this.button2.Location = new System.Drawing.Point(218, 256);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 32);
             this.button2.TabIndex = 40;

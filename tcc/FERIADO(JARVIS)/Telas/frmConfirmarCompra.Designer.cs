@@ -35,6 +35,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -90,6 +91,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dgvPedido);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -104,9 +106,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(83, 267);
+            this.button1.Location = new System.Drawing.Point(12, 267);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 38);
+            this.button1.Size = new System.Drawing.Size(165, 38);
             this.button1.TabIndex = 1;
             this.button1.Text = "Confirmar compra";
             this.button1.UseVisualStyleBackColor = false;
@@ -118,8 +120,22 @@
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPedido.Location = new System.Drawing.Point(12, 78);
             this.dgvPedido.Name = "dgvPedido";
-            this.dgvPedido.Size = new System.Drawing.Size(301, 183);
+            this.dgvPedido.Size = new System.Drawing.Size(313, 183);
             this.dgvPedido.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(183, 267);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 38);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Alterar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // frmConfirmarCompra
             // 
@@ -154,5 +170,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvPedido;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
     }
 }

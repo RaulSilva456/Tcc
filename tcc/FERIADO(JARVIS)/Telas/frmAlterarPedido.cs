@@ -40,6 +40,9 @@ namespace FERIADO_JARVIS_.Telas
                 //atualizar Data Grid
                 dataGridView1.DataSource = bs.listar();
 
+                frmConfirmarCompra r = new frmConfirmarCompra();
+                r.Show();
+                Hide();
             }
             catch (Exception ex)
             {
