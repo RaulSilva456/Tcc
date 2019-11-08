@@ -43,8 +43,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Estoque",
-            "Mostruario"});
+            "Estoque"});
             this.comboBox1.Location = new System.Drawing.Point(50, 194);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 21);
@@ -86,10 +85,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(90, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 24);
+            this.label1.Size = new System.Drawing.Size(80, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Estoque";
             // 
@@ -108,6 +107,7 @@
             this.Name = "frmEstoqueDirecionador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEstoqueDirecionador";
+            this.Load += new System.EventHandler(this.frmEstoqueDirecionador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

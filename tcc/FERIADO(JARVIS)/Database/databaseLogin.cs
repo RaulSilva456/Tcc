@@ -8,9 +8,9 @@ namespace FERIADO_JARVIS_.Database
 {
     class databaseLogin
     {
-        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
+        Mod.db_a4fd25_pppEntities1 md = new Mod.db_a4fd25_pppEntities1();
 
-        public void Cadastrar(Mod.tb_login tabela)
+        public void Cadastrar(Mod.tb_loginp tabela)
         {
 
 
@@ -18,22 +18,22 @@ namespace FERIADO_JARVIS_.Database
 
 
 
-            md.tb_login.Add(tabela);
+            md.tb_loginp.Add(tabela);
             md.SaveChanges();
         }
-        public void alterar(Mod.tb_login tabela)
+        public void alterar(Mod.tb_loginp tabela)
         {
-            Mod.tb_login altearar = md.tb_login.FirstOrDefault(x => x.nm_nome == tabela.nm_nome);
+            Mod.tb_loginp altearar = md.tb_loginp.FirstOrDefault(x => x.nm_nome == tabela.nm_nome);
             altearar.pes_senha = tabela.pes_senha;
             md.SaveChanges();
 
 
         }
        
-        public void remover(Mod.tb_codigo tb)
+        public void remover(Mod.tb_codigop tb)
         {
            var deleteCommand = md.Database.Connection.CreateCommand();
-            deleteCommand.CommandText = "DELETE FROM tb_codigo";
+            deleteCommand.CommandText = "DELETE FROM tb_codigop";
             md.Database.Connection.Open();
 
             deleteCommand.ExecuteNonQuery();
@@ -41,9 +41,9 @@ namespace FERIADO_JARVIS_.Database
             md.Database.Connection.Close();
 
         }
-        public void icd(Mod.tb_codigo tabela )
+        public void icd(Mod.tb_codigop tabela )
         {
-            md.tb_codigo.Add(tabela);
+            md.tb_codigop.Add(tabela);
             md.SaveChanges();
         }
     }

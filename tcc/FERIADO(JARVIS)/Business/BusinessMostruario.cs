@@ -8,9 +8,9 @@ namespace FERIADO_JARVIS_.Business
 {
     class BusinessMostruario
     {
-        /*
+/*
         Database.DatabaseMostruario db = new Database.DatabaseMostruario();
-        public void deletar(Mod.tb_mostruario tabela)
+        public void deletar(Mod.tb_mostruariop tabela)
         {
 
            
@@ -83,7 +83,7 @@ namespace FERIADO_JARVIS_.Business
             db.inserir(tabela);
            
         }
-        public List<Mod.tb_mostruario> lista()
+        public List<Mod.tb_mostruariop> lista()
         {
             return db.lista();
         }*/

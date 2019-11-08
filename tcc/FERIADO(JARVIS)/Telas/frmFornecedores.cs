@@ -66,14 +66,15 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Campo de valor pago vazio.");
                 }
                 
-                Mod.tb_fornecedor tabela = new Mod.tb_fornecedor();
+            Mod.tb_fornecedorp tabela = new Mod.tb_fornecedorp();
+               
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;
             tabela.nm_fornecedor = txtNMFornecedor.Text;
             tabela.nm_produto = txtNMProduto.Text;
             tabela.tl_telefone = txtTelefone.Text;
-            tabela.vl_valor_produto = Convert.ToDecimal(txtValorPago.Text);
+            tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
              tabela.dt_entrada_do_produto = DataProduto.Value;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.inserir(tabela);
@@ -96,7 +97,7 @@ namespace FERIADO_JARVIS_.Telas
         private void button2_Click_1(object sender, EventArgs e)
         {
             try
-            { Mod.tb_fornecedor tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedor;
+            { Mod.tb_fornecedorp tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedorp;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.deletar(tabela);
             MessageBox.Show("Fornecedor deletado.");
@@ -123,7 +124,7 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Campo de valor pago vazio.");
                 }
 
-                Mod.tb_fornecedor tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedor;
+                Mod.tb_fornecedorp tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_fornecedorp;
             tabela.end_endereço = txtEndereço.Text;
             tabela.fr_cep = txtCEP.Text;
             tabela.fr_cnpj = txtCNPJ.Text;

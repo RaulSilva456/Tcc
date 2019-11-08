@@ -33,10 +33,10 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Preencha todos os campos corretamente.");
                 }
 
-            Mod.tb_despesa tabela = new Mod.tb_despesa();
+            Mod.tb_despesap tabela = new Mod.tb_despesap();
             tabela.tp_conta = txtCompra.Text;
             tabela.dt_data_pagamento = dtpDiaCompra.Value;
-            tabela.vl_valor = Convert.ToInt32( txtValor.Text);
+            tabela.vl_valor = Convert.ToDecimal( txtValor.Text);
             
           
 
@@ -87,11 +87,11 @@ namespace FERIADO_JARVIS_.Telas
                 MessageBox.Show("Todos os campos precisam ser preenchidos.");
             }
    
-            Mod.tb_despesa tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesa;
+            Mod.tb_despesap tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesap;
 
-            tb.vl_valor = Convert.ToDecimal(txtCompra.Text);
-            tb.dt_data_pagamento = Convert.ToDateTime(dtpDiaCompra.Value);
-            tb.tp_conta = txtCompra.Text;
+                tb.tp_conta = txtCompra.Text;
+                tb.dt_data_pagamento = dtpDiaCompra.Value;
+                tb.vl_valor = Convert.ToDecimal(txtValor.Text);
                 Business.Business_Despesas Bs = new Business.Business_Despesas();
                 Bs.alterar(tb);
 
@@ -115,7 +115,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {
-                Mod.tb_despesa tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesa;
+                Mod.tb_despesap tb = dgvDespesas.CurrentRow.DataBoundItem as Mod.tb_despesap;
 
 
                 Business.Business_Despesas bs = new Business.Business_Despesas();
@@ -125,7 +125,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
                 //Atualizar a DataGrid
-                List<Mod.tb_despesa> tabela = bs.consultarFuncionarios();
+                List<Mod.tb_despesap> tabela = bs.consultarFuncionarios();
                 dgvDespesas.DataSource = tabela;
 
             }
@@ -141,7 +141,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             Business.Business_Despesas bs = new Business.Business_Despesas();
             //Atualizar a DataGrid
-            List<Mod.tb_despesa> tabela = bs.consultarFuncionarios();
+            List<Mod.tb_despesap> tabela = bs.consultarFuncionarios();
             dgvDespesas.DataSource = tabela;
         }
     }

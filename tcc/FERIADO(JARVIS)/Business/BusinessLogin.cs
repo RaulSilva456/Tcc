@@ -10,7 +10,7 @@ namespace FERIADO_JARVIS_.Business
     {
         Database.databaseLogin db = new Database.databaseLogin();
         
-        public void Cadastrar(Mod.tb_login tabela)
+        public void Cadastrar(Mod.tb_loginp tabela)
         {
             if (tabela.nm_nome == string.Empty)
                 try
@@ -42,7 +42,7 @@ namespace FERIADO_JARVIS_.Business
 
             db.Cadastrar(tabela);   
         }
-        public void alterar(Mod.tb_login tabela)
+        public void alterar(Mod.tb_loginp tabela)
         {
             if (tabela.nm_nome == string.Empty)
                 try
@@ -69,11 +69,11 @@ namespace FERIADO_JARVIS_.Business
                 }
             db.alterar(tabela);
         }
-        public void remover(Mod.tb_codigo codigo)
+        public void remover(Mod.tb_codigop codigo)
         {
             db.remover(codigo);
         }
-        public void icd(Mod.tb_codigo tabela)
+        public void icd(Mod.tb_codigop tabela)
         {
             db.icd(tabela); 
         }

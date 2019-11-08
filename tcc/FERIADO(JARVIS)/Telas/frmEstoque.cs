@@ -30,7 +30,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            Mod.tb_estoque tabela = new Mod.tb_estoque();
+            Mod.tb_estoquep tabela = new Mod.tb_estoquep();
             tabela.nm_produto = txtNome.Text;
             tabela.pr_preco = Convert.ToDecimal( txtPreço.Text);
             
@@ -44,7 +44,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void Deletar_Click(object sender, EventArgs e)
         {
-            Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
+            Mod.tb_estoquep tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoquep;
             Business.Estoque_Business bs = new Business.Estoque_Business();
 
             bs.remover(tabela);
@@ -57,7 +57,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
+            Mod.tb_estoquep tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoquep;
             
             Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.alterar(tabela);
@@ -110,34 +110,37 @@ namespace FERIADO_JARVIS_.Telas
 
 
 
-            Mod.tb_estoque tabela = new Mod.tb_estoque();
-          
+            Mod.tb_estoquep tabela = new Mod.tb_estoquep();
+            tabela.dt_saida_do_produto = dtpSaidaProduto.Value;
             tabela.nm_produto = txtNome.Text;
             tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
-            tabela.qtd_produto = Convert.ToInt32(txtQuantidade.Text);
-                
+            tabela.qtd_quantidade_do_produto = Convert.ToDecimal(txtQuantidade.Text);
 
 
                 //validaçoes
 
                
-           
+           if(rdbNao.Checked == true)
+                {
+                    tabela.pro_vencido = "Perecivel";
+                }
 
             if(rdbSim.Checked == true)
             {
-               tabela.nm_fornecedor = "Vencido" ;
+               tabela.pro_vencido = "Vencido";
             }
+            
 
-            if (rdbNao.Checked == true)
-            {
-                tabela.nm_fornecedor = "Perecivel";
-            }
+               
+
+           
 
 
 
             Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.inserir(tabela);
-            MessageBox.Show("Produto inserido no estoque.");
+               
+                MessageBox.Show("Produto inserido no estoque.");
 
 
 
@@ -160,6 +163,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {
+                
 
                 if (txtPreço.Text == string.Empty)
                 {
@@ -171,30 +175,22 @@ namespace FERIADO_JARVIS_.Telas
                 }
 
 
-                Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
-                tabela.nm_produto = txtNome.Text;
-                tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
-                tabela.qtd_produto = Convert.ToInt32(txtQuantidade.Text);
+                Mod.tb_estoquep tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoquep;
+            tabela.dt_saida_do_produto = dtpSaidaProduto.Value;
+            tabela.nm_produto = txtNome.Text;
+            tabela.pr_preco = Convert.ToDecimal(txtPreço.Text);
+            tabela.qtd_quantidade_do_produto = Convert.ToInt32(txtQuantidade.Text);
+               
 
-
-
-                //validaçoes
-
-
-
+                if(rdbNao.Checked == true)
+                {
+                    tabela.pro_vencido = "perecivel";
+                }
 
                 if (rdbSim.Checked == true)
                 {
-                    tabela.nm_fornecedor = "Vencido";
+                    tabela.pro_vencido = "Vencido";
                 }
-
-                if (rdbNao.Checked == true)
-                {
-                    tabela.nm_fornecedor = "Perecivel";
-                }
-
-
-
                 Business.Estoque_Business bs = new Business.Estoque_Business();
             bs.alterar(tabela);
             MessageBox.Show("Produto alterado.");
@@ -217,7 +213,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             
 
-            Mod.tb_estoque tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoque;
+            Mod.tb_estoquep tabela = dgvEstoque.CurrentRow.DataBoundItem as Mod.tb_estoquep;
             Business.Estoque_Business bs = new Business.Estoque_Business();
 
             bs.remover(tabela);

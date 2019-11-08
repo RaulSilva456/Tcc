@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_a4fd25_pppModelStoreContainer" CdmEntityContainer="db_a4fd25_pppEntities1">
+    <EntitySetMapping Name="tb_clientep">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_clientep">
+        <MappingFragment StoreEntitySet="tb_clientep">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nm_nome" ColumnName="nm_nome" />
+          <ScalarProperty Name="end_endereco" ColumnName="end_endereco" />
+          <ScalarProperty Name="doc_rg" ColumnName="doc_rg" />
+          <ScalarProperty Name="doc_cep" ColumnName="doc_cep" />
+          <ScalarProperty Name="pes_email" ColumnName="pes_email" />
+          <ScalarProperty Name="tel_telefone" ColumnName="tel_telefone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_codigop">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_codigop">
+        <MappingFragment StoreEntitySet="tb_codigop">
+          <ScalarProperty Name="id_codigo" ColumnName="id_codigo" />
+          <ScalarProperty Name="cd_verificacao" ColumnName="cd_verificacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_despesap">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_despesap">
+        <MappingFragment StoreEntitySet="tb_despesap">
+          <ScalarProperty Name="id_despesas" ColumnName="id_despesas" />
+          <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
+          <ScalarProperty Name="dt_data_pagamento" ColumnName="dt_data_pagamento" />
+          <ScalarProperty Name="tp_conta" ColumnName="tp_conta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_estoquep">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_estoquep">
+        <MappingFragment StoreEntitySet="tb_estoquep">
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+          <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
+          <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
+          <ScalarProperty Name="qtd_quantidade_do_produto" ColumnName="qtd_quantidade_do_produto" />
+          <ScalarProperty Name="pro_vencido" ColumnName="pro_vencido" />
+          <ScalarProperty Name="pr_preco" ColumnName="pr_preco" />
+          <ScalarProperty Name="dt_saida_do_produto" ColumnName="dt_saida_do_produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_folhapagamentop">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_folhapagamentop">
+        <MappingFragment StoreEntitySet="tb_folhapagamentop">
+          <ScalarProperty Name="id_folha_pagamento" ColumnName="id_folha_pagamento" />
+          <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
+          <ScalarProperty Name="ds_inss" ColumnName="ds_inss" />
+          <ScalarProperty Name="hora_extra" ColumnName="hora_extra" />
+          <ScalarProperty Name="ad_gratificação" ColumnName="ad_gratificação" />
+          <ScalarProperty Name="imposto_renda" ColumnName="imposto_renda" />
+          <ScalarProperty Name="vl_alimentação" ColumnName="vl_alimentação" />
+          <ScalarProperty Name="vl_transporte" ColumnName="vl_transporte" />
+          <ScalarProperty Name="ds_faltas" ColumnName="ds_faltas" />
+          <ScalarProperty Name="sl_salario_liquido" ColumnName="sl_salario_liquido" />
+          <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />
+          <ScalarProperty Name="sl_salario_bruto" ColumnName="sl_salario_bruto" />
+          <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_fornecedorp">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_fornecedorp">
+        <MappingFragment StoreEntitySet="tb_fornecedorp">
+          <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
+          <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
+          <ScalarProperty Name="nm_fornecedor" ColumnName="nm_fornecedor" />
+          <ScalarProperty Name="end_endereço" ColumnName="end_endereço" />
+          <ScalarProperty Name="tl_telefone" ColumnName="tl_telefone" />
+          <ScalarProperty Name="fr_cep" ColumnName="fr_cep" />
+          <ScalarProperty Name="fr_cnpj" ColumnName="fr_cnpj" />
+          <ScalarProperty Name="vl_valor_produto" ColumnName="vl_valor_produto" />
+          <ScalarProperty Name="dt_entrada_do_produto" ColumnName="dt_entrada_do_produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_funcionariosp">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_funcionariosp">
+        <MappingFragment StoreEntitySet="tb_funcionariosp">
+          <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
+          <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />
+          <ScalarProperty Name="dt_nasc" ColumnName="dt_nasc" />
+          <ScalarProperty Name="fun_rg" ColumnName="fun_rg" />
+          <ScalarProperty Name="fun_cpf" ColumnName="fun_cpf" />
+          <ScalarProperty Name="fun_endereço" ColumnName="fun_endereço" />
+          <ScalarProperty Name="ad_fgts" ColumnName="ad_fgts" />
+          <ScalarProperty Name="sl_salario" ColumnName="sl_salario" />
+          <ScalarProperty Name="dt_data_de_contratacao" ColumnName="dt_data_de_contratacao" />
+          <ScalarProperty Name="fun_cargo" ColumnName="fun_cargo" />
+          <ScalarProperty Name="dt_pagamento_do_funcionario" ColumnName="dt_pagamento_do_funcionario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_loginp">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_loginp">
+        <MappingFragment StoreEntitySet="tb_loginp">
+          <ScalarProperty Name="id_login" ColumnName="id_login" />
+          <ScalarProperty Name="nm_nome" ColumnName="nm_nome" />
+          <ScalarProperty Name="pes_senha" ColumnName="pes_senha" />
+          <ScalarProperty Name="pes_email" ColumnName="pes_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pedido_clientep">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_pedido_clientep">
+        <MappingFragment StoreEntitySet="tb_pedido_clientep">
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="qtd_quantidade" ColumnName="qtd_quantidade" />
+          <ScalarProperty Name="nm_produto_cliente" ColumnName="nm_produto_cliente" />
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_produtop">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_produtop">
+        <MappingFragment StoreEntitySet="tb_produtop">
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+          <ScalarProperty Name="nm_fornecedor_produto" ColumnName="nm_fornecedor_produto" />
+          <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
+          <ScalarProperty Name="cat_categoria" ColumnName="cat_categoria" />
+          <ScalarProperty Name="sb_sabor" ColumnName="sb_sabor" />
+          <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_venda_clientep">
+      <EntityTypeMapping TypeName="db_a4fd25_pppModel.tb_venda_clientep">
+        <MappingFragment StoreEntitySet="tb_venda_clientep">
+          <ScalarProperty Name="id_venda" ColumnName="id_venda" />
+          <ScalarProperty Name="vl_venda" ColumnName="vl_venda" />
+          <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
+          <ScalarProperty Name="nm_cliente_venda" ColumnName="nm_cliente_venda" />
+          <ScalarProperty Name="dt_venda_produto" ColumnName="dt_venda_produto" />
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

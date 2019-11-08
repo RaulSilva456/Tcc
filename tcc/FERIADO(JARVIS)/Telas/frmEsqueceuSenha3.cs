@@ -24,7 +24,7 @@ namespace FERIADO_JARVIS_.Telas
             Database.databaseLogin db = new Database.databaseLogin();
                 Business.BusinessLogin bs = new Business.BusinessLogin();
                 int codigo = Convert.ToInt32(txtcodigo.Text);
-                Mod.tb_codigo tabela = new Mod.tb_codigo();
+                Mod.tb_codigop tabela = new Mod.tb_codigop();
                 tabela.cd_verificacao = Convert.ToInt32(txtcodigo.Text);
 
                 tabela.cd_verificacao = Convert.ToInt32(txtcodigo.Text);
@@ -73,7 +73,7 @@ namespace FERIADO_JARVIS_.Telas
             try
             {
                 string usurario = txtUsuario.Text;
-                Mod.tb_login tabelea = new Mod.tb_login();
+                Mod.tb_loginp tabelea = new Mod.tb_loginp();
                 tabelea.nm_nome = txtUsuario.Text;
                 tabelea.pes_senha = txtNovaSenha.Text;
 
@@ -118,16 +118,49 @@ namespace FERIADO_JARVIS_.Telas
            
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            frmMenu r = new frmMenu();
-            r.Show();
-            Hide();
-        }
+            try
+            {
+                string usurario = txtUsuario.Text;
+                Mod.tb_loginp tabelea = new Mod.tb_loginp();
+                tabelea.nm_nome = txtUsuario.Text;
+                tabelea.pes_senha = txtNovaSenha.Text;
 
-        private void Label3_Click(object sender, EventArgs e)
-        {
-            Close();
+                Objetos fun = new Objetos();
+                if (!fun.usuario(usurario))
+                {
+                    MessageBox.Show("Usuario Invalido ");
+
+                }
+                else
+                {
+                    if (txtConfirmarSenha.Text == txtNovaSenha.Text)
+                    {
+                        Business.BusinessLogin bs = new Business.BusinessLogin();
+                        bs.alterar(tabelea);
+                        MessageBox.Show("Senha Nova Alterada Com Sucesso");
+                        Telas.frmLogin tela = new frmLogin();
+                        tela.Show();
+                        Hide();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Senha Nao Estão iguais");
+                    }
+
+
+
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Campos Vazios");
+            }
+
         }
     }
 

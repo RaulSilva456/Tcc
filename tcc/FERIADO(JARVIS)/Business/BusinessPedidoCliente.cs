@@ -10,9 +10,9 @@ namespace FERIADO_JARVIS_.Business
     {
         Database.DatabasePedidoCliente db = new Database.DatabasePedidoCliente();
 
-        public void inseri(Mod.tb_pedido_cliente tabela)
+        public void inseri(Mod.tb_pedido_clientep tabela)
         {
-           if(tabela.nm_nome == string.Empty)
+           if(tabela.nm_produto_cliente == string.Empty)
                 try
                 {
                     throw new Exception();
@@ -26,18 +26,18 @@ namespace FERIADO_JARVIS_.Business
 
             db.inseri(tabela);
         }
-        public void deletar(Mod.tb_pedido_cliente tabela)
+        public void deletar(Mod.tb_pedido_clientep tabela)
         {
             
 
             db.deletar(tabela);
 
         }
-        public void alterar(Mod.tb_pedido_cliente tabela)
+        public void alterar(Mod.tb_pedido_clientep tabela)
         {
             db.alterar(tabela);
         }
-        public List<Mod.tb_pedido_cliente> listar()
+        public List<Mod.tb_pedido_clientep> listar()
         {
             return db.listar();
             

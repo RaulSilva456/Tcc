@@ -9,7 +9,7 @@ namespace FERIADO_JARVIS_.Business
     class BusinessFornecedores
     {
         Database.DatabaseFornecedores db = new Database.DatabaseFornecedores();
-        public void inserir(Mod.tb_fornecedor tabela)
+        public void inserir(Mod.tb_fornecedorp tabela)
         {
             if(tabela.fr_cep == string.Empty)
                 try
@@ -84,18 +84,8 @@ namespace FERIADO_JARVIS_.Business
                     throw new ArgumentException("Campo Telefone Vazio");
                 }
 
-            if (tabela.vl_valor_produto <= 0)
-                try
-                {
-                    throw new Exception();
-
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Valor Produto Invalido ");
-                }
-
+           
+           
             
 
 
@@ -114,12 +104,12 @@ namespace FERIADO_JARVIS_.Business
             db.inserir(tabela);
           
         }
-        public void deletar(Mod.tb_fornecedor tabela)
+        public void deletar(Mod.tb_fornecedorp tabela)
         {
             db.deletar(tabela);
 
         }
-        public void alterar(Mod.tb_fornecedor tabela)
+        public void alterar(Mod.tb_fornecedorp tabela)
         {
             if (tabela.fr_cep == string.Empty)
                 try
@@ -194,24 +184,13 @@ namespace FERIADO_JARVIS_.Business
                     throw new ArgumentException("Campo Telefone Vazio");
                 }
 
-            if (tabela.vl_valor_produto < 0)
-                try
-                {
-                    throw new Exception();
-
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Valor Produto Invalido ");
-                }
             db.alterar(tabela);
 
 
 
 
         }
-        public List<Mod.tb_fornecedor> listar()
+        public List<Mod.tb_fornecedorp> listar()
         {
            return  db.listar();
 

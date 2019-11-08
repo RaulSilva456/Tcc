@@ -9,7 +9,7 @@ namespace FERIADO_JARVIS_.Business
     class Business_Folha_de_Pagamento
     {
         Database.Database_FolhaDePagamento_ dt = new Database.Database_FolhaDePagamento_();
-        public void inserir(Mod.tb_folhapagamento tabela)
+        public void inserir(Mod.tb_folhapagamentop tabela)
         {
 
            
@@ -41,82 +41,6 @@ namespace FERIADO_JARVIS_.Business
                 }
 
 
-            if (tabela.sl_salario_bruto <=0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Salario Bruto Invalido");
-                }
-
-
-            if (tabela.sl_salario_liquido <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Salario liquido Invalido");
-                }
-
-            if (tabela.vl_alimentação <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Vale Alimentação Invalido");
-                }
-
-
-            if (tabela.vl_transporte <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Vale Tranporte Invalido");
-                }
-            if (tabela.ad_gratificação <=   0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Gratificação Invalido");
-                }
-            if (tabela.imposto_renda <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo imposto de Renda Invalido");
-                }
-            if (tabela.ds_inss <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo  INSS Invalido");
-                }
-         
 
 
 
@@ -183,12 +107,13 @@ namespace FERIADO_JARVIS_.Business
 
             dt.inserir(tabela);
         }
-        public void remover(Mod.tb_folhapagamento tabela)
+        public void remover(Mod.tb_folhapagamentop tabela)
         {
             dt.remover(tabela);
         }
-        public void alterar(Mod.tb_folhapagamento tabela)
+        public void alterar(Mod.tb_folhapagamentop tabela)
         {
+
 
             if (tabela.dt_pagamento < DateTime.Now)
                 try
@@ -198,7 +123,8 @@ namespace FERIADO_JARVIS_.Business
                 catch (Exception)
                 {
 
-                    throw new ArgumentException("Data Invalida");
+
+                    throw new ArgumentException("Data inválida.");
                 }
 
 
@@ -214,88 +140,12 @@ namespace FERIADO_JARVIS_.Business
                 }
 
 
-            if (tabela.sl_salario_bruto <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Salario Bruto Invalido");
-                }
-
-
-            if (tabela.sl_salario_liquido <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Salario liquido Invalido");
-                }
-
-            if (tabela.vl_alimentação <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Vale Alimentação Invalido");
-                }
-
-
-            if (tabela.vl_transporte <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Vale Tranporte Invalido");
-                }
-            if (tabela.ad_gratificação <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo Gratificação Invalido");
-                }
-            if (tabela.imposto_renda <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo imposto de Renda Invalido");
-                }
-            if (tabela.ds_inss <= 0)
-                try
-                {
-                    throw new Exception();
-                }
-                catch (Exception)
-                {
-
-                    throw new ArgumentException("Campo  INSS Invalido");
-                }
-
 
             dt.alterar(tabela);
 
 
         }
-        public List<Mod.tb_folhapagamento> listar()
+        public List<Mod.tb_folhapagamentop> listar()
         {
           return  dt.listar();
         }

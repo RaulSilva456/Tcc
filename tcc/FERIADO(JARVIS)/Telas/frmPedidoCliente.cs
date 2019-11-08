@@ -21,12 +21,12 @@ namespace FERIADO_JARVIS_.Telas
         {
             Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
 
-             dgvEstoque.DataSource = bs.listar();
+             //dgvEstoque.DataSource = bs.listar();
 
             Business.Business_Produtos bss = new Business.Business_Produtos();
 
-            List<Mod.tb_produto> produto = bss.listar();
-            CboProduto.DisplayMember = nameof(Mod.tb_produto.nm_produto);
+            List<Mod.tb_produtop> produto = bss.listar();
+            CboProduto.DisplayMember = nameof(Mod.tb_produtop.nm_produto);
             CboProduto.DataSource = produto;
         }
 
@@ -58,15 +58,15 @@ namespace FERIADO_JARVIS_.Telas
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
-            {Mod.tb_pedido_cliente tabela = new Mod.tb_pedido_cliente();
-            tabela.nm_nome = CboProduto.Text;
+            {Mod.tb_pedido_clientep tabela = new Mod.tb_pedido_clientep();
+            tabela.nm_produto_cliente = CboProduto.Text;
             tabela.qtd_quantidade = Convert.ToInt32(nudQuantidadePedido.Value);
             Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
             bs.inseri(tabela);
                 MessageBox.Show("Pedido enviado.");
             
             //atualizar Data Grid
-            dgvEstoque.DataSource = bs.listar();
+            //dgvEstoque.DataSource = bs.listar();
 
             }
             catch (Exception ex)

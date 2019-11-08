@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -279,4 +279,4 @@ namespace FERIADO_JARVIS_
             speak(texts[rnd.Next(1, texts.Length)]);
         }
     }
-}
+}*/

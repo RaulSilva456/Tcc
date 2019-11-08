@@ -8,12 +8,12 @@ namespace FERIADO_JARVIS_
 {
     class Objetos
     {
-        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
+        Mod.db_a4fd25_pppEntities1 md = new Mod.db_a4fd25_pppEntities1();
         public bool login(string login, string senha, string email)
         {
          
 
-            var usuario = md.tb_login.FirstOrDefault(x =>( x.nm_nome == login || x.pes_email == email) && x.pes_senha == senha );
+            var usuario = md.tb_loginp.FirstOrDefault(x =>( x.nm_nome == login || x.pes_email == email) && x.pes_senha == senha );
             if (usuario != null)
             {
                 return true;
@@ -23,7 +23,7 @@ namespace FERIADO_JARVIS_
         public bool esqueceusenha(string email)
         {
 
-            var usuario = md.tb_login.FirstOrDefault(x => x.pes_email == email);
+            var usuario = md.tb_loginp.FirstOrDefault(x => x.pes_email == email);
             if (usuario != null)
             {
                 return true;
@@ -32,7 +32,7 @@ namespace FERIADO_JARVIS_
         }
         public bool cod(int codigo)
         {
-            var tabela = md.tb_codigo.FirstOrDefault(x => x.cd_verificacao == codigo);
+            var tabela = md.tb_codigop.FirstOrDefault(x => x.cd_verificacao == codigo);
           
             if (tabela != null)
             {
@@ -43,7 +43,7 @@ namespace FERIADO_JARVIS_
         }
         public bool usuario(string usuario)
         {
-            var tabela = md.tb_login.FirstOrDefault(x => x.nm_nome == usuario);
+            var tabela = md.tb_loginp.FirstOrDefault(x => x.nm_nome == usuario);
 
             if (tabela != null)
             {

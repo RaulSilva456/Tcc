@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace FERIADO_JARVIS_.Database
 {
     class DatabaseMostruario
-    {
-     /*   Mod.tccEntities10 md = new Mod.tccEntities10();
+    {/*
+        Mod.db_a4fccd_tccEntities1 md = new Mod.db_a4fccd_tccEntities1();
         public void deletar(Mod.tb_mostruario tabela)
         {
             tabela = md.tb_mostruario.First(x => x.id_produto_mostruario == tabela.id_produto_mostruario);

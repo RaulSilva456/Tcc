@@ -8,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FERIADO_JARVIS_.Telas
+/*namespace FERIADO_JARVIS_.Telas
 {
-   /* public partial class frmMostruario : Form
-    {
+ /*   public partial class frmMostruario : Form
+    {/*
         public frmMostruario()
         {
             InitializeComponent();
@@ -40,9 +40,9 @@ namespace FERIADO_JARVIS_.Telas
             dgvMostruario.DataSource = r.lista();
 
             Business.funcionarios_bsiness bs = new Business.funcionarios_bsiness();
-            List<Mod.tb_funcionario> funcionario = bs.consultarFuncionarios();
+            List<Mod.tb_funcionarios> funcionario = bs.consultarFuncionarios();
 
-            cboFornecedor.DisplayMember = nameof(Mod.tb_funcionario.nm_funcionario);
+            cboFornecedor.DisplayMember = nameof(Mod.tb_funcionarios.nm_funcionario);
             cboFornecedor.DataSource = funcionario;
 
         }
@@ -87,7 +87,7 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-                Mod.tb_mostruario tabela = dgvMostruario.CurrentRow.DataBoundItem as Mod.tb_mostruario;
+                Mod.tb_mostruariop tabela = dgvMostruario.CurrentRow.DataBoundItem as Mod.tb_mostruariop;
 
                 Business.BusinessMostruario bs = new Business.BusinessMostruario();
                 
@@ -109,7 +109,8 @@ namespace FERIADO_JARVIS_.Telas
 
                 MessageBox.Show("Erro");
             }
-
+            
         }
     }*/
-}
+/*}
+/**/

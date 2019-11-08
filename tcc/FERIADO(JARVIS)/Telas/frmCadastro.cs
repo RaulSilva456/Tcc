@@ -21,7 +21,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Mod.tb_login tabela = new Mod.tb_login();
+            Mod.tb_loginp tabela = new Mod.tb_loginp();
             tabela.nm_nome = txtUsuario.Text;
             tabela.pes_email = txtEmail.Text;
             tabela.pes_senha = txtSenha.Text;
@@ -119,7 +119,7 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-                Mod.tb_login tabela = new Mod.tb_login();
+                Mod.tb_loginp tabela = new Mod.tb_loginp();
                 tabela.nm_nome = txtUsuario.Text;
                 tabela.pes_email = txtEmail.Text;
                 tabela.pes_senha = txtSenha.Text;

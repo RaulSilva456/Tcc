@@ -8,21 +8,21 @@ namespace FERIADO_JARVIS_.Database
 {
     class Database_FolhaDePagamento_
     {
-        Mod.db_a4fcff_tccEntities md = new Mod.db_a4fcff_tccEntities();
-        public void inserir(Mod.tb_folhapagamento tabela)
+        Mod.db_a4fd25_pppEntities1 md = new Mod.db_a4fd25_pppEntities1();
+        public void inserir(Mod.tb_folhapagamentop tabela)
         {
-            md.tb_folhapagamento.Add(tabela);
+            md.tb_folhapagamentop.Add(tabela);
             md.SaveChanges();
         }
-        public void remover(Mod.tb_folhapagamento tabela)
+        public void remover(Mod.tb_folhapagamentop tabela)
         {
-           tabela = md.tb_folhapagamento.First(x => x.id_folha_pagamento == tabela.id_folha_pagamento);
-            md.tb_folhapagamento.Remove(tabela);
+           tabela = md.tb_folhapagamentop.First(x => x.id_folha_pagamento == tabela.id_folha_pagamento);
+            md.tb_folhapagamentop.Remove(tabela);
             md.SaveChanges();
         }
-        public void alterar (Mod.tb_folhapagamento tabela)
+        public void alterar (Mod.tb_folhapagamentop tabela)
         {
-         Mod.tb_folhapagamento   altera = md.tb_folhapagamento.First(x => x.id_folha_pagamento == tabela.id_folha_pagamento);
+         Mod.tb_folhapagamentop   altera = md.tb_folhapagamentop.First(x => x.id_folha_pagamento == tabela.id_folha_pagamento);
             altera.ad_gratificação = tabela.ad_gratificação;
             altera.ds_faltas = tabela.ds_faltas;
             altera.ds_inss = tabela.ds_inss;
@@ -38,9 +38,9 @@ namespace FERIADO_JARVIS_.Database
 
 
         }
-        public List<Mod.tb_folhapagamento>listar()
+        public List<Mod.tb_folhapagamentop>listar()
         {
-            return md.tb_folhapagamento.ToList();
+            return md.tb_folhapagamentop.ToList();
         }
 
 

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_a4fd25_pppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_clientep">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_endereco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doc_rg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doc_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tel_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_pedido_clientep" Relationship="Self.tb_pedido_clientep_ibfk_1" FromRole="tb_clientep" ToRole="tb_pedido_clientep" />
+    <NavigationProperty Name="tb_venda_clientep" Relationship="Self.tb_venda_clientep_ibfk_2" FromRole="tb_clientep" ToRole="tb_venda_clientep" />
+  </EntityType>
+  <EntityType Name="tb_codigop">
+    <Key>
+      <PropertyRef Name="id_codigo" />
+    </Key>
+    <Property Name="id_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cd_verificacao" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tb_despesap">
+    <Key>
+      <PropertyRef Name="id_despesas" />
+    </Key>
+    <Property Name="id_despesas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vl_valor" Type="Decimal" />
+    <Property Name="dt_data_pagamento" Type="DateTime" />
+    <Property Name="tp_conta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_estoquep">
+    <Key>
+      <PropertyRef Name="id_produto" />
+    </Key>
+    <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_fornecedor" Type="Int32" />
+    <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qtd_quantidade_do_produto" Type="Decimal" />
+    <Property Name="pro_vencido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pr_preco" Type="Decimal" />
+    <Property Name="dt_saida_do_produto" Type="DateTime" />
+    <NavigationProperty Name="tb_fornecedorp" Relationship="Self.tb_estoquep_ibfk_1" FromRole="tb_estoquep" ToRole="tb_fornecedorp" />
+  </EntityType>
+  <EntityType Name="tb_folhapagamentop">
+    <Key>
+      <PropertyRef Name="id_folha_pagamento" />
+    </Key>
+    <Property Name="id_folha_pagamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_funcionario" Type="Int32" />
+    <Property Name="ds_inss" Type="Decimal" />
+    <Property Name="hora_extra" Type="Decimal" />
+    <Property Name="ad_gratificação" Type="Decimal" />
+    <Property Name="imposto_renda" Type="Decimal" />
+    <Property Name="vl_alimentação" Type="Decimal" />
+    <Property Name="vl_transporte" Type="Decimal" />
+    <Property Name="ds_faltas" Type="Int32" />
+    <Property Name="sl_salario_liquido" Type="Decimal" />
+    <Property Name="nm_funcionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sl_salario_bruto" Type="Decimal" />
+    <Property Name="dt_pagamento" Type="DateTime" />
+    <NavigationProperty Name="tb_funcionariosp" Relationship="Self.tb_folhapagamentop_ibfk_1" FromRole="tb_folhapagamentop" ToRole="tb_funcionariosp" />
+  </EntityType>
+  <EntityType Name="tb_fornecedorp">
+    <Key>
+      <PropertyRef Name="id_fornecedor" />
+    </Key>
+    <Property Name="id_fornecedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nm_fornecedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="end_endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tl_telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fr_cep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fr_cnpj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vl_valor_produto" Type="Decimal" />
+    <Property Name="dt_entrada_do_produto" Type="DateTime" />
+    <NavigationProperty Name="tb_estoquep" Relationship="Self.tb_estoquep_ibfk_1" FromRole="tb_fornecedorp" ToRole="tb_estoquep" />
+    <NavigationProperty Name="tb_produtop" Relationship="Self.tb_produtop_ibfk_1" FromRole="tb_fornecedorp" ToRole="tb_produtop" />
+  </EntityType>
+  <EntityType Name="tb_funcionariosp">
+    <Key>
+      <PropertyRef Name="id_funcionario" />
+    </Key>
+    <Property Name="id_funcionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_funcionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt_nasc" Type="DateTime" />
+    <Property Name="fun_rg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fun_cpf" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fun_endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ad_fgts" Type="Decimal" />
+    <Property Name="sl_salario" Type="Decimal" />
+    <Property Name="dt_data_de_contratacao" Type="DateTime" />
+    <Property Name="fun_cargo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="dt_pagamento_do_funcionario" Type="DateTime" />
+    <NavigationProperty Name="tb_folhapagamentop" Relationship="Self.tb_folhapagamentop_ibfk_1" FromRole="tb_funcionariosp" ToRole="tb_folhapagamentop" />
+  </EntityType>
+  <EntityType Name="tb_loginp">
+    <Key>
+      <PropertyRef Name="id_login" />
+    </Key>
+    <Property Name="id_login" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pes_senha" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pes_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_pedido_clientep">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_cliente" Type="Int32" />
+    <Property Name="qtd_quantidade" Type="Int32" />
+    <Property Name="nm_produto_cliente" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="id_produto" Type="Int32" />
+    <NavigationProperty Name="tb_clientep" Relationship="Self.tb_pedido_clientep_ibfk_1" FromRole="tb_pedido_clientep" ToRole="tb_clientep" />
+    <NavigationProperty Name="tb_produtop" Relationship="Self.tb_pedido_clientep_ibfk_2" FromRole="tb_pedido_clientep" ToRole="tb_produtop" />
+  </EntityType>
+  <EntityType Name="tb_produtop">
+    <Key>
+      <PropertyRef Name="id_produto" />
+    </Key>
+    <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_fornecedor_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nm_produto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cat_categoria" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="sb_sabor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id_fornecedor" Type="Int32" />
+    <NavigationProperty Name="tb_fornecedorp" Relationship="Self.tb_produtop_ibfk_1" FromRole="tb_produtop" ToRole="tb_fornecedorp" />
+    <NavigationProperty Name="tb_pedido_clientep" Relationship="Self.tb_pedido_clientep_ibfk_2" FromRole="tb_produtop" ToRole="tb_pedido_clientep" />
+    <NavigationProperty Name="tb_venda_clientep" Relationship="Self.tb_venda_clientep_ibfk_1" FromRole="tb_produtop" ToRole="tb_venda_clientep" />
+  </EntityType>
+  <EntityType Name="tb_venda_clientep">
+    <Key>
+      <PropertyRef Name="id_venda" />
+    </Key>
+    <Property Name="id_venda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vl_venda" Type="Decimal" />
+    <Property Name="nm_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nm_cliente_venda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt_venda_produto" Type="DateTime" />
+    <Property Name="id_produto" Type="Int32" />
+    <Property Name="id_cliente" Type="Int32" />
+    <NavigationProperty Name="tb_clientep" Relationship="Self.tb_venda_clientep_ibfk_2" FromRole="tb_venda_clientep" ToRole="tb_clientep" />
+    <NavigationProperty Name="tb_produtop" Relationship="Self.tb_venda_clientep_ibfk_1" FromRole="tb_venda_clientep" ToRole="tb_produtop" />
+  </EntityType>
+  <Association Name="tb_pedido_clientep_ibfk_1">
+    <End Role="tb_clientep" Type="Self.tb_clientep" Multiplicity="0..1" />
+    <End Role="tb_pedido_clientep" Type="Self.tb_pedido_clientep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_clientep">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="tb_pedido_clientep">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_venda_clientep_ibfk_2">
+    <End Role="tb_clientep" Type="Self.tb_clientep" Multiplicity="0..1" />
+    <End Role="tb_venda_clientep" Type="Self.tb_venda_clientep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_clientep">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="tb_venda_clientep">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_estoquep_ibfk_1">
+    <End Role="tb_fornecedorp" Type="Self.tb_fornecedorp" Multiplicity="0..1" />
+    <End Role="tb_estoquep" Type="Self.tb_estoquep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_fornecedorp">
+        <PropertyRef Name="id_fornecedor" />
+      </Principal>
+      <Dependent Role="tb_estoquep">
+        <PropertyRef Name="id_fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_folhapagamentop_ibfk_1">
+    <End Role="tb_funcionariosp" Type="Self.tb_funcionariosp" Multiplicity="0..1" />
+    <End Role="tb_folhapagamentop" Type="Self.tb_folhapagamentop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_funcionariosp">
+        <PropertyRef Name="id_funcionario" />
+      </Principal>
+      <Dependent Role="tb_folhapagamentop">
+        <PropertyRef Name="id_funcionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_produtop_ibfk_1">
+    <End Role="tb_fornecedorp" Type="Self.tb_fornecedorp" Multiplicity="0..1" />
+    <End Role="tb_produtop" Type="Self.tb_produtop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_fornecedorp">
+        <PropertyRef Name="id_fornecedor" />
+      </Principal>
+      <Dependent Role="tb_produtop">
+        <PropertyRef Name="id_fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_pedido_clientep_ibfk_2">
+    <End Role="tb_produtop" Type="Self.tb_produtop" Multiplicity="0..1" />
+    <End Role="tb_pedido_clientep" Type="Self.tb_pedido_clientep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_produtop">
+        <PropertyRef Name="id_produto" />
+      </Principal>
+      <Dependent Role="tb_pedido_clientep">
+        <PropertyRef Name="id_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_venda_clientep_ibfk_1">
+    <End Role="tb_produtop" Type="Self.tb_produtop" Multiplicity="0..1" />
+    <End Role="tb_venda_clientep" Type="Self.tb_venda_clientep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_produtop">
+        <PropertyRef Name="id_produto" />
+      </Principal>
+      <Dependent Role="tb_venda_clientep">
+        <PropertyRef Name="id_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_a4fd25_pppEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_clientep" EntityType="Self.tb_clientep" />
+    <EntitySet Name="tb_codigop" EntityType="Self.tb_codigop" />
+    <EntitySet Name="tb_despesap" EntityType="Self.tb_despesap" />
+    <EntitySet Name="tb_estoquep" EntityType="Self.tb_estoquep" />
+    <EntitySet Name="tb_folhapagamentop" EntityType="Self.tb_folhapagamentop" />
+    <EntitySet Name="tb_fornecedorp" EntityType="Self.tb_fornecedorp" />
+    <EntitySet Name="tb_funcionariosp" EntityType="Self.tb_funcionariosp" />
+    <EntitySet Name="tb_loginp" EntityType="Self.tb_loginp" />
+    <EntitySet Name="tb_pedido_clientep" EntityType="Self.tb_pedido_clientep" />
+    <EntitySet Name="tb_produtop" EntityType="Self.tb_produtop" />
+    <EntitySet Name="tb_venda_clientep" EntityType="Self.tb_venda_clientep" />
+    <AssociationSet Name="tb_pedido_clientep_ibfk_1" Association="Self.tb_pedido_clientep_ibfk_1">
+      <End Role="tb_clientep" EntitySet="tb_clientep" />
+      <End Role="tb_pedido_clientep" EntitySet="tb_pedido_clientep" />
+    </AssociationSet>
+    <AssociationSet Name="tb_venda_clientep_ibfk_2" Association="Self.tb_venda_clientep_ibfk_2">
+      <End Role="tb_clientep" EntitySet="tb_clientep" />
+      <End Role="tb_venda_clientep" EntitySet="tb_venda_clientep" />
+    </AssociationSet>
+    <AssociationSet Name="tb_estoquep_ibfk_1" Association="Self.tb_estoquep_ibfk_1">
+      <End Role="tb_fornecedorp" EntitySet="tb_fornecedorp" />
+      <End Role="tb_estoquep" EntitySet="tb_estoquep" />
+    </AssociationSet>
+    <AssociationSet Name="tb_folhapagamentop_ibfk_1" Association="Self.tb_folhapagamentop_ibfk_1">
+      <End Role="tb_funcionariosp" EntitySet="tb_funcionariosp" />
+      <End Role="tb_folhapagamentop" EntitySet="tb_folhapagamentop" />
+    </AssociationSet>
+    <AssociationSet Name="tb_produtop_ibfk_1" Association="Self.tb_produtop_ibfk_1">
+      <End Role="tb_fornecedorp" EntitySet="tb_fornecedorp" />
+      <End Role="tb_produtop" EntitySet="tb_produtop" />
+    </AssociationSet>
+    <AssociationSet Name="tb_pedido_clientep_ibfk_2" Association="Self.tb_pedido_clientep_ibfk_2">
+      <End Role="tb_produtop" EntitySet="tb_produtop" />
+      <End Role="tb_pedido_clientep" EntitySet="tb_pedido_clientep" />
+    </AssociationSet>
+    <AssociationSet Name="tb_venda_clientep_ibfk_1" Association="Self.tb_venda_clientep_ibfk_1">
+      <End Role="tb_produtop" EntitySet="tb_produtop" />
+      <End Role="tb_venda_clientep" EntitySet="tb_venda_clientep" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

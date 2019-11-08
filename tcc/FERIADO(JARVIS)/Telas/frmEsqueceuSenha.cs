@@ -31,7 +31,7 @@ namespace FERIADO_JARVIS_.Telas
             string  email;
             email = txtEmailConfirmação.Text;
             string assunto = "Codigo de Verificação";
-            Mod.tb_codigo tabela = new Mod.tb_codigo();
+            Mod.tb_codigop tabela = new Mod.tb_codigop();
             tabela.cd_verificacao = Convert.ToInt32(codigo);
             Business.BusinessLogin bs = new Business.BusinessLogin();
             bs.icd(tabela);

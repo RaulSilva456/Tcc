@@ -1,5 +1,5 @@
 ﻿namespace FERIADO_JARVIS_
-{
+{/*
     partial class Jarvis
     {
         /// <summary>
@@ -93,6 +93,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-    }
+    }*/
 }
 

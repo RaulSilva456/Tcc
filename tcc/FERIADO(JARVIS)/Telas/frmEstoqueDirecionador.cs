@@ -36,7 +36,7 @@ namespace FERIADO_JARVIS_.Telas
             }
             if(escolha == "Mostruario")
             {
-             /*   frmMostruario r = new frmMostruario();
+                /*frmMostruario r = new frmMostruario();
                 r.Show();
                 Hide();*/
 
@@ -48,6 +48,11 @@ namespace FERIADO_JARVIS_.Telas
             frmMenu r = new frmMenu();
             r.Show();
             Hide();
+        }
+
+        private void frmEstoqueDirecionador_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

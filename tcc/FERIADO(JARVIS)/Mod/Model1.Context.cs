@@ -13,10 +13,10 @@ namespace FERIADO_JARVIS_.Mod
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db_a4fcff_tccEntities : DbContext
+    public partial class db_a4fd25_pppEntities1 : DbContext
     {
-        public db_a4fcff_tccEntities()
-            : base("name=db_a4fcff_tccEntities")
+        public db_a4fd25_pppEntities1()
+            : base("name=db_a4fd25_pppEntities1")
         {
         }
     
@@ -25,17 +25,16 @@ namespace FERIADO_JARVIS_.Mod
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tb_cliente> tb_cliente { get; set; }
-        public virtual DbSet<tb_codigo> tb_codigo { get; set; }
-        public virtual DbSet<tb_compra> tb_compra { get; set; }
-        public virtual DbSet<tb_despesa> tb_despesa { get; set; }
-        public virtual DbSet<tb_estoque> tb_estoque { get; set; }
-        public virtual DbSet<tb_folhapagamento> tb_folhapagamento { get; set; }
-        public virtual DbSet<tb_fornecedor> tb_fornecedor { get; set; }
-        public virtual DbSet<tb_funcionario> tb_funcionario { get; set; }
-        public virtual DbSet<tb_login> tb_login { get; set; }
-        public virtual DbSet<tb_pedido_cliente> tb_pedido_cliente { get; set; }
-        public virtual DbSet<tb_produto> tb_produto { get; set; }
-        public virtual DbSet<tb_venda_cliente> tb_venda_cliente { get; set; }
+        public virtual DbSet<tb_clientep> tb_clientep { get; set; }
+        public virtual DbSet<tb_codigop> tb_codigop { get; set; }
+        public virtual DbSet<tb_despesap> tb_despesap { get; set; }
+        public virtual DbSet<tb_estoquep> tb_estoquep { get; set; }
+        public virtual DbSet<tb_folhapagamentop> tb_folhapagamentop { get; set; }
+        public virtual DbSet<tb_fornecedorp> tb_fornecedorp { get; set; }
+        public virtual DbSet<tb_funcionariosp> tb_funcionariosp { get; set; }
+        public virtual DbSet<tb_loginp> tb_loginp { get; set; }
+        public virtual DbSet<tb_pedido_clientep> tb_pedido_clientep { get; set; }
+        public virtual DbSet<tb_produtop> tb_produtop { get; set; }
+        public virtual DbSet<tb_venda_clientep> tb_venda_clientep { get; set; }
     }
 }

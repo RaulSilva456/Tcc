@@ -87,7 +87,7 @@ namespace FERIADO_JARVIS_.Telas
 
 
 
-                Mod.tb_folhapagamento tabela = new Mod.tb_folhapagamento();
+                Mod.tb_folhapagamentop tabela = new Mod.tb_folhapagamentop();
 
                 tabela.ad_gratificação = Convert.ToDecimal(txtGratificação.Text);
                 tabela.ds_faltas = Convert.ToInt32(txtFaltas.Text);
@@ -100,6 +100,7 @@ namespace FERIADO_JARVIS_.Telas
                 tabela.vl_alimentação = Convert.ToDecimal(txtVA.Text);
                 tabela.vl_transporte = Convert.ToDecimal(txtVT.Text);
                 tabela.nm_funcionario = cboFuncionario.Text;
+                
 
                 Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
                 bs.inserir(tabela);
@@ -127,9 +128,9 @@ namespace FERIADO_JARVIS_.Telas
 
 
 
-            List<Mod.tb_funcionario> funcionario = bs.consultarFuncionarios();
+            List<Mod.tb_funcionariosp> funcionario = bs.consultarFuncionariosp();
 
-            cboFuncionario.DisplayMember = nameof(Mod.tb_funcionario.nm_funcionario);
+            cboFuncionario.DisplayMember = nameof(Mod.tb_funcionariosp.nm_funcionario);
             cboFuncionario.DataSource = funcionario;
 
         }
@@ -150,7 +151,7 @@ namespace FERIADO_JARVIS_.Telas
 
             try
             {
-                Mod.tb_folhapagamento tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamento;
+                Mod.tb_folhapagamentop tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamentop;
                 Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
                 bs.remover(tabela);
 
@@ -170,18 +171,17 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {
-                Mod.tb_folhapagamento tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamento;
-
+                Mod.tb_folhapagamentop tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamentop;
                 tabela.ad_gratificação = Convert.ToDecimal(txtGratificação.Text);
                 tabela.ds_faltas = Convert.ToInt32(txtFaltas.Text);
-                tabela.ds_inss = Convert.ToInt32(txtINSS.Text);
+                tabela.ds_inss = Convert.ToDecimal(txtINSS.Text);
                 tabela.dt_pagamento = pagamento.Value;
-                tabela.hora_extra = Convert.ToInt32(txtHRExtra.Text);
-                tabela.imposto_renda = Convert.ToInt32(txtImpostoRenda.Text);
-                tabela.sl_salario_bruto = Convert.ToInt32(txtSalarioBruto.Text);
-                tabela.sl_salario_liquido = Convert.ToInt32(txtSalarioLiquido.Text);
-                tabela.vl_alimentação = Convert.ToInt32(txtVA.Text);
-                tabela.vl_transporte = Convert.ToInt32(txtVT.Text);
+                tabela.hora_extra = Convert.ToDecimal(txtHRExtra.Text);
+                tabela.imposto_renda = Convert.ToDecimal(txtImpostoRenda.Text);
+                tabela.sl_salario_bruto = Convert.ToDecimal(txtSalarioBruto.Text);
+                tabela.sl_salario_liquido = Convert.ToDecimal(txtSalarioLiquido.Text);
+                tabela.vl_alimentação = Convert.ToDecimal(txtVA.Text);
+                tabela.vl_transporte = Convert.ToDecimal(txtVT.Text);
                 tabela.nm_funcionario = cboFuncionario.Text;
 
 
@@ -213,7 +213,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {
-                Mod.tb_folhapagamento tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamento;
+                Mod.tb_folhapagamentop tabela = dgvFolhaPagamento.CurrentRow.DataBoundItem as Mod.tb_folhapagamentop;
                 Business.Business_Folha_de_Pagamento bs = new Business.Business_Folha_de_Pagamento();
                 bs.remover(tabela);
                 MessageBox.Show(" Funcionário deletado.");

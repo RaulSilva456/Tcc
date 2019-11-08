@@ -52,7 +52,7 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {Business.BusinessCliente bs = new Business.BusinessCliente();
-            Mod.tb_cliente tabela = new Mod.tb_cliente();
+            Mod.tb_clientep tabela = new Mod.tb_clientep();
             tabela.doc_cep = txtCep.Text;
             tabela.doc_rg = txtRg.Text;
             tabela.end_endereco = txtEndereço.Text;
@@ -106,7 +106,7 @@ namespace FERIADO_JARVIS_.Telas
         private void button2_Click_1(object sender, EventArgs e)
         {
             try
-            {Mod.tb_cliente tabela = dgvClientes.CurrentRow.DataBoundItem as Mod.tb_cliente;
+            {Mod.tb_clientep tabela = dgvClientes.CurrentRow.DataBoundItem as Mod.tb_clientep;
             Business.BusinessCliente bs = new Business.BusinessCliente();
 
             bs.remover(tabela);
@@ -128,7 +128,7 @@ namespace FERIADO_JARVIS_.Telas
         {
 
             try
-            {Mod.tb_cliente tabela = dgvClientes.CurrentRow.DataBoundItem as Mod.tb_cliente;
+            {Mod.tb_clientep tabela = dgvClientes.CurrentRow.DataBoundItem as Mod.tb_clientep;
             tabela.doc_cep = txtCep.Text;
             tabela.doc_rg = txtRg.Text;
             tabela.end_endereco = txtEndereço.Text;

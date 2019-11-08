@@ -28,10 +28,10 @@ namespace FERIADO_JARVIS_.Telas
         {
             try
             {
-                Mod.tb_pedido_cliente tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_pedido_cliente;
+                Mod.tb_pedido_clientep tabela = dataGridView1.CurrentRow.DataBoundItem as Mod.tb_pedido_clientep;
 
                 tabela.qtd_quantidade = Convert.ToInt32(nudQuantidadeAlteração.Value);
-                tabela.nm_nome = CboProduto.Text;
+                tabela.nm_produto_cliente = CboProduto.Text;
                
                 Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
                 bs.alterar(tabela);
@@ -40,9 +40,6 @@ namespace FERIADO_JARVIS_.Telas
                 //atualizar Data Grid
                 dataGridView1.DataSource = bs.listar();
 
-                frmConfirmarCompra r = new frmConfirmarCompra();
-                r.Show();
-                Hide();
             }
             catch (Exception ex)
             {
@@ -65,8 +62,8 @@ namespace FERIADO_JARVIS_.Telas
 
             Business.Business_Produtos bss = new Business.Business_Produtos();
 
-            List<Mod.tb_produto> produto = bss.listar();
-            CboProduto.DisplayMember = nameof(Mod.tb_produto.nm_produto);
+            List<Mod.tb_produtop> produto = bss.listar();
+            CboProduto.DisplayMember = nameof(Mod.tb_produtop.nm_produto);
             CboProduto.DataSource = produto;
         }
     }

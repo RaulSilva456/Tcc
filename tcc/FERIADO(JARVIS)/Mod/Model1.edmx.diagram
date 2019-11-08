@@ -4,27 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="81b65dc8984448dcaba9aa2bb24fb30c" Name="Diagram1">
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_cliente" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_codigo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_compra" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_despesa" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_estoque" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_folhapagamento" Width="1.5" PointX="8" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_fornecedor" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_funcionario" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_login" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_pedido_cliente" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_produto" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_a4fcff_tccModel.tb_venda_cliente" Width="1.5" PointX="8.25" PointY="9.375" IsExpanded="true" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_pedido_cliente_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_venda_cliente_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_compra_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_estoque_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_folhapagamento_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_produto_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_pedido_cliente_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="db_a4fcff_tccModel.tb_venda_cliente_ibfk_1" ManuallyRouted="false" />
+      <Diagram DiagramId="bafe4e68296b4f4ab87a31ce64bdd9bc" Name="Diagram1">
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_clientep" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_codigop" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_despesap" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_estoquep" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_folhapagamentop" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_fornecedorp" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_funcionariosp" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_loginp" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_pedido_clientep" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_produtop" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4fd25_pppModel.tb_venda_clientep" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="db_a4fd25_pppModel.tb_pedido_clientep_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4fd25_pppModel.tb_venda_clientep_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4fd25_pppModel.tb_estoquep_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4fd25_pppModel.tb_folhapagamentop_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4fd25_pppModel.tb_produtop_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4fd25_pppModel.tb_pedido_clientep_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4fd25_pppModel.tb_venda_clientep_ibfk_1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
