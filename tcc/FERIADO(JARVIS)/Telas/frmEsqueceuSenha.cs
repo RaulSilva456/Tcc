@@ -60,7 +60,7 @@ namespace FERIADO_JARVIS_.Telas
             }
           else
             {
-                MessageBox.Show("Email válido! Rederecionamos você para a tela de código de recuperação.");
+                MessageBox.Show("Email válido Foi Enviado Um Codigo De Verificação Ao Seu Email!   Rederecionamos você para a tela de código de recuperação.");
             frmEsqueceuSenha3 r = new frmEsqueceuSenha3();
             r.Show();
             Hide();

@@ -49,6 +49,13 @@ namespace FERIADO_JARVIS_.Telas
             Mod.tb_pedido_clientep tb = dgvPedido.CurrentRow.DataBoundItem as Mod.tb_pedido_clientep;
             Business.BusinessPedidoCliente bs = new Business.BusinessPedidoCliente();
             bs.deletar(tb);
+
+            Objetos fun = new Objetos();
+
+            
+
+
+
             MessageBox.Show("Pedido realizado com sucesso.");
            dgvPedido.DataSource =  bs.listar();
         }

@@ -67,6 +67,15 @@ namespace FERIADO_JARVIS_.Telas
 
                 if (rg.IsMatch(tabela.pes_email))
                 {
+                    string nome = txtNomeCliente.Text;
+                    string mensagem = nome +   " Voce Eo Mais Novo Cliente Do Choco Frei Vire Nosso fregues!";
+                    string Assunto = "Choco Frei";
+
+                    string email = txtEmail.Text;
+
+                    Objetos fun = new Objetos();
+                    fun.EnviarEmail(email, Assunto, mensagem);
+
                 bs.inserir(tabela);
                 MessageBox.Show("Cadastro realizado com sucesso.");
 
@@ -75,6 +84,8 @@ namespace FERIADO_JARVIS_.Telas
                 {
                     MessageBox.Show("Email inválido.");
                 }
+
+
 
 
                     
