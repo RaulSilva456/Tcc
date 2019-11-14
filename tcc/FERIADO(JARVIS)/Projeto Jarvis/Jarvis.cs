@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,11 +29,11 @@ namespace FERIADO_JARVIS_
         Telas.frmInserirFuncionario inserirfuncionario = new Telas.frmInserirFuncionario();
         Telas.frmFolhaPagamento folhapagamnento = new Telas.frmFolhaPagamento();
         Telas.frmEstoque estoque = new Telas.frmEstoque();
-     
-     
-        Telas.frmCadastroProdutos cadastroproduto = new Telas.frmCadastroProdutos();
-        Telas.frmCadastro cadastro = new Telas.frmCadastro();
-        
+        Telas.frmCadastroProdutos produtos = new Telas.frmCadastroProdutos();
+        Telas.frmClientes cliente = new Telas.frmClientes();
+        Telas.frmDespesas despesas = new Telas.frmDespesas();
+        Telas.frmFornecedores fornecedores = new Telas.frmFornecedores();
+      
         public Jarvis()
         {
             InitializeComponent();
@@ -55,8 +55,22 @@ namespace FERIADO_JARVIS_
                 c_ComandoDoSistema.Add(GrammarRules.MaximizarTela.ToArray());//MAXIMIZAR JANELA
                 c_ComandoDoSistema.Add(GrammarRules.AbrirMenu.ToArray());//abrir menu
                 c_ComandoDoSistema.Add(GrammarRules.FecharMenu.ToArray()); //fechar menu
-                c_ComandoDoSistema.Add(GrammarRules.MinimizarMenu.ToArray()); //Minimizar Menu
-                c_ComandoDoSistema.Add(GrammarRules.SubirMenu.ToArray()); // Maximizar Menu
+                c_ComandoDoSistema.Add(GrammarRules.AbriCliente.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharCliente.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.AbriFolha.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.AbrirDespesas.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.AbrirEstoque.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.AbrirFornecedores.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.AbrirFuncionario.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.AbrirProduto.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharCliente.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharDespesas.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharEstoque.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharFolha.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharFornecedores.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharFuncionario.ToArray());
+                c_ComandoDoSistema.Add(GrammarRules.fecharProduto.ToArray());
+               
 
                 GrammarBuilder gb_ComandosDoSistema = new GrammarBuilder();
                 gb_ComandosDoSistema.Append(c_ComandoDoSistema);
@@ -73,6 +87,17 @@ namespace FERIADO_JARVIS_
                 // gramatica do jarvis falando
 
                 jarvi.SpeakProgress += new EventHandler<SpeakProgressEventArgs>(jarvisfalando);
+
+
+
+
+
+
+
+
+
+
+             
 
 
 
@@ -97,77 +122,120 @@ namespace FERIADO_JARVIS_
         }
         private void reconhecimento(object sender, SpeechRecognizedEventArgs e)
         {
-            string speech = e.Result.Text;
-            float conf = e.Result.Confidence;
-            this.label1.Text = "Reconecimineto: " + speech;
-
-            if (conf > 0.35f)
+            try
             {
-                this.label1.ForeColor = Color.Aquamarine; ;
-                if (GrammarRules.FeriadoStop.Any(x => x == speech))
+                string speech = e.Result.Text;
+                float conf = e.Result.Confidence;
+                this.label1.Text = "Reconecimineto: " + speech;
+
+                if (conf > 0.35f)
                 {
-                    speak("Fui Dormi Até Logo");
-                    jarvisOuvindo = false;
-                }
-                else if (GrammarRules.FeriadoStar.Any(x => x == speech))
-                {
-                    speak("Acordei Como Posso Ajudar");
-                    jarvisOuvindo = true;
-                }
-                if (jarvisOuvindo == true)
-                {
-                    switch (e.Result.Grammar.Name)
+                    this.label1.ForeColor = Color.Aquamarine; ;
+                    if (GrammarRules.FeriadoStop.Any(x => x == speech))
                     {
-                        case "sys":
-                            if (GrammarRules.QueHorasSão.Any(x => x == speech))
-                            {
-                                Runner.qualHORAS();
-                            }
-                            else if (GrammarRules.QualData.Any(x => x == speech))
-                            {
-                                Runner.QualDia();
-                            }
-                            else if (GrammarRules.MinimizarJanela.Any(x => x == speech))
-                            {
-                                minimizarJanela();
-                            }
+                        speak("Fui Dormi Até Logo");
+                        jarvisOuvindo = false;
+                    }
+                    else if (GrammarRules.FeriadoStar.Any(x => x == speech))
+                    {
+                        speak("Acordei Como Posso Ajudar");
+                        jarvisOuvindo = true;
+                    }
+                    if (jarvisOuvindo == true)
+                    {
+                        switch (e.Result.Grammar.Name)
+                        {
+                            case "sys":
+                                if (GrammarRules.QueHorasSão.Any(x => x == speech))
+                                {
+                                    Runner.qualHORAS();
+                                }
+                                else if (GrammarRules.QualData.Any(x => x == speech))
+                                {
+                                    Runner.QualDia();
+                                }
+                                else if (GrammarRules.MinimizarJanela.Any(x => x == speech))
+                                {
+                                    minimizarJanela();
+                                }
 
-                            else if (GrammarRules.MaximizarTela.Any(x => x == speech))
-                            {
-                                MaximizarJanela();
-                            }
-                            else if (GrammarRules.AbrirMenu.Any(x => x == speech))
-                            {
-                                abrirmenu();
-                            }
-                            else if (GrammarRules.FecharMenu.Any(x => x == speech))
-                            {
-                                fecharmenu();
-                            }
-                            else if (GrammarRules.MinimizarMenu.Any(x => x == speech))
-                            {
-                                MinimizarMenu();
-                            }
-                            else if (GrammarRules.SubirMenu.Any(x => x == speech))
-                            {
-                                MenuSubir();
-                            }
+                                else if (GrammarRules.MaximizarTela.Any(x => x == speech))
+                                {
+                                    MaximizarJanela();
+                                }
+                                else if (GrammarRules.AbrirMenu.Any(x => x == speech))
+                                {
+                                    abrirmenu();
+                                }
+                                else if (GrammarRules.FecharMenu.Any(x => x == speech))
+                                {
+                                    fecharmenu();
+                                }
+
+                                else if (GrammarRules.AbriCliente.Any(x => x == speech))
+                                {
+                                    abrircliente();
+                                }
+                                else if (GrammarRules.fecharCliente.Any(x => x == speech))
+                                {
+                                    fecharcliente();
+                                }
+                                else if (GrammarRules.AbriFolha.Any(x => x == speech))
+                                {
+                                    abrirfolha();
+                                }
+                                else if (GrammarRules.fecharFolha.Any(x => x == speech))
+                                {
+                                    fecharfolha();
+                                }
+                                else if (GrammarRules.AbrirDespesas.Any(x => x == speech))
+                                {
+                                    abrirdespesas();
+                                }
+                                else if (GrammarRules.fecharDespesas.Any(x => x == speech))
+                                {
+                                    fechardespesas();
+                                }
+                                else if (GrammarRules.AbrirEstoque.Any(x => x == speech))
+                                {
+                                    abrirestoque();
+                                }
+                                else if (GrammarRules.fecharEstoque.Any(x => x == speech))
+                                {
+                                    fecharestoque();
+                                }
+                                else if (GrammarRules.AbrirFornecedores.Any(x => x == speech))
+                                {
+                                    abrifornercedores();
+                                }
+                                else if (GrammarRules.Feu.Any(x => x == speech))
+                                {
+                                  fechar
+                                }
 
 
-                            break;
+                                break;
 
+
+                        }
 
                     }
 
                 }
+                else
+                {
+
+
+                    this.label1.ForeColor = Color.Blue;
+                }
 
             }
-            else
+            catch (Exception)
             {
 
-
-                this.label1.ForeColor = Color.Blue;
+                speak("Comando De Voz Invalido Venha Com Um Portugues Mais Transparente");
             }
+            
         }
         //metodos
         private void audiolevel(Object s, AudioLevelUpdatedEventArgs e)
@@ -232,23 +300,7 @@ namespace FERIADO_JARVIS_
 
         }
 
-        private void MenuSubir()
-        {
-         if(menu.WindowState == FormWindowState.Minimized)
-            {
-                menu.WindowState = FormWindowState.Normal;
-                speak("Tela Subida", "Tela em Estado Normal");
-
-            }
-         else
-            {
-                speak("Tela Menu Ja está em Tamanho Normal");
-            }
-            
-
-
-            
-        }
+      
         
         //telas abrir e Fechar
         private void fecharmenu()
@@ -261,6 +313,74 @@ namespace FERIADO_JARVIS_
             menu.Show();
 
         }
+
+        private void fecharcliente()
+        {
+            cliente.Close();
+        }
+        private void abrircliente()
+        {
+
+            cliente.Show();
+
+        }
+        private void fechardespesas()
+        {
+            despesas.Close();
+        }
+        private void abrirdespesas()
+        {
+
+            despesas.Show();
+
+        }
+        private void fecharestoque()
+        {
+            estoque.Close();
+        }
+        private void abrirestoque()
+        {
+
+           estoque.Show();
+
+        }
+        private void fecharfolha()
+        {
+            folhapagamnento.Close();
+        }
+        private void abrirfolha()
+        {
+
+           folhapagamnento.Show();
+
+        }
+        private void fecharfornecedores()
+        {
+            fornecedores.Close();
+        }
+        private void abrifornercedores()
+        {
+
+            fornecedores.Show();
+
+        }
+        private void fecharfuncionario()
+        {
+            inserirfuncionario.Close();
+        }
+        private void abriinserirFuncionario()
+        {
+
+          inserirfuncionario.Show();
+
+        }
+
+
+
+
+
+
+
         // jarvis falando
         public void jarvisfalando(object s, SpeakProgressEventArgs e)
         {
@@ -279,4 +399,4 @@ namespace FERIADO_JARVIS_
             speak(texts[rnd.Next(1, texts.Length)]);
         }
     }
-}*/
+}
