@@ -34,6 +34,12 @@ namespace FERIADO_JARVIS_.Telas
                 r.Show();
                 Hide();
             }
+            if (escolha == "Clientes")
+            {
+                frmClientes r = new frmClientes();
+                r.Show();
+                Hide();
+            }
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
