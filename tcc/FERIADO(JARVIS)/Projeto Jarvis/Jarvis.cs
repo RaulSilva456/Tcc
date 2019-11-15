@@ -33,6 +33,7 @@ namespace FERIADO_JARVIS_
         Telas.frmClientes cliente = new Telas.frmClientes();
         Telas.frmDespesas despesas = new Telas.frmDespesas();
         Telas.frmFornecedores fornecedores = new Telas.frmFornecedores();
+        Telas.frmCadastroProdutos prot = new Telas.frmCadastroProdutos();
       
         public Jarvis()
         {
@@ -118,7 +119,7 @@ namespace FERIADO_JARVIS_
         private void Form1_Load(object sender, EventArgs e)
         {
             loadSpeech();
-            speak("Ja Carreguei Meus Componetes");
+            speak("Ja Carreguei Meus Componetes, Como Posso Ajudar?");
         }
         private void reconhecimento(object sender, SpeechRecognizedEventArgs e)
         {
@@ -126,7 +127,7 @@ namespace FERIADO_JARVIS_
             {
                 string speech = e.Result.Text;
                 float conf = e.Result.Confidence;
-                this.label1.Text = "Reconecimineto: " + speech;
+                this.label1.Text = "Reconheciminto: " + speech;
 
                 if (conf > 0.35f)
                 {
@@ -208,13 +209,37 @@ namespace FERIADO_JARVIS_
                                 {
                                     abrifornercedores();
                                 }
-                               // else if (GrammarRules.Feu.Any(x => x == speech))
-                               // {
-                               //   fechar
-                               //}
+                                else if (GrammarRules.fecharFornecedores.Any(x => x == speech))
+                                {
+                                    fecharfornecedores();
+
+                                }
+                                else if (GrammarRules.AbrirFuncionario.Any(x => x == speech))
+                                {
+                                    abriinserirFuncionario();
+
+                                }
+                                else if (GrammarRules.fecharFuncionario.Any(x => x == speech))
+                                {
+                                    fecharfuncionario();
+
+                                }
+                                else if (GrammarRules.AbrirProduto.Any(x => x == speech))
+                                {
+                                    abriiproduto();
+
+                                }
+                                else if (GrammarRules.fecharProduto.Any(x => x == speech))
+                                {
+                                    fecharproduto();
 
 
-                                break;
+                                }
+
+
+
+
+                                    break;
 
 
                         }
@@ -306,6 +331,7 @@ namespace FERIADO_JARVIS_
         private void fecharmenu()
         {
             menu.Close();
+           
         }
         private void abrirmenu()
         {
@@ -375,6 +401,16 @@ namespace FERIADO_JARVIS_
 
         }
 
+        private void fecharproduto()
+        {
+            prot.Close();
+        }
+        private void abriiproduto()
+        {
+
+            prot.Show();
+
+        }
 
 
 

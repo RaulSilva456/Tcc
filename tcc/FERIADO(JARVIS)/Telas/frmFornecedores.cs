@@ -74,7 +74,7 @@ namespace FERIADO_JARVIS_.Telas
             tabela.nm_fornecedor = txtNMFornecedor.Text;
             tabela.nm_produto = txtNMProduto.Text;
             tabela.tl_telefone = txtTelefone.Text;
-            tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
+            tabela.vl_valor_produto = Convert.ToDecimal(txtValorPago.Text);
              tabela.dt_entrada_do_produto = DataProduto.Value;
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.inserir(tabela);
@@ -131,7 +131,7 @@ namespace FERIADO_JARVIS_.Telas
             tabela.nm_fornecedor = txtNMFornecedor.Text;
             tabela.nm_produto = txtNMProduto.Text;
             tabela.tl_telefone = txtTelefone.Text;
-            tabela.vl_valor_produto = Convert.ToInt32(txtValorPago.Text);
+            tabela.vl_valor_produto = Convert.ToDecimal(txtValorPago.Text);
             Business.BusinessFornecedores bs = new Business.BusinessFornecedores();
             bs.alterar(tabela);
             MessageBox.Show("Fornecedor alterado.");
