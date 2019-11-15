@@ -74,9 +74,10 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(175, 428);
+            this.panel1.Size = new System.Drawing.Size(172, 423);
             this.panel1.TabIndex = 36;
             // 
             // label3
@@ -206,10 +207,11 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox7.Image = global::FERIADO_JARVIS_.Properties.Resources.logo_choco_frei;
-            this.pictureBox7.Location = new System.Drawing.Point(171, -2);
+            this.pictureBox7.Location = new System.Drawing.Point(171, 0);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(322, 425);
+            this.pictureBox7.Size = new System.Drawing.Size(323, 423);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 34;
             this.pictureBox7.TabStop = false;

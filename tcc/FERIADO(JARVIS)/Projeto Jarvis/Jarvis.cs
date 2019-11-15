@@ -208,10 +208,10 @@ namespace FERIADO_JARVIS_
                                 {
                                     abrifornercedores();
                                 }
-                                else if (GrammarRules.Feu.Any(x => x == speech))
-                                {
-                                  fechar
-                                }
+                               // else if (GrammarRules.Feu.Any(x => x == speech))
+                               // {
+                               //   fechar
+                               //}
 
 
                                 break;

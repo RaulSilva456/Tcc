@@ -19,6 +19,7 @@ namespace FERIADO_JARVIS_.Telas
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+
             Telas.frmLogin r = new frmLogin();
             r.Show();
 

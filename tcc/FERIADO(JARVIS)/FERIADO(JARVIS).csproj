@@ -273,6 +273,12 @@
     <Compile Include="Telas\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmSplash1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmSplash1.Designer.cs">
+      <DependentUpon>frmSplash1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmSuprimentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +358,9 @@
     <EmbeddedResource Include="Telas\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmSplash1.resx">
+      <DependentUpon>frmSplash1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmSuprimentos.resx">
       <DependentUpon>frmSuprimentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +434,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\fundo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
