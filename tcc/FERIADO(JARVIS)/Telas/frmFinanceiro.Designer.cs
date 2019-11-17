@@ -45,7 +45,8 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Folha de Pagamento",
             "Fornecedores",
-            "Despesas"});
+            "Despesas",
+            "Fluxo de caixa"});
             this.comboBox1.Location = new System.Drawing.Point(54, 209);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(186, 21);

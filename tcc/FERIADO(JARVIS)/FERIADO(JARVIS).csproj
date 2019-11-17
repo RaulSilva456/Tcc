@@ -221,6 +221,12 @@
     <Compile Include="Telas\frmFinanceiro.Designer.cs">
       <DependentUpon>frmFinanceiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmFluxoDeCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmFluxoDeCaixa.Designer.cs">
+      <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmFolhaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmFinanceiro.resx">
       <DependentUpon>frmFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmFluxoDeCaixa.resx">
+      <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmFolhaPagamento.resx">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>

@@ -69,7 +69,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(3, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(424, 60);
+            this.panel1.Size = new System.Drawing.Size(424, 63);
             this.panel1.TabIndex = 4;
             // 
             // label5
@@ -88,7 +88,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(167, 16);
+            this.label4.Location = new System.Drawing.Point(161, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 36);
             this.label4.TabIndex = 0;

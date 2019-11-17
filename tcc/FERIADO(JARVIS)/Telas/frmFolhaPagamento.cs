@@ -57,11 +57,7 @@ namespace FERIADO_JARVIS_.Telas
                     MessageBox.Show("Campo de imposto de renda vazio.");
 
                 }
-                else if (txtSalarioBruto.Text == string.Empty)
-                {
-                    MessageBox.Show("Campo de salário bruto vazio.");
-
-                }
+                
                 else if (txtSalarioLiquido.Text == string.Empty)
                 {
                     MessageBox.Show("Campo de salário liquido vazio.");
@@ -95,7 +91,7 @@ namespace FERIADO_JARVIS_.Telas
                 tabela.dt_pagamento = pagamento.Value;
                 tabela.hora_extra = Convert.ToDecimal(txtHRExtra.Text);
                 tabela.imposto_renda = Convert.ToDecimal(txtImpostoRenda.Text);
-                tabela.sl_salario_bruto = Convert.ToDecimal(txtSalarioBruto.Text);
+               
                 tabela.sl_salario_liquido = Convert.ToDecimal(txtSalarioLiquido.Text);
                 tabela.vl_alimentação = Convert.ToDecimal(txtVA.Text);
                 tabela.vl_transporte = Convert.ToDecimal(txtVT.Text);
@@ -178,7 +174,7 @@ namespace FERIADO_JARVIS_.Telas
                 tabela.dt_pagamento = pagamento.Value;
                 tabela.hora_extra = Convert.ToDecimal(txtHRExtra.Text);
                 tabela.imposto_renda = Convert.ToDecimal(txtImpostoRenda.Text);
-                tabela.sl_salario_bruto = Convert.ToDecimal(txtSalarioBruto.Text);
+              
                 tabela.sl_salario_liquido = Convert.ToDecimal(txtSalarioLiquido.Text);
                 tabela.vl_alimentação = Convert.ToDecimal(txtVA.Text);
                 tabela.vl_transporte = Convert.ToDecimal(txtVT.Text);

@@ -132,5 +132,12 @@ namespace FERIADO_JARVIS_.Telas
             r.Show();
             Hide();
         }
+
+        private void Label4_Click_1(object sender, EventArgs e)
+        {
+            Jarvis r = new Jarvis();
+            r.Show();
+            Hide();
+        }
     }
 }

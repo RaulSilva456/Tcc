@@ -36,7 +36,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DataProduto = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
@@ -54,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNMFornecedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -122,9 +122,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.DataProduto);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.txtCNPJ);
             this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.txtCEP);
@@ -142,7 +142,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtNMFornecedor);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(415, 445);
@@ -169,15 +169,6 @@
             this.label11.Size = new System.Drawing.Size(174, 24);
             this.label11.TabIndex = 44;
             this.label11.Text = " Entrega do Produto:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 297);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(272, 140);
-            this.dataGridView1.TabIndex = 8;
             // 
             // txtCNPJ
             // 
@@ -236,7 +227,7 @@
             // 
             // txtValorPago
             // 
-            this.txtValorPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorPago.Location = new System.Drawing.Point(249, 146);
             this.txtValorPago.Name = "txtValorPago";
             this.txtValorPago.Size = new System.Drawing.Size(111, 20);
@@ -291,7 +282,7 @@
             // 
             // txtEndereço
             // 
-            this.txtEndereço.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereço.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereço.Location = new System.Drawing.Point(249, 224);
             this.txtEndereço.Name = "txtEndereço";
             this.txtEndereço.Size = new System.Drawing.Size(111, 20);
@@ -321,7 +312,7 @@
             // 
             // txtNMProduto
             // 
-            this.txtNMProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNMProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNMProduto.Location = new System.Drawing.Point(249, 94);
             this.txtNMProduto.Name = "txtNMProduto";
             this.txtNMProduto.Size = new System.Drawing.Size(111, 20);
@@ -340,7 +331,7 @@
             // 
             // txtNMFornecedor
             // 
-            this.txtNMFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNMFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNMFornecedor.Location = new System.Drawing.Point(249, 67);
             this.txtNMFornecedor.Name = "txtNMFornecedor";
             this.txtNMFornecedor.Size = new System.Drawing.Size(111, 20);
@@ -356,6 +347,15 @@
             this.label2.Size = new System.Drawing.Size(104, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Fornecedor:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 289);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(307, 150);
+            this.dataGridView1.TabIndex = 46;
             // 
             // frmFornecedores
             // 
@@ -402,7 +402,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNMFornecedor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MaskedTextBox txtCEP;
         private System.Windows.Forms.MaskedTextBox txtCNPJ;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
@@ -410,5 +409,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.dgvFolhaPagamento = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,15 +50,12 @@
             this.txtSalarioLiquido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtSalarioBruto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtHRExtra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtINSS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFolhaPagamento)).BeginInit();
             this.panel1.SuspendLayout();
@@ -85,8 +83,6 @@
             this.groupBox1.Controls.Add(this.txtSalarioLiquido);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtSalarioBruto);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtHRExtra);
             this.groupBox1.Controls.Add(this.label2);
@@ -99,6 +95,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label14.Location = new System.Drawing.Point(169, 289);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(137, 24);
+            this.label14.TabIndex = 74;
+            this.label14.Text = "Visualizar folha:";
             // 
             // dgvFolhaPagamento
             // 
@@ -135,7 +143,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label13.Location = new System.Drawing.Point(110, 18);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(243, 34);
@@ -243,7 +251,7 @@
             // 
             // txtFaltas
             // 
-            this.txtFaltas.Location = new System.Drawing.Point(141, 290);
+            this.txtFaltas.Location = new System.Drawing.Point(355, 120);
             this.txtFaltas.Name = "txtFaltas";
             this.txtFaltas.Size = new System.Drawing.Size(100, 20);
             this.txtFaltas.TabIndex = 60;
@@ -253,7 +261,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(77, 286);
+            this.label7.Location = new System.Drawing.Point(291, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 24);
             this.label7.TabIndex = 59;
@@ -288,25 +296,6 @@
             this.label5.Size = new System.Drawing.Size(109, 24);
             this.label5.TabIndex = 55;
             this.label5.Text = "Funcionario:";
-            // 
-            // txtSalarioBruto
-            // 
-            this.txtSalarioBruto.Location = new System.Drawing.Point(361, 120);
-            this.txtSalarioBruto.Name = "txtSalarioBruto";
-            this.txtSalarioBruto.Size = new System.Drawing.Size(100, 20);
-            this.txtSalarioBruto.TabIndex = 54;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(251, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 24);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "salario bruto:";
             // 
             // label3
             // 
@@ -344,7 +333,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(281, 245);
+            this.button1.Location = new System.Drawing.Point(275, 240);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 43);
             this.button1.TabIndex = 48;
@@ -370,18 +359,6 @@
             this.label1.Size = new System.Drawing.Size(44, 24);
             this.label1.TabIndex = 46;
             this.label1.Text = "inss:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Harlow Solid Italic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label14.Location = new System.Drawing.Point(291, 286);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 24);
-            this.label14.TabIndex = 74;
-            this.label14.Text = "Visualizar folha";
             // 
             // frmFolhaPagamento
             // 
@@ -423,8 +400,6 @@
         private System.Windows.Forms.TextBox txtSalarioLiquido;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSalarioBruto;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtHRExtra;
         private System.Windows.Forms.Label label2;

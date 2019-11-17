@@ -52,6 +52,12 @@ namespace FERIADO_JARVIS_.Telas
                 r.Show();
                 Hide();
             }
+            if (escolha == "Fluxo de caixa")
+            {
+                frmFluxoDeCaixa r = new frmFluxoDeCaixa();
+                r.Show();
+                Hide();
+            }
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
