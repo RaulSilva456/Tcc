@@ -331,85 +331,101 @@ namespace FERIADO_JARVIS_
         private void fecharmenu()
         {
             menu.Close();
-           
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
+
         }
         private void abrirmenu()
         {
 
             menu.Show();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
 
         }
 
         private void fecharcliente()
         {
             cliente.Close();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void abrircliente()
         {
 
             cliente.Show();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
 
         }
         private void fechardespesas()
         {
             despesas.Close();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void abrirdespesas()
         {
 
             despesas.Show();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
 
         }
         private void fecharestoque()
         {
             estoque.Close();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void abrirestoque()
         {
 
            estoque.Show();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
 
         }
         private void fecharfolha()
         {
             folhapagamnento.Close();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void abrirfolha()
         {
 
            folhapagamnento.Show();
-
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void fecharfornecedores()
         {
             fornecedores.Close();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void abrifornercedores()
         {
 
             fornecedores.Show();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
 
         }
         private void fecharfuncionario()
         {
             inserirfuncionario.Close();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void abriinserirFuncionario()
         {
 
           inserirfuncionario.Show();
 
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
 
         private void fecharproduto()
         {
+
             prot.Close();
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
         private void abriiproduto()
         {
 
             prot.Show();
 
+            speak("Pronto Você Que Manda", "vocÊ Que Manda Meu Truta", "Pronto");
         }
 
 
