@@ -207,6 +207,7 @@
             this.label3.Size = new System.Drawing.Size(25, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // pictureBox1
             // 
@@ -217,6 +218,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // label1
             // 

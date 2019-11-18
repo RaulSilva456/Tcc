@@ -162,6 +162,18 @@ namespace FERIADO_JARVIS_.Telas
             }
 
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            frmLogin r = new frmLogin();
+            r.Show();
+            Hide();
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
 
